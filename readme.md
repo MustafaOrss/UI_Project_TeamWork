@@ -1,13 +1,16 @@
 # com.T113_UI_Project_T10
 
-###  
+###   
 
 ***
 
-1. tests class isimlendirmesi US_ID seklinde olmali
+1. tests class isimlendirmesi US_ID seklinde olmali (US_001)
+2. test case isimlendirmesi US_ID_TC_ID (US_001_TC_01)
 
-2. Locate alinan element nerenin elementi oldugu aciklama satiri ile aciklanmali
-   || orn:  Homepage >> LoginLink >> Email Text Box ||
+2. Locate alinan element ilgili pages de aciklama satiri ile aciklanmali
+   || orn:  UserHomepage >> LoginLink >> Email Text Box ||
+   || orn:  UserDashboard >> LoginLink >> Email Text Box ||
+   || orn:  AdminDasboard >> LoginLink >> Email Text Box ||
 
 <br/>
 
