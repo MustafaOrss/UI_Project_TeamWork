@@ -19,7 +19,7 @@
 ***
 
 1. Herkes kendi adina birer branch olusturur.
-    * 'git branch <isim>'
+    * 'git branch isim'
 
 2. #### *** Herkes kendi branch'inde calisir.
 3. #### ** Her islemden once hangi branch'de oldugu kontrol edilir.**
@@ -27,7 +27,7 @@
     * 'git branch'  (hangi branch'de oldugumuz kontrol edilir)
     * main yesil ve yaninda yildiz olmali (degilse 'git branch main')
     * 'git pull' yapilir
-    * 'git branch <isim>' (kendi branch'imize gecilir)
+    * 'git branch isim' (kendi branch'imize gecilir)
     * 'git merge main' (main'dekileri kendi branch'imize cekiyoruz)
 
 3. Yaptigi degisiklikleri kucuk commitlerle kendi branchinda saklar. Burada tavsiye edilen sadece sizin yaptiginiz
