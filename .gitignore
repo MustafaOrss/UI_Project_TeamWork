@@ -5,6 +5,8 @@
 ### IntelliJ IDEA ###
 /.idea/
 out/
+/test-output/
+/xmlFiles/
 *.iws
 *.iml
 *.ipr
