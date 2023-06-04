@@ -5,12 +5,13 @@ import org.testng.annotations.Test;
 import pages.UserHomepage;
 import utilities.*;
 
-public class US_007_TC_03 extends UserTestBaseRapor {
+public class US_007_TC_04 extends UserTestBaseRapor {
     UserHomepage userHomepage = new UserHomepage();
+
     @Test
-    public void tc_03(){
+    public void tc_04() {
         extentTest = extentReports.createTest("Footer Recent Posts testi",
-                "Kullanici Facebooka ulasabilmeli");
+                "Kullanici Twitter'a ulasabilmeli");
         userHomepage.cookiesButonu.click();
         // 1- Launch Browser
         // 2- Go to https://qa.tripandway.com/
@@ -30,14 +31,16 @@ public class US_007_TC_03 extends UserTestBaseRapor {
 
         Assert.assertTrue(userHomepage.recentPostsElementi.isDisplayed());
 
-        // 5- Facebook linkine tiklanir ve acilan sayfa dogrulanir
-        userHomepage.facebookLinki.click();
-        extentTest.info("Facebook linkine tiklandi");
+        // 5- Twitter linkine tiklanir ve acilan sayfa dogrulanir
+        userHomepage.twitterLinki.click();
+        extentTest.info("Twitter linki tiklandi");
         ReusableMethods.wait(3);
 
-        ReusableMethods.switchToWindow("Facebook - Giriş Yap veya Kaydol");
+        ReusableMethods.switchToWindow("Twitter");
+        String actualTwitterTitle = Driver.getDriver().getTitle();
+        String expectedTwitterTitle = ConfigReader.getProperty("expectedTwitterTitle");
 
-        Assert.assertTrue(userHomepage.facebookEmailButonu.isDisplayed());
-        extentTest.pass("Facebook sayfasi dogrulandi");
+        Assert.assertEquals(expectedTwitterTitle,actualTwitterTitle);
+        extentTest.pass("Twitter sayfasi dogrulandi");
     }
 }
