@@ -9,7 +9,6 @@ public class UserHomepage {
     public UserHomepage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
-
     // Cookies butonu
     @FindBy(className = "wpcc-btn")
     public WebElement cookiesButonu;
@@ -29,7 +28,5 @@ public class UserHomepage {
     // Footer >> Facebook Linki >> Email
     @FindBy(id = "email")
     public WebElement facebookEmailButonu;
-
-
 
 }
