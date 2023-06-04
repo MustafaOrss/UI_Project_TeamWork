@@ -30,6 +30,7 @@ public class US_007_TC_04 extends UserTestBaseRapor {
         extentTest.info("Sayfa footer bolumune indi");
 
         Assert.assertTrue(userHomepage.recentPostsElementi.isDisplayed());
+        extentTest.pass("Recent Posts gorundu");
 
         // 5- Twitter linkine tiklanir ve acilan sayfa dogrulanir
         userHomepage.twitterLinki.click();
