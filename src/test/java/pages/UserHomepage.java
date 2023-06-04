@@ -23,12 +23,40 @@ public class UserHomepage {
     public WebElement searchKutusu;
 
     // Footer >> Facebok Linki
-    @FindBy(xpath = "/html[1]/body[1]/div[16]/div[1]/div[1]/div[4]/div[1]/ul[1]/li[1]/a[1]")
+    @FindBy(xpath = "//div[@class='col-md-3 col-sm-6 wow fadeInRight']//li[1]//a[1]")
     public WebElement facebookLinki;
 
     // Footer >> Facebook Linki >> Email
     @FindBy(id = "email")
     public WebElement facebookEmailButonu;
+
+    // Footer >> Twitter Linki
+    @FindBy(xpath = "//div[@class='col-md-3 col-sm-6 wow fadeInRight']//li[2]//a[1]")
+    public WebElement twitterLinki;
+
+    // Footer >> Linkedin Linki
+    @FindBy(xpath = "//div[@class='col-md-3 col-sm-6 wow fadeInRight']//li[3]//a[1]")
+    public WebElement linkedinLinki;
+
+    // Footer >> Linkedin Linki >> Email
+    @FindBy(id = "session_key")
+    public WebElement linkedinEmailButonu;
+
+    // Footer >> Pinterest Linki
+    @FindBy(xpath = "//div[@class='col-md-3 col-sm-6 wow fadeInRight']//li[4]//a[1]")
+    public WebElement pinterestLinki;
+
+    // Footer >> Pinterest Linki >> Pinterest Logosu
+    @FindBy(xpath = "//h1[@class='lH1 dyH iFc H2s bwj c8S zDA']")
+    public WebElement pinterestLogosu;
+
+    // Footer >> Instagram Linki
+    @FindBy(xpath = "//div[@class='col-md-3 col-sm-6 wow fadeInRight']//li[5]//a[1]")
+    public WebElement instagramLinki;
+
+    // Footer >> Instagram Linki >> Email
+    @FindBy(xpath = "(//input[@autocorrect='off'])[1]")
+    public WebElement instagramEmailButonu;
 
 
 
