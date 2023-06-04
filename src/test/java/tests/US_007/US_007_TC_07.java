@@ -29,6 +29,7 @@ public class US_007_TC_07 extends UserTestBaseRapor {
         extentTest.info("Sayfa footer bolumune indi");
 
         Assert.assertTrue(userHomepage.recentPostsElementi.isDisplayed());
+        extentTest.pass("Recent Posts gorundu");
 
        // 5- Instagram linkine tiklanir ve acilan sayfa dogrulanir
         userHomepage.instagramLinki.click();
