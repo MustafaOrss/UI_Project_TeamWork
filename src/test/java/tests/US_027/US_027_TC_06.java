@@ -11,10 +11,10 @@ public class US_027_TC_06 extends AdminTestBaseRapor {
     @Test
     public void tc_06(){
         extentTest = extentReports.createTest("Tripandway admin panel testi",
-                "Kullanici Language ulasabilmeli");
+                "Admin Language ulasabilmeli");
         // 1- Launch Browser
         // 2- Go to https://qa.tripandway.com/admin/login
-        extentTest.info("Kullanici " + ConfigReader.getProperty("tripAndWayAdminUrl") + " sayfaya gider");
+        extentTest.info("Admin " + ConfigReader.getProperty("tripAndWayAdminUrl") + " sayfaya gider");
 
         // 3- Email kismina ilgili data yazilir
         adminDashboard.emailAddressButonu.sendKeys(ConfigReader.getProperty("admin28Email"));
