@@ -39,7 +39,6 @@ public class AdminDashboard {
     @FindBy(xpath = "(//*[text()='Invoice'])[1]")
     public WebElement invoiceButonuLocate;
 
-
     //Order Invoice Body
     @FindBy(xpath = "//div[@class='iv-right col-7 text-md-right']")
     public WebElement orderInvoiceLocate;
@@ -48,5 +47,32 @@ public class AdminDashboard {
     @FindBy(xpath = "//div[@class='invoice-address']")
     public WebElement invoiceAdress;
 
+    // General Settings
+    @FindBy(xpath = "//span[text()='General Settings']")
+    public WebElement generalSettingsElementi;
+
+    // Page Settings
+    @FindBy(xpath = "//span[text()='Page Settings']")
+    public WebElement pageSettingsElementi;
+
+    // Payment Settings
+    @FindBy(xpath = "//span[text()='Payment Settings']")
+    public WebElement paymentSettingsElementi;
+
+    // Dynamic Pages
+    @FindBy(xpath = "//span[text()='Dynamic Pages']")
+    public WebElement dynamicPagesElementi;
+
+    // Language
+    @FindBy(xpath = "//span[text()='Language']")
+    public WebElement languageElementi;
+
+    // Website Section
+    @FindBy(xpath = "//span[text()='Website Section']")
+    public WebElement websiteSectionElementi;
+
+    // Email Template
+    @FindBy(xpath = "//span[text()='Email Template']")
+    public WebElement emailTemplateElementi;
 }
 

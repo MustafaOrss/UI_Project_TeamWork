@@ -5,12 +5,12 @@ import org.testng.annotations.Test;
 import pages.UserHomepage;
 import utilities.*;
 
-public class US_007_TC_02 extends UserTestBaseRapor {
+public class US_007_TC_05 extends UserTestBaseRapor {
     UserHomepage userHomepage = new UserHomepage();
     @Test
-    public void tc_02(){
+    public void tc_05(){
         extentTest = extentReports.createTest("Footer Recent Posts testi",
-                "Kullanici Recent Posts ulasabilmeli");
+                "Kullanici Linkedin'e ulasabilmeli");
         userHomepage.cookiesButonu.click();
         // 1- Launch Browser
         // 2- Go to https://qa.tripandway.com/
@@ -30,5 +30,15 @@ public class US_007_TC_02 extends UserTestBaseRapor {
 
         Assert.assertTrue(userHomepage.recentPostsElementi.isDisplayed());
         extentTest.pass("Recent Posts gorundu");
+
+        // 5- Linkedin linkine tiklanir ve acilan sayfa dogrulanir
+        userHomepage.linkedinLinki.click();
+        extentTest.info("Linkedin linkine tiklandi");
+        ReusableMethods.wait(3);
+
+        ReusableMethods.switchToWindow("LinkedIn: Oturum Açın veya Üye Olun");
+
+        Assert.assertTrue(userHomepage.linkedinEmailButonu.isDisplayed());
+        extentTest.pass("Linkedin sayfasi dogrulandi");
     }
 }

@@ -5,12 +5,12 @@ import org.testng.annotations.Test;
 import pages.UserHomepage;
 import utilities.*;
 
-public class US_007_TC_02 extends UserTestBaseRapor {
+public class US_007_TC_07 extends UserTestBaseRapor {
     UserHomepage userHomepage = new UserHomepage();
     @Test
-    public void tc_02(){
+    public void tc_07(){
         extentTest = extentReports.createTest("Footer Recent Posts testi",
-                "Kullanici Recent Posts ulasabilmeli");
+                "Kullanici Instagram'a ulasabilmeli");
         userHomepage.cookiesButonu.click();
         // 1- Launch Browser
         // 2- Go to https://qa.tripandway.com/
@@ -30,5 +30,15 @@ public class US_007_TC_02 extends UserTestBaseRapor {
 
         Assert.assertTrue(userHomepage.recentPostsElementi.isDisplayed());
         extentTest.pass("Recent Posts gorundu");
+
+       // 5- Instagram linkine tiklanir ve acilan sayfa dogrulanir
+        userHomepage.instagramLinki.click();
+        extentTest.info("Instagram linkine tiklandi");
+        ReusableMethods.wait(3);
+
+        ReusableMethods.switchToWindow("Instagram");
+
+        Assert.assertTrue(userHomepage.instagramEmailButonu.isDisplayed());
+        extentTest.pass("Instagram sayfasi dogrulandi");
     }
 }
