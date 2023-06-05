@@ -1,25 +1,22 @@
 package tests.US_034;
 
-import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 import pages.AdminDashboard;
 import utilities.AdminTestBaseRapor;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-import javax.swing.*;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.lang.module.Configuration;
 import java.util.Properties;
 
-public class US_034_TC_01 extends AdminTestBaseRapor {
-
+public class US_034_TC_02 extends AdminTestBaseRapor {
     @Test
-    public void TC_01() throws InterruptedException, IOException {
-        extentTest=extentReports.createTest("Tripandway admin sayfasina gidis ve email giris testi",
-                 "Kullanici ana sayfaya gidip email girebilmeli");
+    public void TC_02() throws InterruptedException, IOException {
+
+
+        extentTest = extentReports.createTest("Tripandway admin sayfasina gidis, email giris ve order bolumune erisim",
+                "Kullanici ana sayfaya gidip email girebilmeli ve order bolumune erisebilmeli");
 
 
         // "https://qa.tripandway/com/admin/login" adresine gidebilmeliyim." (adminTestBaseRapor class'ini extend ederek gidildi)
@@ -34,9 +31,8 @@ public class US_034_TC_01 extends AdminTestBaseRapor {
         adminDashboard.adminPasswordKutusu.sendKeys(adminPassword); // Password kismina gerekli datalari yazabilmeliyim.
         adminDashboard.adminLoginButonu.click(); // Admin Email'i ve Password'u ilgili kisimlara girildikten sonra login butonuna click yapabilmeliyim.
         adminDashboard.anasayfaLocate.isDisplayed(); // Admin sayfasina ulastirildigimi dogruluyabilmeliyim.
+        adminDashboard.orderButonuLocate.click(); // Order Butonuna tiklayabilmeyim
+        adminDashboard.orderBodyLocate.isDisplayed(); // Order bolumunde oldugumu dogrulayabilmeliyim.
         ReusableMethods.wait(1);
-
-
     }
-
 }
