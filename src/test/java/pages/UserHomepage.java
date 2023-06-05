@@ -29,8 +29,7 @@ public class UserHomepage {
     @FindBy(id = "email")
     public WebElement facebookEmailButonu;
 
-<<<<<<< HEAD
-=======
+
     // Footer >> Twitter Linki
     @FindBy(xpath = "//div[@class='col-md-3 col-sm-6 wow fadeInRight']//li[2]//a[1]")
     public WebElement twitterLinki;
@@ -76,5 +75,5 @@ public class UserHomepage {
     public WebElement footerEmailElementi;
 
 
->>>>>>> main
+
 }

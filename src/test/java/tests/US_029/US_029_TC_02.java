@@ -23,13 +23,13 @@ public class US_029_TC_02 extends AdminTestBaseRapor {
 
         // 3-Mail ve Sifre girilir.
         AdminDashboard adminDashboard = new AdminDashboard();
-        adminDashboard.emailKutusu.sendKeys(ConfigReader.getProperty("admin30Email"));
+        adminDashboard.emailAddressButonu.sendKeys(ConfigReader.getProperty("admin30Email"));
         ReusableMethods.wait(2);
-        adminDashboard.passwordKutusu.sendKeys(ConfigReader.getProperty("adminPassword"));
+        adminDashboard.passwordButonu.sendKeys(ConfigReader.getProperty("adminPassword"));
         ReusableMethods.wait(2);
 
         // 4-Login click yapılır.
-        adminDashboard.AdminLoginButonu.click();
+        adminDashboard.loginButonu.click();
         ReusableMethods.wait(2);
 
         // 5-Admin Panel sayfasinin oldugu dogrulanir.

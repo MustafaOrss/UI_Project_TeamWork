@@ -10,15 +10,6 @@ public class AdminDashboard {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    // adminLoginButonu
-    @FindBy(xpath = "//button[@type='submit']")
-    public WebElement AdminLoginButonu;
-    // adminLoginemailKutusu
-    @FindBy (xpath = "//*[@id='email']")
-    public WebElement emailKutusu;
-    // adminloginpassword kutusu
-    @FindBy (xpath = "//*[@id='password']")
-    public WebElement passwordKutusu;
 
 
     // Admin Anasayfa >> Email Address
