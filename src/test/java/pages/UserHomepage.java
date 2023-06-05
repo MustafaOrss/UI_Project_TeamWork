@@ -58,6 +58,21 @@ public class UserHomepage {
     @FindBy(xpath = "(//input[@autocorrect='off'])[1]")
     public WebElement instagramEmailButonu;
 
+    // Footer >> Address
+    @FindBy(xpath = "//h3[normalize-space()='Address']")
+    public WebElement addressElementi;
+
+    // Footer >> Adres
+    @FindBy(xpath = "//div[@class='text']//p[text()='34, Edd Lane, NYC, 22335']")
+    public WebElement footerAdresElementi;
+
+    // Footer >> Telefon
+    @FindBy(xpath = "//div[@class='text']//p[text()='202-456-3789']")
+    public WebElement footerTelefonElementi;
+
+    // Footer >> Email
+    @FindBy(xpath = "//div[@class='text']//p[text()='info@tripandway.com']")
+    public WebElement footerEmailElementi;
 
 
 }

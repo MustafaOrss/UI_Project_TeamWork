@@ -4,17 +4,14 @@ import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.UserHomepage;
-import utilities.ConfigReader;
-import utilities.Driver;
-import utilities.UserTestBaseRapor;
+import utilities.*;
 
-public class US_008_TC_01 extends UserTestBaseRapor {
+public class US_008_TC_02 extends UserTestBaseRapor {
     UserHomepage userHomepage = new UserHomepage();
-
     @Test
-    public void tc_01() {
-        extentTest = extentReports.createTest("Tripandway anasayfa testi",
-                "Kullanici sayfaya ulasabilmeli");
+    public void tc_02(){
+        extentTest = extentReports.createTest("Firma Iletisim Bilgileri testi",
+                "Kullanici footer'da Address'e ulasabilmeli");
         userHomepage.cookiesButonu.click();
         // 1- Launch Browser
         // 2- Go to https://qa.tripandway.com/
@@ -28,5 +25,12 @@ public class US_008_TC_01 extends UserTestBaseRapor {
         Assert.assertTrue(actualTitle.contains(expectedHomePageTitle));
         extentTest.pass("Belirlenen " + expectedHomePageTitle + " aranacak title arama sonucunda expected icerik oldugu test edildi");
 
+        //  4- Sayfanin en altina inilmelidir ve firma illetisim bilgileri test edilmelidir
+        JSUtilities.scrollToElement(Driver.getDriver(), userHomepage.addressElementi);
+        ReusableMethods.wait(2);
+        extentTest.info("Sayfa footer bolumune indi");
+
+        Assert.assertTrue(userHomepage.addressElementi.isDisplayed());
+        extentTest.pass("Footer'da Address gorundu");
     }
 }
