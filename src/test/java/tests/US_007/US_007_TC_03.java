@@ -8,9 +8,9 @@ import utilities.*;
 public class US_007_TC_03 extends UserTestBaseRapor {
     UserHomepage userHomepage = new UserHomepage();
     @Test
-    public void tc_02(){
+    public void tc_03(){
         extentTest = extentReports.createTest("Footer Recent Posts testi",
-                "Kullanici Recent Posts ulasabilmeli");
+                "Kullanici Facebooka ulasabilmeli");
         userHomepage.cookiesButonu.click();
         // 1- Launch Browser
         // 2- Go to https://qa.tripandway.com/
@@ -29,6 +29,7 @@ public class US_007_TC_03 extends UserTestBaseRapor {
         extentTest.info("Sayfa footer bolumune indi");
 
         Assert.assertTrue(userHomepage.recentPostsElementi.isDisplayed());
+        extentTest.pass("Recent Posts gorundu");
 
         // 5- Facebook linkine tiklanir ve acilan sayfa dogrulanir
         userHomepage.facebookLinki.click();
