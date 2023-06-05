@@ -33,4 +33,24 @@ public class AdminDashboard {
     // Page Settings
     @FindBy(xpath = "//span[text()='Page Settings']")
     public WebElement pageSettingsElementi;
+
+    // Payment Settings
+    @FindBy(xpath = "//span[text()='Payment Settings']")
+    public WebElement paymentSettingsElementi;
+
+    // Dynamic Pages
+    @FindBy(xpath = "//span[text()='Dynamic Pages']")
+    public WebElement dynamicPagesElementi;
+
+    // Language
+    @FindBy(xpath = "//span[text()='Language']")
+    public WebElement languageElementi;
+
+    // Website Section
+    @FindBy(xpath = "//span[text()='Website Section']")
+    public WebElement websiteSectionElementi;
+
+    // Email Template
+    @FindBy(xpath = "//span[text()='Email Template']")
+    public WebElement emailTemplateElementi;
 }
