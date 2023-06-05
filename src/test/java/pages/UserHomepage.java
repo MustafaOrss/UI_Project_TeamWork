@@ -9,6 +9,7 @@ public class UserHomepage {
     public UserHomepage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
+  
     // Cookies butonu
     @FindBy(className = "wpcc-btn")
     public WebElement cookiesButonu;
