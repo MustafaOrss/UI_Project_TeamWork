@@ -6,12 +6,12 @@ import pages.AdminDashboard;
 import utilities.AdminTestBaseRapor;
 import utilities.ConfigReader;
 
-public class US_027_TC_01 extends AdminTestBaseRapor {
+public class US_027_TC_07 extends AdminTestBaseRapor {
     AdminDashboard adminDashboard = new AdminDashboard();
     @Test
-    public void tc_01(){
-        extentTest = extentReports.createTest("Tripandway admin anasayfa testi",
-                "Kullanici sayfaya ulasabilmeli");
+    public void tc_07(){
+        extentTest = extentReports.createTest("Tripandway admin panel testi",
+                "Kullanici Website Section ulasabilmeli");
         // 1- Launch Browser
         // 2- Go to https://qa.tripandway.com/admin/login
         extentTest.info("Kullanici " + ConfigReader.getProperty("tripAndWayAdminUrl") + " sayfaya gider");
@@ -31,5 +31,9 @@ public class US_027_TC_01 extends AdminTestBaseRapor {
         //6- Acilan sayfa test edilir
         Assert.assertTrue(adminDashboard.dashboardElementi.isDisplayed());
         extentTest.pass("Admin Dashboard sayfasi dogrulandi");
+
+        // 7- Admin sayfasinda "Website Section" gorunurlugu dogrulanır
+        Assert.assertTrue(adminDashboard.websiteSectionElementi.isDisplayed());
+        extentTest.pass("Website Section elementi gorunurlugu test edildi");
     }
 }
