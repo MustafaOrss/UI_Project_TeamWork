@@ -2,10 +2,11 @@ package tests.US_029;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.QAAdminPage;
+import pages.AdminDashboard;
 import utilities.AdminTestBaseRapor;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class US_029_TC_02 extends AdminTestBaseRapor {
 
@@ -21,15 +22,15 @@ public class US_029_TC_02 extends AdminTestBaseRapor {
         extentTest.info("Kullanici " + ConfigReader.getProperty("tripAndWayAdminUrl") + " sayfaya gider");
 
         // 3-Mail ve Sifre girilir.
-        QAAdminPage qaAdminPage = new QAAdminPage();
-        qaAdminPage.emailKutusu.sendKeys(ConfigReader.getProperty("admin30Email"));
-        Thread.sleep(2000);
-        qaAdminPage.passwordKutusu.sendKeys(ConfigReader.getProperty("adminPassword"));
-        Thread.sleep(2000);
+        AdminDashboard adminDashboard = new AdminDashboard();
+        adminDashboard.emailKutusu.sendKeys(ConfigReader.getProperty("admin30Email"));
+        ReusableMethods.wait(2);
+        adminDashboard.passwordKutusu.sendKeys(ConfigReader.getProperty("adminPassword"));
+        ReusableMethods.wait(2);
 
         // 4-Login click yapılır.
-        qaAdminPage.AdminLoginButonu.click();
-        Thread.sleep(2000);
+        adminDashboard.AdminLoginButonu.click();
+        ReusableMethods.wait(2);
 
         // 5-Admin Panel sayfasinin oldugu dogrulanir.
         String actualTitle = Driver.getDriver().getTitle();
