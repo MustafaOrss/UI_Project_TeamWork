@@ -1,22 +1,20 @@
-package tests.US_007;
+package tests.US_006;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.UserHomepage;
-import utilities.ConfigReader;
-import utilities.Driver;
-import utilities.UserTestBaseRapor;
+import utilities.*;
 
-public class US_007_TC_01 extends UserTestBaseRapor {
+public class US_006_TC_02 extends UserTestBaseRapor {
     UserHomepage userHomepage = new UserHomepage();
+
     @Test
-    public void tc_01() {
-        extentTest = extentReports.createTest("Tripandway anasayfa testi",
-                "Kullanici sayfaya ulasabilmeli");
+    public void test02() {
+        extentTest = extentReports.createTest("Footer Recent Posts testi",
+                "Kullanici Recent Posts ulasabilmeli");
         userHomepage.cookiesButonu.click();
         // 1- Launch Browser
         // 2- Go to https://qa.tripandway.com/
-        // TestBaseRapor'dan URL giris yapildi
         extentTest.info("Kullanici " + ConfigReader.getProperty("tripAndWayUrl") + " sayfaya gider");
 
         // 3- Anasayfaya erisildigi dogrulanmalidir
@@ -26,5 +24,12 @@ public class US_007_TC_01 extends UserTestBaseRapor {
         Assert.assertTrue(actualTitle.contains(expectedHomePageTitle));
         extentTest.pass("Belirlenen " + expectedHomePageTitle + " aranacak title arama sonucunda expected icerik oldugu test edildi");
 
+        // 4- Sayfayı asagi indirip Recent Posts gorunurlugu test edilmeli
+        JSUtilities.scrollToElement(Driver.getDriver(), userHomepage.recentPostsElementi);
+        ReusableMethods.wait(2);
+        extentTest.info("Sayfa footer bolumune indi");
+
+        Assert.assertTrue(userHomepage.recentPostsElementi.isDisplayed());
+        extentTest.pass("Recent Posts gorunurlugu dogrulandi");
     }
 }
