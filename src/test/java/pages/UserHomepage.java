@@ -9,8 +9,7 @@ public class UserHomepage {
     public UserHomepage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
-
-
+  
     // Cookies butonu
     @FindBy(className = "wpcc-btn")
     public WebElement cookiesButonu;
@@ -30,6 +29,7 @@ public class UserHomepage {
     // Footer >> Facebook Linki >> Email
     @FindBy(id = "email")
     public WebElement facebookEmailButonu;
+
 
     // Footer >> Twitter Linki
     @FindBy(xpath = "//div[@class='col-md-3 col-sm-6 wow fadeInRight']//li[2]//a[1]")
@@ -74,6 +74,7 @@ public class UserHomepage {
     // Footer >> Email
     @FindBy(xpath = "//div[@class='text']//p[text()='info@tripandway.com']")
     public WebElement footerEmailElementi;
+
 
 
 }
