@@ -11,29 +11,40 @@ public class AdminDashboard {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
+    // Admin Anasayfa >> Email Address
     @FindBy(id = "email")
-    public WebElement adminEmailKutusu; // admin email kutusu locate edildi
-    @FindBy(id = "password")
-    public WebElement adminPasswordKutusu; // admin password kutusu locate edildi
-    @FindBy(xpath = "//button[@class='btn btn-primary btn-user btn-block']") // admin login butonu locate edildi
-    public  WebElement adminLoginButonu;
-    @FindBy(id = "content")
-    public WebElement anasayfaLocate; // admin anasayfa locate edildi
+    public WebElement adminEmailKutusu;
 
+    // Admin Anasayfa >> Password
+    @FindBy(id = "password")
+    public WebElement adminPasswordKutusu;
+
+    // Admin Anasayfa >> Login
+    @FindBy(xpath = "//button[@class='btn btn-primary btn-user btn-block']")
+    public  WebElement adminLoginButonu;
+
+    // Dashboard
+    @FindBy(id = "content")
+    public WebElement dashboardLocate;
+
+    // Order Buton
     @FindBy(xpath = "(//*[@class='nav-link'])[6]")
     public WebElement orderButonuLocate;
 
+    //Order Body
     @FindBy(xpath = "(//div[@class='row'])[2]")
     public WebElement orderBodyLocate;
 
+    //Invoice Buton
     @FindBy(xpath = "(//*[text()='Invoice'])[1]")
     public WebElement invoiceButonuLocate;
 
 
-
+    //Order Invoice Body
     @FindBy(xpath = "//div[@class='iv-right col-7 text-md-right']")
-    public WebElement invoiceLocate;
+    public WebElement orderInvoiceLocate;
 
+    // Invoice
     @FindBy(xpath = "//div[@class='invoice-address']")
     public WebElement invoiceAdress;
 
