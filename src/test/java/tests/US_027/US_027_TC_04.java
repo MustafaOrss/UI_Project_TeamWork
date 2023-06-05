@@ -17,19 +17,19 @@ public class US_027_TC_04 extends AdminTestBaseRapor {
         extentTest.info("Admin " + ConfigReader.getProperty("tripAndWayAdminUrl") + " sayfaya gider");
 
         // 3- Email kismina ilgili data yazilir
-        adminDashboard.emailAddressButonu.sendKeys(ConfigReader.getProperty("admin28Email"));
+        adminDashboard.adminEmailKutusu.sendKeys(ConfigReader.getProperty("admin28Email"));
         extentTest.info("Email address yazildi");
 
         // 4- Password kismina ilgili data yazilir
-        adminDashboard.passwordButonu.sendKeys(ConfigReader.getProperty("adminPassword"));
+        adminDashboard.adminPasswordKutusu.sendKeys(ConfigReader.getProperty("adminPassword"));
         extentTest.info("Password yazildi");
 
         // 5- Login butonuna tiklanir
-        adminDashboard.loginButonu.click();
+        adminDashboard.adminLoginButonu.click();
         extentTest.info("Login butonuna tiklandi");
 
         //6- Acilan sayfa test edilir
-        Assert.assertTrue(adminDashboard.dashboardElementi.isDisplayed());
+        Assert.assertTrue(adminDashboard.dashboardLocate.isDisplayed());
         extentTest.pass("Admin Dashboard sayfasi dogrulandi");
 
         // 7- Admin sayfasinda "Payment Settings" gorunurlugu dogrulanır
