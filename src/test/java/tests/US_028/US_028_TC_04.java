@@ -64,20 +64,15 @@ public class US_028_TC_04 extends AdminTestBaseRapor {
         extentTest.pass("Add Category elementi dogrulandi");
 
         // 10- Add Category bolumundeki "Category Name", "Category Slug" kutularina bir text yazilir
-        adminDashboard.categoriesAddCategoryCategoryName.sendKeys("Ankara");
+        adminDashboard.categoriesAddCategoryCategoryName.sendKeys(ConfigReader.getProperty("categoryName"));
         extentTest.info("Add Category'de Category Name yazildi");
-        adminDashboard.categoriesAddCategoryCategorySlug.sendKeys("Turkiye'nin Baskenti");
+        adminDashboard.categoriesAddCategoryCategorySlug.sendKeys(ConfigReader.getProperty("categorySlug"));
         extentTest.info("Add Category'de Category Slug yazildi");
 
         // 11- SEO Information bolumundeki "Title", "Meta Description" kutularina bir text yazilir
-        adminDashboard.categoriesSEOInformationTitle.sendKeys("Ankara");
+        adminDashboard.categoriesSEOInformationTitle.sendKeys(ConfigReader.getProperty("categoryTitle"));
         extentTest.info("Add Category'de Title yazildi");
-        adminDashboard.categoriesSEOMetaDescription.sendKeys("Ankara, Türkiye'nin başkenti ve " +
-                "İstanbul'dan sonra en kalabalık ikinci ilidir. " +
-                "Nüfusu 2023 yılı itibarıyla 5.782.285 kişidir." +
-                " Bu nüfus; 25 ilçe ve bu ilçelere bağlı 1425 mahallede yaşamaktadır. " +
-                "İl genelinde nüfus yoğunluğu 215'tir3.");
-        extentTest.info("Add Category'de Meta Description yazildi");
+        adminDashboard.categoriesSEOMetaDescription.sendKeys(ConfigReader.getProperty("categoryMetaDescription"));
 
         // 12- Submit butonuna tiklanir
         adminDashboard.categoriesSubmitButonu.click();
@@ -101,7 +96,7 @@ public class US_028_TC_04 extends AdminTestBaseRapor {
         extentTest.info("Duzenlenme linkine tiklandi");
         adminDashboard.categoriesAddCategoryCategoryName.clear();
         extentTest.info("Category Name silindi");
-        adminDashboard.categoriesAddCategoryCategoryName.sendKeys("TEAM10");
+        adminDashboard.categoriesAddCategoryCategoryName.sendKeys(ConfigReader.getProperty("categoryDuzenlemeName"));
         extentTest.info("Category Name'a yeni yazi yazildi");
 
         adminDashboard.categoriesSubmitButonu.click();
