@@ -106,17 +106,17 @@ public class UserDashboard {
     public WebElement payWithCardButonu;
 
 
-    //User Dashboard  >> 'Card number' textbox kutusu
+    //User Dashboard  >>Packages >> Payment >> Pay with Card  >> 'Card number' textbox kutusu
     @FindBy(xpath = "//input[@id='card_number']")
     public WebElement cardNumberKutusu;
 
 
-    //User Dashboard  >>'Tarih(MM/YY) textbox kutusu
+    //User Dashboard  >>Packages >>Payment>>Pay with Card' >>Tarih(MM/YY) textbox kutusu
     @FindBy(xpath = "//*[@id='cc-exp']")
     public WebElement cardMMYYKutusu;
 
 
-    //User Dashboard  >>'Güvenlik kodu (CVC)' textbox kutusu
+    //User Dashboard  >>Packages >> Payment>> Pay with Card >>'Güvenlik kodu (CVC)' textbox kutusu
     @FindBy(xpath = "//*[@id='cc-csc']")
     public WebElement cardCVCKutusu;
 
@@ -129,6 +129,9 @@ public class UserDashboard {
   @FindBy(xpath = "//iframe[@name='stripe_checkout_app']")
   public WebElement iframeElementi;
 
+  //User Dashboard >> logout butonu
+   @FindBy(xpath = "//*[text()='Logout']")
+  public WebElement logoutButonu;
 
 
 }

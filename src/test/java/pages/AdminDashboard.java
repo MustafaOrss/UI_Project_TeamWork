@@ -11,8 +11,6 @@ public class AdminDashboard {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-
-
     // Admin Anasayfa >> Email Address
     @FindBy(id = "email")
     public WebElement adminEmailKutusu;
@@ -81,9 +79,14 @@ public class AdminDashboard {
     @FindBy(xpath = "//span[text()='Blog Section']")
     public WebElement blogSectionButonu;
 
+    @FindBy (xpath = "//a[text()='Blogs']")
+    public WebElement blogsButonu;
+
+    @FindBy (xpath = "//h1")
+    public WebElement blogsWebElementi;
+
     @FindBy(xpath = "(//*[@class='nav-link collapsed'])[6]")
     public WebElement subscriberButonu;
-
 
     @FindBy(xpath = "(//div[@class='bg-white py-2 collapse-inner rounded'])[6]")
     public WebElement allSubscriberButonu;
@@ -92,6 +95,46 @@ public class AdminDashboard {
     public WebElement bodyAllSubscribers;
     @FindBy(xpath = "//div[@class='dataTables_info']")
     public WebElement wiewAllSubscribers;
+
+    // Blog Section >> Categories
+    @FindBy(xpath = "//a[normalize-space()='Categories']")
+    public WebElement blogSectionCategoriesLinki;
+
+    // Blog Section >> Categories >> View Categories
+    @FindBy(xpath = "//h6[@class='m-0 mt-2 font-weight-bold text-primary']")
+    public WebElement viewCategoriesElementi;
+
+    // Blog Section >> Categories >> +Add New
+    @FindBy(xpath = "//a[@class='btn btn-primary btn-sm']")
+    public WebElement categoriesAddNewLinki;
+
+    // Blog Section >> Categories >> +Add New >> Add Category
+    @FindBy(xpath = "//h1[@class='h3 mb-3 text-gray-800']")
+    public WebElement categoriesAddCategoryElementi;
+
+    // Blog Section >> Categories >> +Add New >> Category Name
+    @FindBy(xpath = "//input[@name='category_name']")
+    public WebElement categoriesAddCategoryCategoryName;
+
+    // Blog Section >> Categories >> +Add New >> Category Slug
+    @FindBy(xpath = "//input[@name='category_slug']")
+    public WebElement categoriesAddCategoryCategorySlug;
+
+    // Blog Section >> Categories >> +Add New >> Title
+    @FindBy(xpath = "//input[@name='seo_title']")
+    public WebElement categoriesSEOInformationTitle;
+
+    // Blog Section >> Categories >> +Add New >> Meta Description
+    @FindBy(xpath = "//textarea[@name='seo_meta_description']")
+    public WebElement categoriesSEOMetaDescription;
+
+    // Blog Section >> Categories >> +Add New >> Submit
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement categoriesSubmitButonu;
+
+    // Blog Section >> Categories >> +Add New >> Dogrulama text
+    @FindBy(xpath = "//body[@id='page-top']/script[4]")
+    public WebElement categoriesDogrulama;
 
 }
 
