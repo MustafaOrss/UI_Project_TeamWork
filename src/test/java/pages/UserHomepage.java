@@ -111,23 +111,22 @@ public class UserHomepage {
     @FindBy(xpath ="(//*[text()='Contact'])[2] ")
     public WebElement CONTACT;
 
+    //Header  >>Registration
+    @FindBy(xpath = "//*[text()='Registration']")
+    public  WebElement registrationButonu;
 
 
+    //body >>Forget Password
+    @FindBy(xpath = "//*[@class='forget-password-link']")
+    public WebElement forgetPasswordButonu;
 
+    //body>> Forget Password >>RESET PASSWORD
 
+    @FindBy(xpath = "//input[@class='form-control']")
+    public WebElement emailAdressReset;
 
-
-
-
-
-
-
-
-
-
-
-
-
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement submitButonuReset;
 
     //International Tour
     @FindBy(xpath ="(//div[@class='ser-text'])[1]")
@@ -179,6 +178,4 @@ public class UserHomepage {
     //Turkey butonu
     @FindBy(xpath ="(//div[@class='portfolio-text'])[6]  ")
     public WebElement Turkey;
-
-
 }
