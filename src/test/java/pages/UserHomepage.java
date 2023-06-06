@@ -76,4 +76,27 @@ public class UserHomepage {
     public WebElement footerEmailElementi;
 
 
+    //Header  >>Registration
+    @FindBy(xpath = "//*[text()='Registration']")
+    public  WebElement registrationButonu;
+
+
+    //body >>Forget Password
+    @FindBy(xpath = "//*[@class='forget-password-link']")
+    public WebElement forgetPasswordButonu;
+
+    //body>> Forget Password >>RESET PASSWORD
+
+    @FindBy(xpath = "//input[@class='form-control']")
+    public WebElement emailAdressReset;
+
+
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement submitButonuReset;
+
+
+
+
+
+
 }
