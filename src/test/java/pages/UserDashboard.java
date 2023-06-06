@@ -48,12 +48,86 @@ public class UserDashboard {
     public WebElement completedButonu;
 
 
-    //User Dashboard >>'Update Password' butonu
+    //User Dashboard >>'Update Password'butonu (kullanıcı login iken sifre yenileme icin)
     @FindBy(xpath = "//*[text()='Update Password']")
     public WebElement updatePasswordButonu;
 
+    //User Dashboard >> New Password textbox kutusu
+    @FindBy(xpath = "//input[@type='password']")
+    public WebElement newPasswordKutusu;
+
+    //User Dashboard >> 'Update'butonu (kullanıcı login iken sifre yenileme icin)
+     @FindBy(xpath = "//button[@type='submit']")
+    public WebElement updateButonu;
+
+     //User Dashboard >> 'Package' butonu
+    @FindBy(xpath = "(//*[text()='Packages'])[2]")
+    public WebElement packageButonu;
+
+    //User Dashboard >> 'Dashboard' Logo butonu (Anasayfada yukarıda yazan logo)
+    @FindBy(xpath = "(//*[text()='Dashboard'])[1]")
+    public WebElement dashboardLogoButonu;
 
 
+    //User Dashboard >> 'Dashboard' butonu (Ana sayfada yanında ev resmi olan)
+    @FindBy(xpath ="(//*[text()='Dashboard'])[2]")
+    public WebElement dashboardButonu;
+
+    //User Dashboard >> '7 Days in Istanbul'
+    @FindBy(xpath = "(//span[@class='fz_22'])[3]")
+    public WebElement istanbulTuruButonu;
+
+
+    //User Dashboard >> '3 Days in Buenos Aires'
+    @FindBy(xpath = "(//span[@class='fz_22'])[1]")
+    public WebElement buenosAiresTuruButonu;
+
+    //User Dashboard >> '3 Days in Bangkok'
+  @FindBy(xpath = "(//span[@class='fz_22'])[4]")
+    public WebElement bangkokTuruButonu;
+
+  //User Dashboard >> '7 days in Salina Island'
+    @FindBy(xpath = "(//span[@class='fz_22'])[5]")
+    public WebElement salinaIslandButonu;
+
+
+    //User Dashboard  >> '5 Day CaLifornia'
+    @FindBy(xpath = "(//span[@class='fz_22'])[6]")
+    public WebElement californiaButonu;
+
+
+    //User Dashboard  >> 'Book Your Seat' butonu
+    @FindBy(xpath = "//button[@class='btn btn-info btn-lg']")
+    public WebElement bookYourSeatButonu;
+
+
+    //User Dashboard  >> 'pay with card 'butonu
+    @FindBy(xpath = "//span[@style='display: block; min-height: 30px;']")
+    public WebElement payWithCardButonu;
+
+
+    //User Dashboard  >> 'Card number' textbox kutusu
+    @FindBy(xpath = "//input[@id='card_number']")
+    public WebElement cardNumberKutusu;
+
+
+    //User Dashboard  >>'Tarih(MM/YY) textbox kutusu
+    @FindBy(xpath = "//*[@id='cc-exp']")
+    public WebElement cardMMYYKutusu;
+
+
+    //User Dashboard  >>'Güvenlik kodu (CVC)' textbox kutusu
+    @FindBy(xpath = "//*[@id='cc-csc']")
+    public WebElement cardCVCKutusu;
+
+
+    //User Dashboard   >>'Pay 'butonu
+    @FindBy(xpath = "//span[@class='iconTick']")
+    public WebElement payButonu;
+
+    //User Dashboard  >> Packages >>Payment>>Pay with Card >>iframe
+  @FindBy(xpath = "//iframe[@name='stripe_checkout_app']")
+  public WebElement iframeElementi;
 
 
 
