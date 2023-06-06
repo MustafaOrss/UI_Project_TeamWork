@@ -81,5 +81,11 @@ public class AdminDashboard {
     @FindBy(xpath = "//span[text()='Blog Section']")
     public WebElement blogSectionButonu;
 
+    @FindBy (xpath = "//a[text()='Blogs']")
+    public WebElement blogsButonu;
+
+    @FindBy (xpath = "//h1")
+    public WebElement blogsWebElementi;
+
 }
 
