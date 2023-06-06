@@ -9,7 +9,7 @@ public class UserHomepage {
     public UserHomepage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
-  
+
     // Cookies butonu
     @FindBy(className = "wpcc-btn")
     public WebElement cookiesButonu;
@@ -75,6 +75,41 @@ public class UserHomepage {
     @FindBy(xpath = "//div[@class='text']//p[text()='info@tripandway.com']")
     public WebElement footerEmailElementi;
 
+    // Header >> Registration ve login alanı
+    @FindBy(xpath =" //div[@class='top-header-right']")
+    public WebElement RegistrationAndlogin;
+
+    //Header >> HOME butonu
+    @FindBy(xpath ="(//*[text()='Home'])[2] ")
+    public WebElement HOME;
+
+    //Header >> SERVICES butonu
+    @FindBy(xpath =" (//*[text()='Services'])[2] ")
+    public WebElement SERVICES;
+
+    //Header >> DESTINATIONS butonu
+    @FindBy(xpath ="(//*[text()='Destinations'])[2] ")
+    public WebElement DESTINATIONS;
+
+    //Header >> PACKAGES butonu
+    @FindBy(xpath ="(//*[text()='Packages'])[2] ")
+    public WebElement PACKAGES;
+
+    //Header >> ABOUT US butonu
+    @FindBy(xpath ="(//*[text()='About Us'])[2]")
+    public WebElement ABOUT_US;
+
+    //Header >> FAQ butonu
+    @FindBy(xpath ="(//*[text()='FAQ'])[2] ")
+    public WebElement FAQ;
+
+    //Header >> BLOG butonu
+    @FindBy(xpath =" (//*[text()='Blog'])[2]")
+    public WebElement BLOG;
+
+    //Header >> CONTACT butonu
+    @FindBy(xpath ="(//*[text()='Contact'])[2] ")
+    public WebElement CONTACT;
 
 
 }
