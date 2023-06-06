@@ -8,9 +8,7 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.Properties;
 import java.util.Set;
 
 
@@ -20,7 +18,7 @@ public class US_034_TC_04 extends AdminTestBaseRapor {
 
     AdminDashboard adminDashboard = new AdminDashboard();
     @Test
-    public void TC_02() throws InterruptedException, IOException {
+    public void TC_04() throws InterruptedException, IOException {
 
         extentTest = extentReports.createTest("Tripandway admin sayfasina gidis," +
                         " email giris, order ve invoice bolumune erisim, fatura goruntulenebilirligi",
