@@ -5,14 +5,13 @@ import org.testng.annotations.Test;
 import pages.AdminDashboard;
 import utilities.*;
 
-import javax.swing.*;
 import java.io.IOException;
 
 public class US_035_TC_03 extends AdminTestBaseRapor {
     AdminDashboard adminDashboard = new AdminDashboard();
 
     @Test
-    public void TC_04() throws InterruptedException, IOException {
+    public void TC_03() throws InterruptedException, IOException {
         extentTest = extentReports.createTest("Tripandway admin sayfasina gidis ve email giris testi",
                 "Admin ana sayfaya gidip email ve password ile login olabilmeli.");
 
