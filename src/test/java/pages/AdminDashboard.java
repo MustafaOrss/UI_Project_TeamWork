@@ -11,8 +11,6 @@ public class AdminDashboard {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-
-
     // Admin Anasayfa >> Email Address
     @FindBy(id = "email")
     public WebElement adminEmailKutusu;
@@ -81,9 +79,14 @@ public class AdminDashboard {
     @FindBy(xpath = "//span[text()='Blog Section']")
     public WebElement blogSectionButonu;
 
+    @FindBy (xpath = "//a[text()='Blogs']")
+    public WebElement blogsButonu;
+
+    @FindBy (xpath = "//h1")
+    public WebElement blogsWebElementi;
+
     @FindBy(xpath = "(//*[@class='nav-link collapsed'])[6]")
     public WebElement subscriberButonu;
-
 
     @FindBy(xpath = "(//div[@class='bg-white py-2 collapse-inner rounded'])[6]")
     public WebElement allSubscriberButonu;
