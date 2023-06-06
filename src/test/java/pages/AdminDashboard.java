@@ -81,5 +81,17 @@ public class AdminDashboard {
     @FindBy(xpath = "//span[text()='Blog Section']")
     public WebElement blogSectionButonu;
 
+    @FindBy(xpath = "(//*[@class='nav-link collapsed'])[6]")
+    public WebElement subscriberButonu;
+
+
+    @FindBy(xpath = "(//div[@class='bg-white py-2 collapse-inner rounded'])[6]")
+    public WebElement allSubscriberButonu;
+
+    @FindBy(xpath = "//div[@id='content']")
+    public WebElement bodyAllSubscribers;
+    @FindBy(xpath = "//div[@class='dataTables_info']")
+    public WebElement wiewAllSubscribers;
+
 }
 
