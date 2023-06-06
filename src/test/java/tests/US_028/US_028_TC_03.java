@@ -1,18 +1,18 @@
 package tests.US_028;
 
-import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.AdminDashboard;
 import utilities.AdminTestBaseRapor;
 import utilities.ConfigReader;
+import utilities.ReusableMethods;
 
-public class US_028_TC_01 extends AdminTestBaseRapor {
+public class US_028_TC_03 extends AdminTestBaseRapor {
     AdminDashboard adminDashboard = new AdminDashboard();
     @Test
-    public void tc_01(){
-        extentTest = extentReports.createTest("Tripandway admin anasayfa testi",
-                "Admin Tripandway anasayfasina ulasabilmeli");
+    public void tc_03(){
+        extentTest = extentReports.createTest("Tripandway admin Categories testi",
+                "Admin Categories ulasabilmeli");
         // 1- Launch Browser
         // 2- Go to https://qa.tripandway.com/admin/login
         extentTest.info("Admin " + ConfigReader.getProperty("tripAndWayAdminUrl") + " sayfaya gider");
@@ -32,5 +32,24 @@ public class US_028_TC_01 extends AdminTestBaseRapor {
         // 6- Acilan sayfa test edilir
         Assert.assertTrue(adminDashboard.dashboardLocate.isDisplayed());
         extentTest.pass("Admin Dashboard sayfasi dogrulandi");
+
+        // 7- Blog Section goruntulenir ve tiklanir
+        Assert.assertTrue(adminDashboard.blogSectionButonu.isDisplayed());
+        extentTest.pass("Blog Section gorunurlugu dogrulandi");
+
+        adminDashboard.blogSectionButonu.click();
+        extentTest.info("Blog Section tiklandi");
+
+        //  8- Categories goruntulenir ve tiklanir
+        Assert.assertTrue(adminDashboard.blogSectionCategoriesLinki.isDisplayed());
+        extentTest.pass("Castegories gorunurlugu dogrulandi");
+
+
+        adminDashboard.blogSectionCategoriesLinki.click();
+        extentTest.info("Categories tiklandi");
+        ReusableMethods.wait(2);
+
+        Assert.assertTrue(adminDashboard.viewCategoriesElementi.isDisplayed());
+        extentTest.pass("View Categories elementi goruldu");
     }
 }

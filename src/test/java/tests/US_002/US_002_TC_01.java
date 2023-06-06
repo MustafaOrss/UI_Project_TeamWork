@@ -4,15 +4,16 @@ import com.aventstack.extentreports.ExtentTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.UserHomepage;
-import utilities.*;
+import utilities.ConfigReader;
+import utilities.Driver;
+import utilities.UserTestBaseRapor;
 
-public class US_002_TC02 extends UserTestBaseRapor {
-    //Header in sağ alt köşesindeki HOME, SERVICES, DESTINATIONS, PACKAGES, ABOUT US, FAQ, BLOG, CONTACT
-    // butonlarının varlığını kontrol edip eğer varsa aktif olduğunu kontrol etmeliyim.
+public class US_002_TC_01 extends UserTestBaseRapor {
+
     UserHomepage userHomepage = new UserHomepage();
-
+    ///                     !!Header in sağ üst köşesindeki Registration ve login butonlarının varlığını kontrol!!
     @Test
-    public void test02() {
+    public void test01() {
         ExtentTest extentTest = extentReports.createTest("Footer Recent Posts testi",
                 "Kullanici Recent Posts ulasabilmeli");
         userHomepage.cookiesButonu.click();
@@ -26,8 +27,7 @@ public class US_002_TC02 extends UserTestBaseRapor {
         Assert.assertTrue(actualTitle.contains(expectedHomePageTitle));
         extentTest.pass("Belirlenen " + expectedHomePageTitle + " aranacak title arama sonucunda expected icerik oldugu test edildi");
 
-        //Header in sağ alt köşesindeki HOME, SERVICES, DESTINATIONS, PACKAGES, ABOUT US, FAQ, BLOG, CONTACT
-        // butonlarının varlığını kontrol
+
 
         //4-
         Assert.assertTrue(userHomepage.RegistrationAndlogin.isDisplayed());
@@ -35,10 +35,8 @@ public class US_002_TC02 extends UserTestBaseRapor {
     }
 }
 
-
 /*
   //Header Registration ve login alanı
     @FindBy(xpath =" //div[@class='top-header-right']")
     public WebElement  RegistrationAndlogin;
  */
-

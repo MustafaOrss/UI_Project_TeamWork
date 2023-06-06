@@ -9,7 +9,7 @@ import utilities.UserTestBaseRapor;
 
 public class US_001_TC_02 extends UserTestBaseRapor {
     UserHomepage userHomepage = new UserHomepage();
-//Sitemizin tittle kısmının "Tripandway" içerdiğini onaylamalıyım.
+    //Sitemizin tittle kısmının "Tripandway" içerdiğini onaylamalıyım.
     @Test
     public void tc_03() {
         extentTest = extentReports.createTest("Tittle testi",

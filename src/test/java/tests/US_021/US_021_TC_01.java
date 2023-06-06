@@ -18,7 +18,7 @@ public class US_021_TC_01 extends UserTestBaseRapor {
       // 1- Launch Browser
       // 2- Go to https://qa.tripandway.com/
       // TestBaseRapor'dan URL giris yapildi
-
+      extentTest.info("Kullanıcı"+ ConfigReader.getProperty("tripAndWayUrl")+"anasayfaya gıder");
 
       // 3- Anasayfaya erisildigi dogrulanmalidir
       String actualTitle= Driver.getDriver().getTitle();
