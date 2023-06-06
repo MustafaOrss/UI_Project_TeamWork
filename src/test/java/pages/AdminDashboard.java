@@ -132,7 +132,7 @@ public class AdminDashboard {
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement categoriesSubmitButonu;
 
-    // Blog Section >> Categories >> +Add New >> Category is deleted successfully!
+    // Blog Section >> Categories >> +Add New >> Dogrulama text
     @FindBy(xpath = "//body[@id='page-top']/script[4]")
     public WebElement categoriesDogrulama;
 
