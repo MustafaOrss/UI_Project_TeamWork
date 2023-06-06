@@ -112,4 +112,73 @@ public class UserHomepage {
     public WebElement CONTACT;
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //International Tour
+    @FindBy(xpath ="(//div[@class='ser-text'])[1]")
+    public WebElement International_tour;
+
+    //Adventure Tour butonu
+    @FindBy(xpath ="(//*[text()='Contact'])[2] ")
+    public WebElement Adventure_Tour;
+
+    //Culture Tour butonu
+    @FindBy(xpath ="(//div[@class='ser-text'])[3] ")
+    public WebElement Culture_tour;
+
+
+    //Bussiness Tour butonu
+    @FindBy(xpath ="(//div[@class='ser-text'])[4] ")
+    public WebElement Bussiness_Tour;
+
+
+    //Health Tour butonu
+    @FindBy(xpath ="(//*[text()='Contact'])[5] ")
+    public WebElement Health_Tour;
+
+
+    //Religious Tour butonu
+    @FindBy(xpath ="(//*[text()='Contact'])[6] ")
+    public WebElement Religious_Tour;
+
+    //Bangkok butonu
+    @FindBy(xpath ="(//div[@class='portfolio-text'])[1]  ")
+    public WebElement Bangkok;
+
+    //Greenville  butonu
+    @FindBy(xpath ="(//div[@class='portfolio-text'])[2]  ")
+    public WebElement Greenville;
+
+    //Argentina butonu
+    @FindBy(xpath ="(//div[@class='portfolio-text'])[3]  ")
+    public WebElement Argentina;
+
+    //Morocco butonu
+    @FindBy(xpath ="(//div[@class='portfolio-text'])[4]  ")
+    public WebElement Morocco;
+
+    //Italy butonu
+    @FindBy(xpath ="(//div[@class='portfolio-text'])[5]  ")
+    public WebElement Italy;
+
+    //Turkey butonu
+    @FindBy(xpath ="(//div[@class='portfolio-text'])[6]  ")
+    public WebElement Turkey;
+
+
 }
