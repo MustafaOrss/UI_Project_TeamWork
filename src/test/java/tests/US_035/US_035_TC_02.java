@@ -1,19 +1,19 @@
 package tests.US_035;
 
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import pages.AdminDashboard;
-import utilities.AdminTestBaseRapor;
-import utilities.ConfigReader;
-import utilities.ReusableMethods;
+import utilities.*;
 
 import java.io.IOException;
 
-public class US_035_TC_01 extends AdminTestBaseRapor {
+public class US_035_TC_02 extends AdminTestBaseRapor {
 
     AdminDashboard adminDashboard = new AdminDashboard();
 
+
     @Test
-    public void TC_01() throws InterruptedException, IOException {
+    public void TC_02() throws InterruptedException, IOException {
         extentTest = extentReports.createTest("Tripandway admin sayfasina gidis ve email giris testi",
                 "Admin ana sayfaya gidip email ve password ile login olabilmeli.");
 
@@ -37,8 +37,18 @@ public class US_035_TC_01 extends AdminTestBaseRapor {
         //6-Admin sayfasina ulastirildigimi dogruluyabilmeliyim.
         adminDashboard.dashboardLocate.isDisplayed();
         extentTest.info("Ana sayfaya ulasildigi dogrulandi");
-        ReusableMethods.wait(1);
+
+
+
+        //7-Acilan ekranda "Subscribers" bolumune tiklayabilmeliyim.
+        adminDashboard.subscriberButonu.click();
+        extentTest.info("Subscribers butonu tiklandi");
+
+
+
+        ReusableMethods.wait(3);
 
 
     }
+
 }
