@@ -81,5 +81,45 @@ public class AdminDashboard {
     @FindBy(xpath = "//span[text()='Blog Section']")
     public WebElement blogSectionButonu;
 
+    // Blog Section >> Categories
+    @FindBy(xpath = "//a[normalize-space()='Categories']")
+    public WebElement blogSectionCategoriesLinki;
+
+    // Blog Section >> Categories >> View Categories
+    @FindBy(xpath = "//h6[@class='m-0 mt-2 font-weight-bold text-primary']")
+    public WebElement viewCategoriesElementi;
+
+    // Blog Section >> Categories >> +Add New
+    @FindBy(xpath = "//a[@class='btn btn-primary btn-sm']")
+    public WebElement categoriesAddNewLinki;
+
+    // Blog Section >> Categories >> +Add New >> Add Category
+    @FindBy(xpath = "//h1[@class='h3 mb-3 text-gray-800']")
+    public WebElement categoriesAddCategoryElementi;
+
+    // Blog Section >> Categories >> +Add New >> Category Name
+    @FindBy(xpath = "//input[@name='category_name']")
+    public WebElement categoriesAddCategoryCategoryName;
+
+    // Blog Section >> Categories >> +Add New >> Category Slug
+    @FindBy(xpath = "//input[@name='category_slug']")
+    public WebElement categoriesAddCategoryCategorySlug;
+
+    // Blog Section >> Categories >> +Add New >> Title
+    @FindBy(xpath = "//input[@name='seo_title']")
+    public WebElement categoriesSEOInformationTitle;
+
+    // Blog Section >> Categories >> +Add New >> Meta Description
+    @FindBy(xpath = "//textarea[@name='seo_meta_description']")
+    public WebElement categoriesSEOMetaDescription;
+
+    // Blog Section >> Categories >> +Add New >> Submit
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement categoriesSubmitButonu;
+
+    // Blog Section >> Categories >> +Add New >> Category is deleted successfully!
+    @FindBy(xpath = "//body[@id='page-top']/script[4]")
+    public WebElement categoriesDogrulama;
+
 }
 
