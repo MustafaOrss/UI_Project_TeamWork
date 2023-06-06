@@ -77,5 +77,9 @@ public class AdminDashboard {
     @FindBy(xpath = "//span[text()='Email Template']")
     public WebElement emailTemplateElementi;
 
+    // Blog Section Butonu
+    @FindBy(xpath = "//span[text()='Blog Section']")
+    public WebElement blogSectionButonu;
+
 }
 

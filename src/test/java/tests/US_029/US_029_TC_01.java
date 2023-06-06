@@ -16,8 +16,9 @@ public class US_029_TC_01 extends AdminTestBaseRapor {
     3-Anasayfaya ulasildigi dogrulanir
      */
     AdminDashboard adminDashboard = new AdminDashboard();
+
     @Test
-    public void US029TC01(){
+    public void US029TC01() {
         extentTest = extentReports.createTest("https://qa.tripandway.com/admin/login testi",
                 "admin login yazisi görülmeli");
         // chorme browser'ina framework de utilities icinde driver üzerinden gidilir.
