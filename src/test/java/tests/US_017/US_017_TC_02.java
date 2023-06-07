@@ -3,15 +3,14 @@ package tests.US_017;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.UserHomepage;
-import utilities.ConfigReader;
-import utilities.Driver;
-import utilities.UserTestBaseRapor;
+import utilities.*;
 
-public class US_017_TC_01 extends UserTestBaseRapor {
+public class US_017_TC_02 extends UserTestBaseRapor {
+
     UserHomepage userHomepage = new UserHomepage();
 
     @Test
-    public void tc_01() {
+    public void tc_02() {
         extentTest = extentReports.createTest("Tripandway anasayfaya gidiş, Contact'a giriş testi",
                 "Kullanici anasayfaya ulasabilmeli, Contact'a tiklayabilmeli");
         userHomepage.cookiesButonu.click();
@@ -20,13 +19,15 @@ public class US_017_TC_01 extends UserTestBaseRapor {
         // TestBaseRapor'dan URL giris yapildi
         extentTest.info("Kullanici " + ConfigReader.getProperty("tripAndWayUrl") + " sayfaya gider");
 
-        // 3- Anasayfaya erisildigi dogrulanmalidir
-        String actualTitle = Driver.getDriver().getTitle();
-        String expectedHomePageTitle = ConfigReader.getProperty("expectedHomePageTitle");
-
-        Assert.assertTrue(actualTitle.contains(expectedHomePageTitle));
-        extentTest.pass("Belirlenen " + expectedHomePageTitle + " aranacak title arama sonucunda expected icerik oldugu test edildi");
         // 3- CONTACT tiklanir
-       userHomepage.contactElementi.click();
+        userHomepage.contactElementi.click();
+        // 4- Sayfadaki tum ogelerin gorulebilir oldugu dogrulanir//
+        JSUtilities.scrollToElement(Driver.getDriver(), userHomepage.contactHomeElementi);
+        ReusableMethods.waitForVisibility(userHomepage.contactHomeElementi,3);
+        Assert.assertTrue(userHomepage.contactHomeElementi.isDisplayed());
+        extentTest.pass("Contact'in sayfa iceriginin gorunurlugu test edildi");
     }
 }
+
+
+
