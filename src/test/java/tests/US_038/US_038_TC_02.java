@@ -1,18 +1,20 @@
-package tests.US_040;
+package tests.US_038;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.AdminDashboard;
 import utilities.AdminTestBaseRapor;
 import utilities.ConfigReader;
+import utilities.Driver;
 
-public class US_040_TC_01 extends AdminTestBaseRapor {
+public class US_038_TC_02 extends AdminTestBaseRapor {
+
 
     AdminDashboard adminDashboard = new AdminDashboard();
 
     @Test
-    public void adminSayfasininLoginTesti(){
-        // 1- "https://qa.tripandway.com/admin/login" adresine gidilir
+    public void adminSayfasininLoginTesti() {
+        //1- "https://qa.tripandway.com/admin/login" adresine gidilir
         extentTest = extentReports.createTest("Tripandway Admin Sayfasinin Login Testi",
                 "Admin Login sayfasına gidip gecerli email ve password ile login olabilmeli.");
 
@@ -29,9 +31,25 @@ public class US_040_TC_01 extends AdminTestBaseRapor {
         adminDashboard.adminLoginButonu.click();
         extentTest.info("Login butonu tiklandi");
 
-        //4- Admin sayfasının açıldığı test edilir.
+        //4- Admin sayfası açılır.
         Assert.assertTrue(adminDashboard.dashboardLocate.isDisplayed());
-        extentTest.pass("Admin Dashbord sayfasi acildi");
+        extentTest.info("Admin Dashbord sayfasi acildi");
+
+        //5- Profil resmine tıklanılır.
+        adminDashboard.profilResmi.click();
+        extentTest.info("Sag ust kosedeki profil resmi tiklandi");
+
+        //6- "Change Password" elementi tıklanır
+        adminDashboard.changePasswordElementi.click();
+        extentTest.info("Acilan profil bilgilerini değiştirme ekranında 'Change Password' elementi tiklandi");
+
+        //7- "Change Password" ekranının görüntülendiği test edilir.
+        String actualText = adminDashboard.editProfilTexti.getText();
+        String expectedAdminPageChangePasswordText = ConfigReader.getProperty("expectedAdminPageChangePasswordText");
+
+        Assert.assertFalse(actualText.contains(expectedAdminPageChangePasswordText));
+        extentTest.error( expectedAdminPageChangePasswordText + " sayfasi yerine "+ actualText + " sayfasi acildi.");
+
 
 
 
