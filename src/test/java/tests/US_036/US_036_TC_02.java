@@ -1,4 +1,4 @@
-package tests.US_035;
+package tests.US_036;
 
 import org.testng.annotations.Test;
 import pages.AdminDashboard;
@@ -8,14 +8,15 @@ import utilities.ReusableMethods;
 
 import java.io.IOException;
 
-public class US_035_TC_01 extends AdminTestBaseRapor {
+public class US_036_TC_02 extends AdminTestBaseRapor {
 
     AdminDashboard adminDashboard = new AdminDashboard();
 
+
     @Test
-    public void TC_01() throws InterruptedException, IOException {
-        extentTest = extentReports.createTest("Tripandway admin sayfasina gidis ve email giris testi",
-                "Admin ana sayfaya gidip email ve password ile login olabilmeli.");
+    public void TC_02() throws InterruptedException, IOException {
+        extentTest = extentReports.createTest("Subscribers bölümüne erisim saglanabilmesi.",
+                "Kullanici Subscribers bölümüne erisim saglayabilmeli.");
 
         //1-Launch Browser
         //2-"https://qa.tripandway/com/admin/login" adresine gidebilmeliyim.
@@ -37,7 +38,16 @@ public class US_035_TC_01 extends AdminTestBaseRapor {
         //6-Admin sayfasina ulastirildigimi dogruluyabilmeliyim.
         adminDashboard.dashboardLocate.isDisplayed();
         extentTest.info("Ana sayfaya ulasildigi dogrulandi");
-        ReusableMethods.wait(1);
+
+
+
+        //7-Acilan ekranda "Subscribers" bolumune tiklayabilmeliyim.
+        adminDashboard.subscriberButonu.click();
+        extentTest.info("Subscribers butonu tiklandi");
+
+
+
+        ReusableMethods.wait(3);
 
 
     }
