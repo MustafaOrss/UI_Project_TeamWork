@@ -74,5 +74,11 @@ public class AdminDashboard {
     // Email Template
     @FindBy(xpath = "//span[text()='Email Template']")
     public WebElement emailTemplateElementi;
+
+    //Admin Panel
+
+  @FindBy(xpath = "//*[@id=\"accordionSidebar\"]/a/div")
+    public WebElement adminPanelElementi;
+
 }
 

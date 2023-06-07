@@ -52,6 +52,10 @@ public class UserDashboard {
     @FindBy(xpath = "//*[text()='Update Password']")
     public WebElement updatePasswordButonu;
 
+    //User Dashboard >> payment hıstory >>Action
+    @FindBy(xpath ="(//*[@class='btn btn-primary btn-xs'])[1]" )
+    public WebElement actionCalifornia;
+
 
 
 

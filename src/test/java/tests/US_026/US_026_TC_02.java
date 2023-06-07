@@ -7,7 +7,7 @@ import utilities.AdminTestBaseRapor;
 import utilities.ConfigReader;
 import utilities.ReusableMethods;
 
-public class US_026_TC_01 extends AdminTestBaseRapor {
+public class US_026_TC_02 extends AdminTestBaseRapor {
 
     AdminDashboard adminDashboard=new AdminDashboard();
 
@@ -37,6 +37,13 @@ public class US_026_TC_01 extends AdminTestBaseRapor {
         //6- Acilan sayfa test edilir
         Assert.assertTrue(adminDashboard.dashboardLocate.isDisplayed());
         extentTest.pass("Admin Dashboard sayfasi dogrulandi");
+
+        //7-Yönetim panelinin görüntülenebildiğini doğrulamalıyım
+
+        Assert.assertTrue(adminDashboard.adminPanelElementi.isDisplayed());
+        ReusableMethods.wait(2);
+        adminDashboard.adminPanelElementi.click();
+        ReusableMethods.wait(2);
 
     }
 }
