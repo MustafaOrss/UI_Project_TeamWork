@@ -11,7 +11,7 @@ import utilities.ReusableMethods;
 public class US_029_TC_02 extends AdminTestBaseRapor {
 
     @Test
-    public void US_029_TC_02() throws InterruptedException {
+    public void US029TC02() {
         // 1-Browser'a gidilir.
         // 2-https://qa.tripandway.com/admin/login adresine gidilir.
         extentTest = extentReports.createTest("https://qa.tripandway.com/admin/login testi",
