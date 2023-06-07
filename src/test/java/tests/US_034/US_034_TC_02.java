@@ -18,9 +18,7 @@ public class US_034_TC_02 extends AdminTestBaseRapor {
     public void TC_02() throws InterruptedException, IOException {
 
 
-        extentTest = extentReports.createTest("Tripandway admin sayfasina gidis, email giris ve " +
-                        "order bolumune erisim",
-                "Kullanici ana sayfaya gidip Login olabilmeli ve order bolumune erisebilmeli");
+        extentTest = extentReports.createTest("order bolumune erisim", "Kullanici order bolumune erisebilmeli");
 
 
         //1-Launch Browser

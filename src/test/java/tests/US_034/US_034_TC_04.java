@@ -20,10 +20,8 @@ public class US_034_TC_04 extends AdminTestBaseRapor {
     @Test
     public void TC_04() throws InterruptedException, IOException {
 
-        extentTest = extentReports.createTest("Tripandway admin sayfasina gidis," +
-                        " email giris, order ve invoice bolumune erisim, fatura goruntulenebilirligi",
-                "Kullanici ana sayfaya gidip email ve password ile login olabilmeli," +
-                        " order ve invoice bolumune erisebilmeli, faturanin goruntulenebilir oldugunu test edebilmeli");
+        extentTest = extentReports.createTest("Fatura goruntulenebilirligi",
+                "Kullanici faturanin goruntulenebilir oldugunu test edebilmeli");
 
         //1-Launch Browser
         //2-"https://qa.tripandway/com/admin/login" adresine gidebilmeliyim.
