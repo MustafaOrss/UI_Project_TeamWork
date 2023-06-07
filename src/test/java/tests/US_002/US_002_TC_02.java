@@ -66,6 +66,7 @@ public class US_002_TC_02 extends UserTestBaseRapor {
 
         Assert.assertTrue(userHomepage. CONTACT.isDisplayed());
         extentTest.pass(" CONTACT gorundu");
+
     }
 }
 >>>>>>> 06e83e62d874234fc73db1e249d59f85729401fe
