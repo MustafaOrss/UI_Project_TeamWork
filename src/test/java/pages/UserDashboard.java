@@ -52,6 +52,12 @@ public class UserDashboard {
     @FindBy(xpath = "//*[text()='Update Password']")
     public WebElement updatePasswordButonu;
 
+<<<<<<< HEAD
+    //User Dashboard >> payment hıstory >>Action
+    @FindBy(xpath ="(//*[@class='btn btn-primary btn-xs'])[1]" )
+    public WebElement actionCalifornia;
+
+=======
     //User Dashboard >> New Password textbox kutusu
     @FindBy(xpath = "//input[@type='password']")
     public WebElement newPasswordKutusu;
@@ -67,6 +73,7 @@ public class UserDashboard {
     //User Dashboard >> 'Dashboard' Logo butonu (Anasayfada yukarıda yazan logo)
     @FindBy(xpath = "(//*[text()='Dashboard'])[1]")
     public WebElement dashboardLogoButonu;
+>>>>>>> 06e83e62d874234fc73db1e249d59f85729401fe
 
 
     //User Dashboard >> 'Dashboard' butonu (Ana sayfada yanında ev resmi olan)

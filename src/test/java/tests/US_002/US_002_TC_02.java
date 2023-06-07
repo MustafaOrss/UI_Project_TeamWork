@@ -1,5 +1,11 @@
 package tests.US_002;
 
+<<<<<<< HEAD
+//public class US_002_TC_01 {
+    //Header in sağ üst köşesindeki Registration ve login butonlarının varlığını kontrol edip
+    // eğer varsa aktif olduğunu kontrol etmeliyim.
+
+=======
 import com.aventstack.extentreports.ExtentTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -60,5 +66,7 @@ public class US_002_TC_02 extends UserTestBaseRapor {
 
         Assert.assertTrue(userHomepage. CONTACT.isDisplayed());
         extentTest.pass(" CONTACT gorundu");
+
     }
 }
+>>>>>>> 06e83e62d874234fc73db1e249d59f85729401fe

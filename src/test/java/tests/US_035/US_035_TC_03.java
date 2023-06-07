@@ -12,8 +12,8 @@ public class US_035_TC_03 extends AdminTestBaseRapor {
 
     @Test
     public void TC_03() throws InterruptedException, IOException {
-        extentTest = extentReports.createTest("Tripandway admin sayfasina gidis ve email giris testi",
-                "Admin ana sayfaya gidip email ve password ile login olabilmeli.");
+        extentTest = extentReports.createTest("All subscribers bolumunun dogrulanmasi.",
+                "Kullanici All subscribers bolumunde oldugunu dogrulayabilmeli.");
 
         //1-Launch Browser
         //2-"https://qa.tripandway/com/admin/login" adresine gidebilmeliyim.
@@ -51,6 +51,7 @@ public class US_035_TC_03 extends AdminTestBaseRapor {
         Assert.assertTrue(adminDashboard.bodyAllSubscribers.isDisplayed());
         extentTest.info("All Subscribers bolumunun goruntulenebilir oldugu dogrulandi");
         ReusableMethods.wait(3);
+
 
     }
 }

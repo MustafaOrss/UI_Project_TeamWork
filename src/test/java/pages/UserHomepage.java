@@ -178,4 +178,25 @@ public class UserHomepage {
     //Turkey butonu
     @FindBy(xpath ="(//div[@class='portfolio-text'])[6]  ")
     public WebElement Turkey;
+
+    // Footer >> 3 days in Buenos Aires
+    @FindBy(xpath ="(//div[@class='featured-text'])[1] ")
+    public WebElement Buenos_Aires;
+
+    // Footer >> 10 days in Buenos Aires
+    @FindBy(xpath ="(//div[@class='featured-text'])[2] ")
+    public WebElement Buenos10Aires;
+
+    // Footer >> 3 days in Bangkok
+    @FindBy(xpath ="(//div[@class='featured-text'])[3] ")
+    public WebElement Bangkok3;
+
+    // Footer >> 7 days in Salina Island
+    @FindBy(xpath ="(//div[@class='featured-text'])[4] ")
+    public WebElement Salina7;
+
+    // Footer >> Latest Packages Elementi
+    @FindBy(xpath = "//h3[text()='Recent Posts']")
+    public WebElement latestpackageselement;
 }
+

@@ -1,4 +1,4 @@
-package tests.US_035;
+package tests.US_036;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -9,13 +9,13 @@ import utilities.ReusableMethods;
 
 import java.io.IOException;
 
-public class US_035_TC_04 extends AdminTestBaseRapor {
+public class US_036_TC_03 extends AdminTestBaseRapor {
     AdminDashboard adminDashboard = new AdminDashboard();
 
     @Test
-    public void TC_04() throws InterruptedException, IOException {
-        extentTest = extentReports.createTest("Tum haber listesi uyelerinin goruntulenebilir oldugunun dogrulanmasi",
-                "Kullanici Tum haber listesi uyelerinin goruntulenebilir oldugunu dogrulayabilmeli.");
+    public void TC_03() throws InterruptedException, IOException {
+        extentTest = extentReports.createTest("All Subscriber bolumune erisim saglanabilmesi.",
+                "Kullanici All Subscribers bolumune erisim sagyabilmeli.");
 
         //1-Launch Browser
         //2-"https://qa.tripandway/com/admin/login" adresine gidebilmeliyim.
@@ -49,15 +49,9 @@ public class US_035_TC_04 extends AdminTestBaseRapor {
         adminDashboard.allSubscriberButonu.click();
         extentTest.info("All Subscribers butonu tiklandi");
 
-        //9-"All Subscribers" bolumununun goruntulenebilir oldugunu dogrulayabilmeliyim.
+        //9-"All Subscribers" bolumunde oldumu dogrulayabilmeliyim.
         Assert.assertTrue(adminDashboard.bodyAllSubscribers.isDisplayed());
         extentTest.info("All Subscribers bolumunun goruntulenebilir oldugu dogrulandi");
-
-
-        //10-"All Subscribers" bolumunde bulunan Haber listesi sayfasında,
-        //tüm haber listesi üyelerinin listelendiğini doğrulayabilmeliyim.
-        adminDashboard.wiewAllSubscribers.isDisplayed();
-        extentTest.info("Tum haber listesi uyelerinin listelendigi dogrulandi");
         ReusableMethods.wait(3);
 
     }
