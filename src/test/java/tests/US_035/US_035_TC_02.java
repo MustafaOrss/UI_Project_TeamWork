@@ -14,8 +14,8 @@ public class US_035_TC_02 extends AdminTestBaseRapor {
 
     @Test
     public void TC_02() throws InterruptedException, IOException {
-        extentTest = extentReports.createTest("Tripandway admin sayfasina gidis ve email giris testi",
-                "Admin ana sayfaya gidip email ve password ile login olabilmeli.");
+        extentTest = extentReports.createTest("Subscribers bölümüne erisim saglanabilmesi.",
+                "Kullanici Subscribers bölümüne erisim saglayabilmeli");
 
         //1-Launch Browser
         //2-"https://qa.tripandway/com/admin/login" adresine gidebilmeliyim.

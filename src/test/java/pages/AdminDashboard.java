@@ -3,7 +3,6 @@ package pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import utilities.AdminTestBaseRapor;
 import utilities.Driver;
 
 public class AdminDashboard {
@@ -85,14 +84,19 @@ public class AdminDashboard {
     @FindBy (xpath = "//h1")
     public WebElement blogsWebElementi;
 
+    //Dashboard >> Subscriber buton
     @FindBy(xpath = "(//*[@class='nav-link collapsed'])[6]")
     public WebElement subscriberButonu;
 
+    //Subscribers >> All Subscriber buton
     @FindBy(xpath = "(//div[@class='bg-white py-2 collapse-inner rounded'])[6]")
     public WebElement allSubscriberButonu;
 
+    // All Subscriber >> body
     @FindBy(xpath = "//div[@id='content']")
     public WebElement bodyAllSubscribers;
+
+    //All Subscribers >> Wiew
     @FindBy(xpath = "//div[@class='dataTables_info']")
     public WebElement wiewAllSubscribers;
 
@@ -135,6 +139,22 @@ public class AdminDashboard {
     // Blog Section >> Categories >> +Add New >> Dogrulama text
     @FindBy(xpath = "//body[@id='page-top']/script[4]")
     public WebElement categoriesDogrulama;
+
+
+    // All Subscribers >> Send Email to Subscribers
+    @FindBy(xpath = "//div[@class='float-right d-inline']")
+    public WebElement sendEmailSubscribers;
+
+    //Send email to Subscribers >> Section
+    @FindBy(xpath = "//div[@class='container-fluid']")
+    public WebElement sectionSendEmailSubscribers;
+
+    // Subject Box
+    @FindBy(xpath = "//input[@class='form-control']")
+    public WebElement subjectBox;
+
+    @FindBy(xpath = "//div[@class='toast-message']")
+    public WebElement emailSentSuccessfully;
 
 }
 
