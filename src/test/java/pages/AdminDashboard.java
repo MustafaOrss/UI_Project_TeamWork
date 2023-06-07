@@ -136,5 +136,45 @@ public class AdminDashboard {
     @FindBy(xpath = "//body[@id='page-top']/script[4]")
     public WebElement categoriesDogrulama;
 
+    // Profil Resmi Locate
+    @FindBy(xpath = "//a[@id='userDropdown']")
+    public WebElement profilResmi;
+
+    // Profil Bilgilerini degistirme ekrani locate'i
+    @FindBy(xpath = "//*[@aria-labelledby='userDropdown']")
+    public WebElement profilBilgileriniDegistirmeEkrani;
+
+    // Change Password elementinin locate'i
+    @FindBy(xpath = "(//a[@class='dropdown-item'])[1]")
+    public WebElement changePasswordElementi;
+
+    // Change Password sayfasindaki "Edit Profil" yazisinin locate'i
+    @FindBy(xpath = "//*[text()='Edit Profile']")
+    public WebElement editProfilTexti;
+
+    // Change Photo elementinin locate'i
+    @FindBy(xpath = "(//a[@class='dropdown-item'])[2]")
+    public WebElement changePhotoElementi;
+
+    // Change Photo sayfasindaki "Change Photo" yazisinin locate'i
+    @FindBy(xpath = "//*[text()='Change Photo *']")
+    public WebElement changePhotoTexti;
+
+    // Daraltma oku elementinin locate'i
+    @FindBy(xpath = "(//*[@id='sidebarToggle'])[1]")
+    public WebElement daraltmaOkuElementi;
+
+    // Admin Dashboard'daki "ADMIN PANEL" yazisinin locate'i
+    @FindBy(xpath = "//*[@class='sidebar-brand-text mx-3']")
+    public WebElement adminPanelTexti;
+
+    // Admin Dashboard'daki "Visit Website" butonu locate'i
+    @FindBy(xpath = "//*[@target='_blank']")
+    public WebElement visitWebsiteButonu;
+
+
+
+
+
 }
 

@@ -3,16 +3,16 @@ package tests.US_040;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.AdminDashboard;
-import utilities.AdminTestBaseRapor;
-import utilities.ConfigReader;
+import utilities.*;
 
-public class US_040_TC_01 extends AdminTestBaseRapor {
+public class US_040_TC_02 extends AdminTestBaseRapor {
+
 
     AdminDashboard adminDashboard = new AdminDashboard();
 
     @Test
-    public void adminSayfasininLoginTesti(){
-        // 1- "https://qa.tripandway.com/admin/login" adresine gidilir
+    public void adminSayfasininLoginTesti() {
+        //1- "https://qa.tripandway.com/admin/login" adresine gidilir
         extentTest = extentReports.createTest("Tripandway Admin Sayfasinin Login Testi",
                 "Admin Login sayfasına gidip gecerli email ve password ile login olabilmeli.");
 
@@ -29,13 +29,26 @@ public class US_040_TC_01 extends AdminTestBaseRapor {
         adminDashboard.adminLoginButonu.click();
         extentTest.info("Login butonu tiklandi");
 
-        //4- Admin sayfasının açıldığı test edilir.
+        //4- Admin sayfası açılır.
         Assert.assertTrue(adminDashboard.dashboardLocate.isDisplayed());
-        extentTest.pass("Admin Dashbord sayfasi acildi");
+        extentTest.info("Admin Dashbord sayfasi acildi");
+
+        //5- Sayfa aşağıya iner
+        JSUtilities.scrollToElement(Driver.getDriver(), adminDashboard.daraltmaOkuElementi);
+        ReusableMethods.wait(2);
+        extentTest.info("Sayfa aşağıya indi");
+
+        //6- Daraltma oku tıklanır tıklanır
+        adminDashboard.daraltmaOkuElementi.click();
+        extentTest.info("Daraltma oku tiklandi");
+
+        //7- Menünün daraldığı test edilir
+        Assert.assertFalse(adminDashboard.adminPanelTexti.isDisplayed());
+        extentTest.pass("Menünün daraldigi goruldu");
+
 
 
 
     }
-
 
 }
