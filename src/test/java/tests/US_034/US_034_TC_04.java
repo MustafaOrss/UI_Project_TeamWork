@@ -4,12 +4,11 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.AdminDashboard;
 import utilities.AdminTestBaseRapor;
+import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.Properties;
 import java.util.Set;
 
 
@@ -17,65 +16,71 @@ import java.util.Set;
 
 public class US_034_TC_04 extends AdminTestBaseRapor {
 
+    AdminDashboard adminDashboard = new AdminDashboard();
     @Test
-    public void TC_02() throws InterruptedException, IOException {
+    public void TC_04() throws InterruptedException, IOException {
 
+        extentTest = extentReports.createTest("Fatura goruntulenebilirligi",
+                "Kullanici faturanin goruntulenebilir oldugunu test edebilmeli");
 
-        extentTest = extentReports.createTest("Tripandway admin sayfasina gidis, email giris ve order bolumune erisim",
-                "Kullanici ana sayfaya gidip email girebilmeli ve order bolumune erisebilmeli");
+        //1-Launch Browser
+        //2-"https://qa.tripandway/com/admin/login" adresine gidebilmeliyim.
 
+        extentTest.info("Admin " + ConfigReader.getProperty("tripAndWayAdminUrl") + "Ana sayfasina gider");
 
-        // "https://qa.tripandway/com/admin/login" adresine gidebilmeliyim." (adminTestBaseRapor class'ini extend ederek gidildi)
+        //3-Email kismina gerekli datalari yazabilmeliyim.
+        adminDashboard.adminEmailKutusu.sendKeys(ConfigReader.getProperty("admin28Email"));
+        extentTest.info("Email adres girildi.");
 
-        AdminDashboard adminDashboard = new AdminDashboard();
-        // Admin Email ve Password datalarini dinamik olarak kullanabilmek icin Properties dosyasindan obje olusturabilmeliyim.
-        Properties properties = new Properties();
-        // Properties kutuphanesini yuklemek icin FileInputStream objesi olusturabilmeliyim.
-        FileInputStream fileInputStream = new FileInputStream("configuration.properties");
-        // Properties ve FileInputStream dosyalarini iceri aktarabilmeliyim.
-        properties.load(fileInputStream);
-        // Class'da kullanmak icin Properties objesinden Email datasini bir degiskene atayabilmeliyim
-        String adminEmail = properties.getProperty("admin28Email");
-        // Class'da kullanmak icin Properties objesinden Password datasini bir degiskene atayabilmeliyim
-        String adminPassword = properties.getProperty("adminPassword");
+        //4-Password kismina gerekli datalari yazabilmeliyim.
+        adminDashboard.adminPasswordKutusu.sendKeys(ConfigReader.getProperty("adminPassword"));
+        extentTest.info("Password girildi");
 
-        // Email kismina gerekli datalari yazildi.
-        adminDashboard.adminEmailKutusu.sendKeys(adminEmail);
-        // Password kismina gerekli datalari yazildi.
-        adminDashboard.adminPasswordKutusu.sendKeys(adminPassword);
-        // Admin Email'i ve Password'u ilgili kisimlara girildikten sonra login butonu click yapildi
+        //5-Admin Email'i ve Password'u ilgili kisimlara girildikten sonra login butonuna click yapabilmeliyim.
         adminDashboard.adminLoginButonu.click();
-        // Admin sayfasina ulastirildigimi dogrulandi.
+        extentTest.info("Login butonu tiklandi");
+
+        //6-Admin sayfasina ulastirildigimi dogruluyabilmeliyim.
         adminDashboard.dashboardLocate.isDisplayed();
-        // Order Butonu tiklandi
+        extentTest.info("Ana sayfaya ulasildigi dogrulandi");
+        //7-Order Butonuna tiklayabilmeliyim
         adminDashboard.orderButonuLocate.click();
-        // Order bolumunde oldugumu dogrulandi
+        extentTest.info("Order butonu tiklandi");
+
+        //8-Order bolumune gecildigini dogrulayabilmeliyim.
         adminDashboard.orderBodyLocate.isDisplayed();
-        // Invoice bolumune tiklandiginda yeni bir window'a yonlendirdigi icin
-        // uzerinde olunan pencerenin window handle degeri alindi
+        extentTest.info("Order bolumune gecildigi dogrulandi");
+        //Invoice bolumune tiklandiginda yeni bir window'a yonlendirdigi icin
         String ilkWindowHandle = Driver.getDriver().getWindowHandle();
-        // Invoice butonuna tiklandi
+        // uzerinde olunan pencerenin window handle degeri alindi
+        // uzerinde olunan pencerenin window handle degeri alindi
+        System.out.println(ilkWindowHandle);
+        //9- Invoice butonuna tiklayabilmeliyim
         adminDashboard.invoiceButonuLocate.click();
-        // Ikinci Window degerini atamak icin bos bir String degisken olusturmaliyiz.
+        extentTest.info("Invoice butonu tiklandi");
+
         String ikinciWindowWHD = "";
         // windowlarin degerlerini alir(icinde 2 tane WHD var)
         Set<String> windowDegerlerSeti = Driver.getDriver().getWindowHandles();
+        extentTest.info("Butun pencerelerin window handle degerleri alindi");
 
         for (String eachWHD : windowDegerlerSeti
         ) {
-            // ilk window'a esit olmayani ikinci window'a atayalim
+            // ilk window'a esit olmayan ikinci window'a atanir
             if (!eachWHD.equals(ilkWindowHandle))
                 ikinciWindowWHD = eachWHD;
+            extentTest.info("ilk window'a esit olmayan window handle degeri ikinci window'a atandi");
         }
-        // ikinci window'daki "Invoice" bolumune gecelim
+
+        //10-ikinci window'daki "Invoice" bolumune gecebilmeliyim
         Driver.getDriver().switchTo().window(ikinciWindowWHD);
-        // Uc saniye bekleyelim
+        extentTest.info("Invoice bolumune gecildi");
         ReusableMethods.wait(3);
-        // ikinci window'daki "Invoice" bolumunde olundugu dogrulandi
+        //11-ikinci window'daki "Invoice" bolumune gecildigini dogrulayabilmeliyim.
         Assert.assertTrue(adminDashboard.orderInvoiceLocate.isDisplayed());
-
-        // Faturanin goruntulenebilir oldugu test edildi
+        extentTest.info("Invoice bolumune gecildigi dogrulandi");
+        //12-Faturanin goruntulenebilir oldugunu dogrulayabilmeliyim
         Assert.assertTrue(adminDashboard.invoiceAdress.isDisplayed());
-
+        extentTest.info("Fatura goruntulenebilir oldugu dogrulandi");
     }
 }
