@@ -6,8 +6,8 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
 public class AdminDashboard {
-    public AdminDashboard(){
-        PageFactory.initElements(Driver.getDriver(),this);
+    public AdminDashboard() {
+        PageFactory.initElements(Driver.getDriver(), this);
     }
 
     // Admin Anasayfa >> Email Address
@@ -20,7 +20,7 @@ public class AdminDashboard {
 
     // Admin Anasayfa >> Login
     @FindBy(xpath = "//button[@class='btn btn-primary btn-user btn-block']")
-    public  WebElement adminLoginButonu;
+    public WebElement adminLoginButonu;
 
     // Dashboard
     @FindBy(id = "content")
@@ -74,20 +74,18 @@ public class AdminDashboard {
     @FindBy(xpath = "//span[text()='Email Template']")
     public WebElement emailTemplateElementi;
 
-
     //Admin Panel
-
-  @FindBy(xpath = "//*[@id=\"accordionSidebar\"]/a/div")
+    @FindBy(xpath = "//*[@id=\"accordionSidebar\"]/a/div")
     public WebElement adminPanelElementi;
-  
+
     // Blog Section Butonu
     @FindBy(xpath = "//span[text()='Blog Section']")
     public WebElement blogSectionButonu;
 
-    @FindBy (xpath = "//a[text()='Blogs']")
+    @FindBy(xpath = "//a[text()='Blogs']")
     public WebElement blogsButonu;
 
-    @FindBy (xpath = "//h1")
+    @FindBy(xpath = "//h1")
     public WebElement blogsWebElementi;
 
     //Dashboard >> Subscriber buton

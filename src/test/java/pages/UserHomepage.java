@@ -30,7 +30,6 @@ public class UserHomepage {
     @FindBy(id = "email")
     public WebElement facebookEmailButonu;
 
-
     // Footer >> Twitter Linki
     @FindBy(xpath = "//div[@class='col-md-3 col-sm-6 wow fadeInRight']//li[2]//a[1]")
     public WebElement twitterLinki;
@@ -252,15 +251,11 @@ public class UserHomepage {
     @FindBy (xpath = "//*[text()='Contact Form']")
     public WebElement contactHomeElementi;
 
-
-
-
     //body >>Forget Password
     @FindBy(xpath = "//*[@class='forget-password-link']")
     public WebElement forgetPasswordButonu;
 
     //body>> Forget Password >>RESET PASSWORD
-
     @FindBy(xpath = "//input[@class='form-control']")
     public WebElement emailAdressReset;
 
@@ -279,16 +274,13 @@ public class UserHomepage {
     @FindBy(xpath ="(//div[@class='ser-text'])[3] ")
     public WebElement Culture_tour;
 
-
     //Bussiness Tour butonu
     @FindBy(xpath ="(//div[@class='ser-text'])[4] ")
     public WebElement Bussiness_Tour;
 
-
     //Health Tour butonu
     @FindBy(xpath ="(//*[text()='Contact'])[5] ")
     public WebElement Health_Tour;
-
 
     //Religious Tour butonu
     @FindBy(xpath ="(//*[text()='Contact'])[6] ")
