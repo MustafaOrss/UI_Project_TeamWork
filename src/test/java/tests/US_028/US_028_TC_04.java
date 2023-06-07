@@ -108,7 +108,6 @@ public class US_028_TC_04 extends AdminTestBaseRapor {
                 "    ";
         Assert.assertEquals(expectedCategorisDuzenleme, actualCategoriesDuzenleme);
         extentTest.pass("Categories duzenleme dogrulandi");
-        ReusableMethods.wait(3);
 
         // 15- Silinebilir oldugu dogrulanir
         silmeLinki(satir).click();
