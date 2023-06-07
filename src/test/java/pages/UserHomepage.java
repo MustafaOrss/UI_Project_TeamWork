@@ -194,5 +194,9 @@ public class UserHomepage {
     // Footer >> 7 days in Salina Island
     @FindBy(xpath ="(//div[@class='featured-text'])[4] ")
     public WebElement Salina7;
+
+    // Footer >> Latest Packages Elementi
+    @FindBy(xpath = "//h3[text()='Recent Posts']")
+    public WebElement latestpackageselement;
 }
 
