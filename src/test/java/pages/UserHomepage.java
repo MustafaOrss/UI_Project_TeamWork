@@ -77,12 +77,15 @@ public class UserHomepage {
     // userhomepage >> services
     @FindBy(xpath = "//*[text()='Services'])[2]")
     public WebElement servicespage;
+  
     // footer>> şartlar ve koşullar
     @FindBy(xpath =" //h1[text()='Terms and Conditions']")
     public WebElement şartlarvekoşullaradresElementi ;
+  
     // footer>> gizlilikPolitikasıElementi
     @FindBy(xpath =" //h1[text()='Privacy Policy']")
     public WebElement  gizlilikPolitikasıElementi;
+  
     // services>> International Tour
     @FindBy(xpath = "//h4[text()='International Tour']")
     public WebElement InternationalTourElementi ;
@@ -90,12 +93,15 @@ public class UserHomepage {
     // services>> International Tour
     @FindBy(xpath = "//h1[text()='International Tour']")
     public WebElement InternationalTourTitle;
+  
     // services>> Adventure Tour
     @FindBy(xpath = "//h1[text()='Adventure Tour']")
     public WebElement AdventureTourTitle;
+  
     // services>> Adventure Tour
     @FindBy(xpath = "//h4[text()='Adventure Tour']")
     public WebElement AdventureTourElementi;
+  
     // services>> Culture Tour
     @FindBy(xpath = "//h1[text()='Culture Tour']")
     public WebElement cultureTourTitle;
@@ -103,18 +109,23 @@ public class UserHomepage {
     // services>> Culture Tour
     @FindBy(xpath = "//h1[text()='Culture Tour']")
     public WebElement cultureTourElementi;
+  
     // services>> Bussiness Tour
     @FindBy(xpath = "//h1[text()='Bussiness Tour']")
     public WebElement BussinessTourElementi;
+  
     // services>> Bussiness Tour
     @FindBy(xpath = "//h1[text()='Bussiness Tour']")
     public WebElement BussinessTourTitle;
+  
     // services>> Health Tour
     @FindBy(xpath = "//h1[text()='Health Tour']")
     public WebElement HealthTourElementi;
+  
     // services>> Health Tour
     @FindBy(xpath = "//h1[text()='Health Tour']")
     public WebElement  HealthTourTitle;
+  
     // services>> Religious Tour
     @FindBy(xpath = "//h1[text()='Health Tour']")
     public WebElement ReligiousTourElementi;
@@ -326,6 +337,10 @@ public class UserHomepage {
     //Bussiness Tour butonu
     @FindBy(xpath ="(//div[@class='ser-text'])[4] ")
     public WebElement Bussiness_Tour;
+
+    //body >>  resetleme dogrulama texti
+    @FindBy(xpath = "//div[@class='toast-message']")
+    public WebElement maileYeniSıfreGondermeTexti;
 
     //Health Tour butonu
     @FindBy(xpath ="(//div[@class='ser-text'])[5] ")
