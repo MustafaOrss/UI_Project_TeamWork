@@ -28,10 +28,10 @@ public class US_033_TC_02 extends AdminTestBaseRapor {
         Assert.assertTrue(adminDashboard.dashboardLocate.isDisplayed());
         extentTest.pass("Admin Dashboard sayfasi dogrulandi");
         //7-Order'ın görünür olduğu doğrulanır
-        Assert.assertTrue(adminDashboard.orderButtonu.isDisplayed());
+        Assert.assertTrue(adminDashboard.orderButonuLocate.isDisplayed());
         extentTest.pass("Order sayfasi dogrulandi");
         //8-Order buttonuna tıklanır
-        adminDashboard.orderButtonu.click();
+        adminDashboard.orderButonuLocate.click();
         extentTest.pass("Order buttonuna tıklandığı dogrulandi");
     }
 }
