@@ -195,6 +195,11 @@ public class AdminDashboard {
     @FindBy(xpath = "//div[@class='toast-message']")
     public WebElement emailSentSuccessfully;
 
+    // Logout elementinin locate'i
+    @FindBy(xpath = "(//*[@class='dropdown-item'])[3]")
+    public WebElement logoutElementi;
+
+
 
 }
 

@@ -13,8 +13,8 @@ public class US_040_TC_03 extends AdminTestBaseRapor {
     @Test
     public void adminSayfasininLoginTesti() {
         //1- "https://qa.tripandway.com/admin/login" adresine gidilir
-        extentTest = extentReports.createTest("Tripandway Admin Sayfasinin Login Testi",
-                "Admin Login sayfasına gidip gecerli email ve password ile login olabilmeli.");
+        extentTest = extentReports.createTest("\"Visit Website\" Butonu Ile Anasayfaya Gitme Testi",
+                "Admin, \"Visit Website\" butonuna tiklayinca \"https://qa.tripandway.com/\" anasayfasina gidebilmeli");
 
         extentTest.info("Admin " + ConfigReader.getProperty("tripAndWayAdminUrl") + " sayfasina gider");
 
@@ -45,8 +45,7 @@ public class US_040_TC_03 extends AdminTestBaseRapor {
         String expectedHomePageTitle = ConfigReader.getProperty("expectedHomePageTitle");
 
         Assert.assertTrue(actualHomePageTitle.contains(expectedHomePageTitle));
-        extentTest.pass("Acilan yeni sekmenin title'inin "+actualHomePageTitle+" oldugu goruldu");
-
+        extentTest.pass("\"Visit Website\" butonuyla "+actualHomePageTitle+" anasayfasinin acildigi dogrulandi");
 
 
 

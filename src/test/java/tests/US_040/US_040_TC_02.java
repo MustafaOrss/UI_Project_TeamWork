@@ -13,8 +13,8 @@ public class US_040_TC_02 extends AdminTestBaseRapor {
     @Test
     public void adminSayfasininLoginTesti() {
         //1- "https://qa.tripandway.com/admin/login" adresine gidilir
-        extentTest = extentReports.createTest("Tripandway Admin Sayfasinin Login Testi",
-                "Admin Login sayfasına gidip gecerli email ve password ile login olabilmeli.");
+        extentTest = extentReports.createTest("\"Darltma Oku\" Ile Menuyu Daraltma Testi",
+                "Admin, Dashbord'daki menuyu \"Daraltma Oku\" ile daraltabilmeli");
 
         extentTest.info("Admin " + ConfigReader.getProperty("tripAndWayAdminUrl") + " sayfasina gider");
 
@@ -44,7 +44,7 @@ public class US_040_TC_02 extends AdminTestBaseRapor {
 
         //7- Menünün daraldığı test edilir
         Assert.assertFalse(adminDashboard.adminPanelTexti.isDisplayed());
-        extentTest.pass("Menünün daraldigi goruldu");
+        extentTest.pass("\"Daraltma Oku\" ile menunun daraldigi dogrulandi");
 
 
 
