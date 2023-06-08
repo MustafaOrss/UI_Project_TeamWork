@@ -75,6 +75,58 @@ public class UserHomepage {
     @FindBy(xpath = "//div[@class='text']//p[text()='info@tripandway.com']")
     public WebElement footerEmailElementi;
 
+    // userhomepage >> services
+    @FindBy(xpath = "//*[text()='Services'])[2]")
+    public WebElement servicespage;
+    // footer>> şartlar ve koşullar
+    @FindBy(xpath =" //h1[text()='Terms and Conditions']")
+    public WebElement şartlarvekoşullaradresElementi ;
+    // footer>> gizlilikPolitikasıElementi
+    @FindBy(xpath =" //h1[text()='Privacy Policy']")
+    public WebElement  gizlilikPolitikasıElementi;
+    // services>> International Tour
+    @FindBy(xpath = "//h4[text()='International Tour']")
+    public WebElement InternationalTourElementi ;
+
+    // services>> International Tour
+    @FindBy(xpath = "//h1[text()='International Tour']")
+    public WebElement InternationalTourTitle;
+    // services>> Adventure Tour
+    @FindBy(xpath = "//h1[text()='Adventure Tour']")
+    public WebElement AdventureTourTitle;
+    // services>> Adventure Tour
+    @FindBy(xpath = "//h4[text()='Adventure Tour']")
+    public WebElement AdventureTourElementi;
+    // services>> Culture Tour
+    @FindBy(xpath = "//h1[text()='Culture Tour']")
+    public WebElement cultureTourTitle;
+
+    // services>> Culture Tour
+    @FindBy(xpath = "//h1[text()='Culture Tour']")
+    public WebElement cultureTourElementi;
+    // services>> Bussiness Tour
+    @FindBy(xpath = "//h1[text()='Bussiness Tour']")
+    public WebElement BussinessTourElementi;
+    // services>> Bussiness Tour
+    @FindBy(xpath = "//h1[text()='Bussiness Tour']")
+    public WebElement BussinessTourTitle;
+    // services>> Health Tour
+    @FindBy(xpath = "//h1[text()='Health Tour']")
+    public WebElement HealthTourElementi;
+    // services>> Health Tour
+    @FindBy(xpath = "//h1[text()='Health Tour']")
+    public WebElement  HealthTourTitle;
+    // services>> Religious Tour
+    @FindBy(xpath = "//h1[text()='Health Tour']")
+    public WebElement ReligiousTourElementi;
+
+    // services>> Religious Tour
+    @FindBy(xpath = "//h1[text()='Religious Tour']")
+    public WebElement  ReligiousTourTitle;
+
+
+
+
 
 
 }
