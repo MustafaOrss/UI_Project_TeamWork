@@ -74,9 +74,9 @@ public class UserHomepage {
     @FindBy(xpath = "//div[@class='text']//p[text()='info@tripandway.com']")
     public WebElement footerEmailElementi;
 
-    // Header >> Registration ve login alanı
-    @FindBy(xpath =" //div[@class='top-header-right']")
-    public WebElement RegistrationAndlogin;
+    // Header >>  login alanı
+    @FindBy(xpath =" //*[text()='Login']")
+    public WebElement login;
 
     //Header >> HOME butonu
     @FindBy(xpath ="(//*[text()='Home'])[2] ")
@@ -267,7 +267,7 @@ public class UserHomepage {
     public WebElement International_tour;
 
     //Adventure Tour butonu
-    @FindBy(xpath ="(//*[text()='Contact'])[2] ")
+    @FindBy(xpath ="(//div[@class='ser-text'])[2] ")
     public WebElement Adventure_Tour;
 
     //Culture Tour butonu
@@ -279,11 +279,11 @@ public class UserHomepage {
     public WebElement Bussiness_Tour;
 
     //Health Tour butonu
-    @FindBy(xpath ="(//*[text()='Contact'])[5] ")
+    @FindBy(xpath ="(//div[@class='ser-text'])[5] ")
     public WebElement Health_Tour;
 
     //Religious Tour butonu
-    @FindBy(xpath ="(//*[text()='Contact'])[6] ")
+    @FindBy(xpath ="(//div[@class='ser-text'])[6]")
     public WebElement Religious_Tour;
 
     //Bangkok butonu
@@ -329,5 +329,23 @@ public class UserHomepage {
     // Footer >> Latest Packages Elementi
     @FindBy(xpath = "//h3[text()='Recent Posts']")
     public WebElement latestpackageselement;
+
+    // Header >> Home
+    @FindBy (xpath = "(//*[text()='Home'])[2]")
+    public WebElement home;
+
+    // Header >> Services
+    @FindBy (xpath = "(//*[text()='Services'])[2]")
+    public WebElement services;
+
+    // Header >> Packages
+    @FindBy (xpath = "(//*[text()='Packages'])[2]")
+    public WebElement Packages;
+
+    // Header >> About_us
+    @FindBy (xpath = "(//*[text()='About Us'])[2]")
+    public WebElement About_us;
+
+
 }
 

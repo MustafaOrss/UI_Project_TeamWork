@@ -31,6 +31,8 @@ public class US_003_TC_01 extends UserTestBaseRapor {
 
 
 //International Tour1
+  JSUtilities.scrollToElement(Driver.getDriver(), userHomepage.International_tour);
+  ReusableMethods.waitForVisibility(userHomepage.International_tour,2);
   userHomepage.International_tour.click();
   String Internatıonalexurl = "https://qa.tripandway.com/service/international-tour";
   String Internatıonalacurl = Driver.getDriver().getCurrentUrl();
@@ -39,16 +41,9 @@ public class US_003_TC_01 extends UserTestBaseRapor {
   Driver.getDriver().navigate().back();
   ReusableMethods.wait(2);
 
-  //Culture Tour3
-  userHomepage.Culture_tour.click();
-  String Culture_tourexurl = "https://qa.tripandway.com/service/culture-tour";
-  String Culture_touracurl = Driver.getDriver().getCurrentUrl();
-  Assert.assertTrue(Culture_touracurl.contains(Culture_tourexurl));
-  extentTest.pass("Culture_tour gorunurlugu dogrulandi");
-  Driver.getDriver().navigate().back();
-  ReusableMethods.wait(2);
-
   //Adventure Tour2
+  JSUtilities.scrollToElement(Driver.getDriver(), userHomepage.Adventure_Tour);
+  ReusableMethods.waitForVisibility(userHomepage.Adventure_Tour,2);
   userHomepage.Adventure_Tour.click();
   String Adventureexurl = "https://qa.tripandway.com/service/adventure-tour";
   String Adventureacurl = Driver.getDriver().getCurrentUrl();
@@ -57,8 +52,20 @@ public class US_003_TC_01 extends UserTestBaseRapor {
   Driver.getDriver().navigate().back();
   ReusableMethods.wait(2);
 
+  //Culture Tour3
+  JSUtilities.scrollToElement(Driver.getDriver(), userHomepage.Culture_tour);
+  ReusableMethods.waitForVisibility(userHomepage.Culture_tour,2);
+  userHomepage.Culture_tour.click();
+  String Culture_tourexurl = "https://qa.tripandway.com/service/culture-tour";
+  String Culture_touracurl = Driver.getDriver().getCurrentUrl();
+  Assert.assertTrue(Culture_touracurl.contains(Culture_tourexurl));
+  extentTest.pass("Culture_tour gorunurlugu dogrulandi");
+  Driver.getDriver().navigate().back();
+  ReusableMethods.wait(2);
+
   //Business Tour4
   JSUtilities.scrollToElement(Driver.getDriver(), userHomepage.Bussiness_Tour);
+  ReusableMethods.waitForVisibility(userHomepage.Bussiness_Tour,2);
   userHomepage.Bussiness_Tour.click();
   String Bussiness_Tourexurl = "https://qa.tripandway.com/service/bussiness-tour";
   String Bussiness_Touracurl = Driver.getDriver().getCurrentUrl();
@@ -68,6 +75,8 @@ public class US_003_TC_01 extends UserTestBaseRapor {
   ReusableMethods.wait(2);
 
   //Health Tour5
+  ReusableMethods.waitForVisibility(userHomepage.Health_Tour,2);
+  JSUtilities.scrollToElement(Driver.getDriver(), userHomepage.Health_Tour);
   userHomepage.Health_Tour.click();
   String Health_Tourexurl = "https://qa.tripandway.com/service/health-tour";
   String Health_Touracurl = Driver.getDriver().getCurrentUrl();
@@ -76,13 +85,20 @@ public class US_003_TC_01 extends UserTestBaseRapor {
   Driver.getDriver().navigate().back();
   ReusableMethods.wait(2);
 
-  //Regious Tour
+  //Regious Tour6
+  JSUtilities.scrollToElement(Driver.getDriver(), userHomepage.Religious_Tour);
+  ReusableMethods.waitForVisibility(userHomepage.Religious_Tour,2);
   userHomepage.Religious_Tour.click();
   String Religious_Tourexurl = "https://qa.tripandway.com/service/religious-tour";
   String AReligious_Touracurl = Driver.getDriver().getCurrentUrl();
   Assert.assertTrue(AReligious_Touracurl.contains(Religious_Tourexurl));
   extentTest.pass("Religious_Tour gorunurlugu dogrulandi");
   ReusableMethods.wait(2);
+  Driver.getDriver().navigate().back();
+  ReusableMethods.wait(2);
+
+
+
 
  }
 

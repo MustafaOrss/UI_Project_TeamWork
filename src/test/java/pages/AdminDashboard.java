@@ -1,5 +1,6 @@
 package pages;
 
+import org.bouncycastle.jcajce.provider.asymmetric.X509;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -264,10 +265,35 @@ public class AdminDashboard {
     public WebElement packageDogrulama;
 
     //Order
-
     @FindBy(xpath = "(//*[@class='btn btn-primary btn-sm mt_10'])[1]")
     public WebElement seeDetailButtonu;
 
+    // 2905_Blog elementi addBlog girisi
+    @FindBy(xpath = "//a[@class='btn btn-primary btn-sm']")
+    public WebElement blogsAddNewButonu;
+
+    // 2905_Blog elementi addBlog text yazimi
+    @FindBy(xpath = "//input[@type='text']")
+    public WebElement addBlogTitleText;
+
+    // 2905_Blog elementi addBlogContent text yazimi
+    @FindBy (xpath = "//*[@role='textbox']")
+    public WebElement addBlogContentText;
+
+    // 2905_Blog elementi addShortContent text yazimi
+    @FindBy (xpath = "//textarea[@name='blog_content_short']")
+    public WebElement addBlogShortContentText;
+    // 2905_addBlogDosya foto seçimi
+    @FindBy (xpath = "//input[@name='blog_photo']")
+    public WebElement addBlogDosyaSecimi;
+
+    // 2905_addblog submit butonu
+    @FindBy (xpath = "//button[@class='btn btn-success']")
+    public WebElement AddBlogSubmitButonu;
+
+    // 2905_addBlog yükleme başarılı
+    @FindBy (xpath = "//*[@id='page-top']/script[4]")
+    public WebElement accessSuccessfullyAlert;
 
 }
 
