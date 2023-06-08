@@ -4,9 +4,7 @@ import com.aventstack.extentreports.ExtentTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.UserHomepage;
-import utilities.ConfigReader;
-import utilities.Driver;
-import utilities.UserTestBaseRapor;
+import utilities.*;
 
 public class US_002_TC_01 extends UserTestBaseRapor {
 
@@ -28,15 +26,31 @@ public class US_002_TC_01 extends UserTestBaseRapor {
         extentTest.pass("Belirlenen " + expectedHomePageTitle + " aranacak title arama sonucunda expected icerik oldugu test edildi");
 
 
+//Registration
 
-        //4-
-        Assert.assertTrue(userHomepage.RegistrationAndlogin.isDisplayed());
-        extentTest.pass("RegistrationAndlogin gorunurlugu dogrulandi");
+        ReusableMethods.waitForVisibility(userHomepage.registrationButonu,2);
+        userHomepage.registrationButonu.click();
+        String registrationButonuexurl = "https://qa.tripandway.com/traveller/register";
+        String registrationButonuacurl = Driver.getDriver().getCurrentUrl();
+        Assert.assertTrue(registrationButonuexurl.contains(registrationButonuacurl));
+        extentTest.pass("Registration butonu çalıştığı onaylandı");
+        Driver.getDriver().navigate().back();
+        ReusableMethods.wait(2);
+
+
+//login
+
+        ReusableMethods.waitForVisibility(userHomepage.login,2);
+        userHomepage.login.click();
+        String loginexurl = "https://qa.tripandway.com/traveller/login";
+        String loginacurl = Driver.getDriver().getCurrentUrl();
+        Assert.assertTrue(loginexurl.contains(loginacurl));
+        extentTest.pass("Login butonuna girilebildiği onaylandı");
+        Driver.getDriver().navigate().back();
+        ReusableMethods.wait(2);
+
+
     }
 }
 
-/*
-  //Header Registration ve login alanı
-    @FindBy(xpath =" //div[@class='top-header-right']")
-    public WebElement  RegistrationAndlogin;
- */
+
