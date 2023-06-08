@@ -195,6 +195,79 @@ public class AdminDashboard {
     @FindBy(xpath = "//div[@class='toast-message']")
     public WebElement emailSentSuccessfully;
 
+    //Packages
+    @FindBy(xpath = "(//*[text()='Packages'])[1]")
+    public WebElement packagesButtonu;
+
+    @FindBy(xpath = "//*[@class='btn btn-primary btn-sm']")
+    public WebElement packagesAddNewButonu;
+
+    @FindBy(xpath = "//*[@class='m-0 mt-2 font-weight-bold text-primary']")
+    public WebElement addPackagesText;
+    @FindBy(xpath = "//input[@name='p_name']")
+    public WebElement packageName;
+
+    @FindBy(xpath = "//input[@name='p_slug']")
+    public WebElement packageSlug;
+    @FindBy(xpath = "//input[@name='p_photo']")
+    public WebElement packagePhoto;
+
+    @FindBy(xpath = "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[4]/div[1]/div[3]/div[2]")
+    public WebElement packageDescription;
+
+    @FindBy(xpath = "//textarea[@name='p_description_short']")
+    public WebElement packageShortDescription;
+
+    @FindBy(xpath = "//textarea[@name='p_location']")
+    public WebElement packageLocation;
+
+    @FindBy(xpath = "//input[@id='datepicker']")
+    public WebElement packageStartDate;
+
+    @FindBy(xpath = "//input[@id='datepicker1']")
+    public WebElement packageEndDate;
+
+    @FindBy(xpath = "//input[@id='datepicker2']")
+    public WebElement packageLastBookingDate;
+
+    @FindBy(xpath = "//textarea[@name='p_map']")
+    public WebElement packageMap;
+
+    @FindBy(xpath = "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[11]/div[1]/div[3]/div[2]")
+    public WebElement packageItinerary;
+
+    @FindBy(xpath = "//input[@name='p_price']")
+    public WebElement packagePrice;
+
+    @FindBy(xpath = "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[13]/div[1]/div[3]/div[2]")
+    public WebElement packagePolicy;
+
+    @FindBy(xpath = "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[14]/div[1]/div[3]/div[2]")
+    public WebElement packageTerms;
+
+    @FindBy(xpath = "//select[@name='p_is_featured']")
+    public WebElement packageIsFeatured;
+
+    @FindBy(xpath = "//select[@name='destination_id']")
+    public WebElement packageDestination;
+
+    @FindBy(xpath = "//input[@name='seo_title']")
+    public WebElement packageTitle;
+
+    @FindBy(xpath = "//textarea[@name='seo_meta_description']")
+    public WebElement packageMetaDescription;
+
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement packageSubmit;
+
+    @FindBy(xpath = "//div[@class='toast-message']")
+    public WebElement packageDogrulama;
+
+    //Order
+
+    @FindBy(xpath = "(//*[@class='btn btn-primary btn-sm mt_10'])[1]")
+    public WebElement seeDetailButtonu;
+
 
 }
 
