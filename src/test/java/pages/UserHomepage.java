@@ -95,6 +95,10 @@ public class UserHomepage {
     public WebElement submitButonuReset;
 
 
+    //body >>  resetleme dogrulama texti
+    @FindBy(xpath = "//div[@class='toast-message']")
+    public WebElement maileYeniSıfreGondermeTexti;
+
 
 
 

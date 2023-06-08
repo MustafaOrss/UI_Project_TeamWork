@@ -2,7 +2,7 @@ package tests.US_022;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.UserDashboard;
+
 import pages.UserHomepage;
 import utilities.ConfigReader;
 import utilities.Driver;

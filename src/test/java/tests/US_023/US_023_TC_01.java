@@ -4,9 +4,11 @@ import org.testng.annotations.Test;
 import pages.UserDashboard;
 import utilities.ConfigReader;
 import utilities.UserTestBaseRapor;
-
 public class US_023_TC_01 extends UserTestBaseRapor {
+
     UserDashboard userDashboard =new UserDashboard();
+
+
     @Test
     public void TC_01(){
 

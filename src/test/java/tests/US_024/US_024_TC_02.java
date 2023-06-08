@@ -1,6 +1,5 @@
 package tests.US_024;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.UserDashboard;
@@ -71,8 +70,16 @@ public class US_024_TC_02 extends UserTestBaseRapor {
     //18-"Pay" butonu gorunurlugu dogrulanır
    Assert.assertTrue(userDashboard.payButonu.isDisplayed());
    extentTest.info("'Pay' butonu gorundu");
+
+
         //        //19-"Payment is successfull!" yazısının gorunurlugu test edılır
 
+        String expectedsıfre="\n" +
+                "        toastr.success('Password is updated successfully');\n" +
+                "    ";
+        String actualsıfre=JSUtilities.getTextWithJS(Driver.getDriver(),userDashboard.odemeTamamlandıTexti);
+        Assert.assertEquals(expectedsıfre,actualsıfre);
+        extentTest.pass("Payment is successfull! yazısı goruldu,odeme basarıyla tamamlandı");
 
 
 
