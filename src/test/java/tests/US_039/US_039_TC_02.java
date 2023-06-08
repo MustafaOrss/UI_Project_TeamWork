@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import pages.AdminDashboard;
 import utilities.AdminTestBaseRapor;
 import utilities.ConfigReader;
+import utilities.Driver;
 
 public class US_039_TC_02 extends AdminTestBaseRapor {
 
@@ -14,8 +15,8 @@ public class US_039_TC_02 extends AdminTestBaseRapor {
     @Test
     public void adminSayfasininLoginTesti() {
         //1- "https://qa.tripandway.com/admin/login" adresine gidilir
-        extentTest = extentReports.createTest("Tripandway Admin Sayfasinin Login Testi",
-                "Admin Login sayfasına gidip gecerli email ve password ile login olabilmeli.");
+        extentTest = extentReports.createTest("\"Change Photo\" Ekranini Goruntuleme Testi",
+                "Admin, \"Change Photo\" ekranini goruntuleyebilmeli");
 
         extentTest.info("Admin " + ConfigReader.getProperty("tripAndWayAdminUrl") + " sayfasina gider");
 
@@ -43,11 +44,11 @@ public class US_039_TC_02 extends AdminTestBaseRapor {
         extentTest.info("Acilan profil bilgilerini değiştirme ekranında 'Change Photo' elementi tiklandi");
 
         //7- "Change Photo" ekranının görüntülendiği test edilir.
-        String actualText = adminDashboard.changePhotoTexti.getText();
-        String expectedAdminPageChangePhotoText = ConfigReader.getProperty("expectedAdminPageChangePhotoText");
+        String actualChangePhotoPageUrl = Driver.getDriver().getCurrentUrl() ;
+        String expectedChangePhotoPageUrl = ConfigReader.getProperty("expectedChangePhotoPageUrl");
 
-        Assert.assertTrue(actualText.contains(expectedAdminPageChangePhotoText));
-        extentTest.pass( expectedAdminPageChangePhotoText + " ekrani acildi.");
+        Assert.assertEquals(expectedChangePhotoPageUrl, actualChangePhotoPageUrl);
+        extentTest.pass( "\""+actualChangePhotoPageUrl+"\"" +  " sayfasinin acildiği dogrulandi.");
 
 
     }

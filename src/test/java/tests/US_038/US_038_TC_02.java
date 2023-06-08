@@ -15,8 +15,8 @@ public class US_038_TC_02 extends AdminTestBaseRapor {
     @Test
     public void adminSayfasininLoginTesti() {
         //1- "https://qa.tripandway.com/admin/login" adresine gidilir
-        extentTest = extentReports.createTest("Tripandway Admin Sayfasinin Login Testi",
-                "Admin Login sayfasına gidip gecerli email ve password ile login olabilmeli.");
+        extentTest = extentReports.createTest("\"Change Password\" Ekranini Goruntuleme Testi",
+                "Admin, \"Change Password\" ekranini goruntuleyebilmeli");
 
         extentTest.info("Admin " + ConfigReader.getProperty("tripAndWayAdminUrl") + " sayfasina gider");
 
@@ -43,12 +43,12 @@ public class US_038_TC_02 extends AdminTestBaseRapor {
         adminDashboard.changePasswordElementi.click();
         extentTest.info("Acilan profil bilgilerini değiştirme ekranında 'Change Password' elementi tiklandi");
 
-        //7- "Change Password" ekranının görüntülendiği test edilir.
-        String actualText = adminDashboard.editProfilTexti.getText();
-        String expectedAdminPageChangePasswordText = ConfigReader.getProperty("expectedAdminPageChangePasswordText");
+        //7- "Change Password" Ekranının görüntülendiği test edilir.
+        String actualChangePasswordUrl =Driver.getDriver().getCurrentUrl() ;
+        String expectedChangePasswordPageUrl = ConfigReader.getProperty("expectedChangePasswordPageUrl");
 
-        Assert.assertFalse(actualText.contains(expectedAdminPageChangePasswordText));
-        extentTest.error( expectedAdminPageChangePasswordText + " sayfasi yerine "+ actualText + " sayfasi acildi.");
+        Assert.assertEquals(expectedChangePasswordPageUrl, actualChangePasswordUrl);
+        extentTest.pass( "\""+actualChangePasswordUrl +"\""+  " sayfasinin acildigi dogrulandi.");
 
 
 

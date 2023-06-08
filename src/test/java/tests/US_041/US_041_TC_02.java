@@ -1,12 +1,13 @@
-package tests.US_037;
+package tests.US_041;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.AdminDashboard;
 import utilities.AdminTestBaseRapor;
 import utilities.ConfigReader;
+import utilities.Driver;
 
-public class US_037_TC_02 extends AdminTestBaseRapor {
+public class US_041_TC_02 extends AdminTestBaseRapor {
 
 
     AdminDashboard adminDashboard = new AdminDashboard();
@@ -14,10 +15,10 @@ public class US_037_TC_02 extends AdminTestBaseRapor {
     @Test
     public void adminSayfasininLoginTesti() {
         //1- "https://qa.tripandway.com/admin/login" adresine gidilir
-        extentTest = extentReports.createTest("Profil Bilgileri Degistirme Ekranini Goruntuleme Testi",
-                "Admin, Dashboard'da profil bilgileri degistirme ekranini goruntuleyebilmeli.");
+        extentTest = extentReports.createTest("\"Logout\" Elementi Ile Dashboard'dan Cikma Testi",
+                "Admin, \"Logout\" elementine tikladiginda Admin Dashboard sayfasından çıkabilmeli");
 
-        extentTest.info("Admin " + ConfigReader.getProperty("tripAndWayAdminUrl") + " sayfasina gider");
+        extentTest.info("Admin \"" + ConfigReader.getProperty("tripAndWayAdminUrl") + "\" sayfasina gider");
 
         //2- "Email Address" kutusuna "admin29@tripandway.com", "Password" kutusuna "123123123" yazılır.
         adminDashboard.adminEmailKutusu.sendKeys(ConfigReader.getProperty("admin29Email"));
@@ -38,12 +39,21 @@ public class US_037_TC_02 extends AdminTestBaseRapor {
         adminDashboard.profilResmi.click();
         extentTest.info("Sag ust kosedeki profil resmi tiklandi");
 
-        //6- Profil bilgilerini değiştirme ekranının görünüldüğü test edilir.
-        Assert.assertTrue(adminDashboard.profilBilgileriniDegistirmeEkrani.isDisplayed());
-        extentTest.pass("Profil bilgilerini degistirme ekraninin görüntülendigi dogrulandi");
+        //6- "Logout" elementi tıklanır.
+        adminDashboard.logoutElementi.click();
+        extentTest.info("Acilan profil bilgilerini değiştirme ekranında 'Logout' elementi tiklandi");
+
+        //7- Admin Dashboard Sayfasından çıktığı test edilir.
+        String actualLoginUrl = Driver.getDriver().getCurrentUrl();
+        String expectedTripAndWayAdminUrl = ConfigReader.getProperty("tripAndWayAdminUrl");
+
+        Assert.assertEquals(expectedTripAndWayAdminUrl, actualLoginUrl);
+        extentTest.pass( "\"Logout\" elementiyle Admin Dashboard Sayfasindan cikildigi dogrulandi");
+
+
+
 
 
 
     }
-
 }

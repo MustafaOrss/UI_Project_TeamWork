@@ -31,7 +31,7 @@ public class US_038_TC_01 extends AdminTestBaseRapor {
 
         //4- Admin sayfasının açıldığı test edilir.
         Assert.assertTrue(adminDashboard.dashboardLocate.isDisplayed());
-        extentTest.pass("Admin Dashbord sayfasi acildi");
+        extentTest.pass("Admin Dashbord sayfasinin acildigi dogrulandi");
 
 
 
