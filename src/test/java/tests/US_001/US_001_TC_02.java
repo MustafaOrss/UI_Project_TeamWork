@@ -14,7 +14,7 @@ public class US_001_TC_02 extends UserTestBaseRapor {
     public void tc_03() {
         extentTest = extentReports.createTest("Tittle testi",
                 "Kullanici tittle nin doğru olduğundan emin olabilmeli");
-        userHomepage.cookiesButonu.click();
+        //userHomepage.cookiesButonu.click();
         extentTest.info("Kullanici " + ConfigReader.getProperty("tripAndWayUrl") + " sayfaya gider");
         String actualTitle = Driver.getDriver().getTitle();
         String expectedHomePageTitle = ConfigReader.getProperty("expectedHomePageTitle");
