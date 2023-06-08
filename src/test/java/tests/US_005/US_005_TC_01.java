@@ -7,7 +7,9 @@ import org.testng.annotations.Test;
 import pages.UserHomepage;
 import utilities.*;
 
-//5 Day California Butonunun varlını ve kullanılabildiğini kontrol
+//Latest Packages bölümündeki 5 öğenin dinamik yolla çalıştığının kontrolü
+// (Bu kısımdaki öğeler sürekli
+// kullanıcılar tarafından değiştirildiği için dinamik yolla yapıldı tek test case'ye indirildi)
 public class US_005_TC_01 extends UserTestBaseRapor {
     UserHomepage userHomepage = new UserHomepage();
     @Test
