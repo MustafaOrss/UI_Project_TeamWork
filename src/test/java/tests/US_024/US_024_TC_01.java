@@ -16,6 +16,9 @@ public class US_024_TC_01 extends UserTestBaseRapor {
         //2-Go to https://qa.tripandway.com/traveller/login
         extentTest=extentReports.createTest("Tripandway anasayfa testi","Kullanıcı ana sayfaya ulasabılmelı");
 
+        //login butonuna tıkla
+        userDashboard.cookiesButonu.click();
+        userDashboard.ilkLoginButonu.click();
         //3-Email kısmına ilgili data yazılır
         userDashboard.emailAddressButonu.sendKeys(ConfigReader.getProperty("userEmail"));
         //4-Password kısmına ilgili data yazılır
