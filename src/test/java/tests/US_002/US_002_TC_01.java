@@ -18,10 +18,10 @@ public class US_002_TC_01 extends UserTestBaseRapor {
                 "Kullanici Recent Posts ulasabilmeli");
         userHomepage.cookiesButonu.click();
         // 1- Launch Browser
-        // 2- Go to https://qa.tripandway.com/
+        // 2- Go to https://qa.tripandway.com/.
         extentTest.info("Kullanici " + ConfigReader.getProperty("tripAndWayUrl") + " sayfaya gider");
 
-        // 3- Anasayfaya erisildigi dogrulanmalidir
+        // 3- Anasayfaya erisildigi dogrulanmalidir.
         String actualTitle = Driver.getDriver().getTitle();
         String expectedHomePageTitle = ConfigReader.getProperty("expectedHomePageTitle");
         Assert.assertTrue(actualTitle.contains(expectedHomePageTitle));

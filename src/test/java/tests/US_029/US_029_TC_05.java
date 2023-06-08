@@ -51,39 +51,41 @@ public class US_029_TC_05  extends AdminTestBaseRapor{
 
         Assert.assertTrue(adminDashboard.blogsWebElementi.isDisplayed());
         extentTest.pass("istenen" + adminDashboard.blogsWebElementi + "istenen sayfa girisi basarili test gecti");
-        /*
-        // Categories sayfasinin sag ust kosesinde "+Add New" tiklanir ve dogrulanir
-        adminDashboard.blogsAddNewLinki.click();
+
+        // blogs sayfasinin sag ust kosesinde "+Add New" tiklanir ve dogrulanir
+        adminDashboard.blogsAddNewButonu.click();
         extentTest.info("Add New linkine tiklandi");
         ReusableMethods.wait(2);
 
-        Assert.assertTrue(adminDashboard.categoriesAddCategoryElementi.isDisplayed());
-        extentTest.pass("Add Category elementi dogrulandi");
+        Assert.assertTrue(adminDashboard.blogsAddNewButonu.isDisplayed());
+        extentTest.pass("Add  elementi dogrulandi");
 
-        // Add Category bolumundeki "Category Name", "Category Slug" kutularina bir text yazilir
-        adminDashboard.categoriesAddCategoryCategoryName.sendKeys(ConfigReader.getProperty("categoryName"));
-        extentTest.info("Add Category'de Category Name yazildi");
-        adminDashboard.categoriesAddCategoryCategorySlug.sendKeys(ConfigReader.getProperty("categorySlug"));
-        extentTest.info("Add Category'de Category Slug yazildi");
-
-        // SEO Information bolumundeki "Title", "Meta Description" kutularina bir text yazilir
-        adminDashboard.categoriesSEOInformationTitle.sendKeys(ConfigReader.getProperty("categoryTitle"));
-        extentTest.info("Add Category'de Title yazildi");
-        adminDashboard.categoriesSEOMetaDescription.sendKeys(ConfigReader.getProperty("categoryMetaDescription"));
-
-        // Submit butonuna tiklanir
-        adminDashboard.categoriesSubmitButonu.click();
+        // Add Blog bolumundeki "blog Title", "Blog Content ", "Blog Short Content", "Blog Photo" kutularina bir text yazilir
+        adminDashboard.addBlogTitleText.sendKeys(ConfigReader.getProperty("addBlogTitleText"));
+        extentTest.info("Add Blog Title yazildi");
+        ReusableMethods.wait(2);
+        adminDashboard.addBlogContentText.sendKeys(ConfigReader.getProperty("addBlogContentText"));
+        extentTest.info("Text yazildi");
+        ReusableMethods.wait(2);
+        adminDashboard.addBlogShortContentText.sendKeys(ConfigReader.getProperty("addBlogShortContentText"));
+        extentTest.info("Text yazildi");
+        ReusableMethods.wait(2);
+        adminDashboard.addBlogDosyaSecimi.sendKeys(ConfigReader.getProperty("addBlogDosyaSecimi"));
+        extentTest.info("foto yüklendi");
         ReusableMethods.wait(5);
-        extentTest.info("Categories Submit Butonu tiklandi");
-
+        // Submit butonuna tiklanir
+        adminDashboard.AddBlogSubmitButonu.click();
+        ReusableMethods.wait(5);
+        extentTest.info(" Blog Submit Butonu tiklandi");
+/*
         // Eklendigi dogrulanir
-        String actualCategoriesYukleme = JSUtilities.getTextWithJS(Driver.getDriver(), adminDashboard.categoriesDogrulama);
-        String expectedCategoriesYukleme = "\n" +
-                "        toastr.success('Category is added successfully!');\n" +
+        String actualBlogYukleme = JSUtilities.getTextWithJS(Driver.getDriver(), adminDashboard.accessSuccessfullyAlert);
+        String expectedBlogYukleme = " " +
+                "        toastr.success('Category is added successfully!'); " +
                 "    ";
-        Assert.assertEquals(expectedCategoriesYukleme, actualCategoriesYukleme);
-        extentTest.pass("Categories yukleme dogrulandi");
-
+        Assert.assertEquals(expectedBlogYukleme, actualBlogYukleme);
+        extentTest.pass("Blog yukleme dogrulandi");
+/*
         // Duzenlebilir oldugu dogrulanir
         WebElement table = Driver.getDriver().findElement(By.tagName("table"));
         List<WebElement> rows = table.findElements(By.tagName("tr"));

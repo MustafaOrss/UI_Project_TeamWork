@@ -30,7 +30,6 @@ public class UserHomepage {
     @FindBy(id = "email")
     public WebElement facebookEmailButonu;
 
-
     // Footer >> Twitter Linki
     @FindBy(xpath = "//div[@class='col-md-3 col-sm-6 wow fadeInRight']//li[2]//a[1]")
     public WebElement twitterLinki;
@@ -115,13 +114,148 @@ public class UserHomepage {
     @FindBy(xpath = "//*[text()='Registration']")
     public  WebElement registrationButonu;
 
+   // Home >> Destinations
+    @FindBy(xpath = "(//*[text()='Destinations'])[2]")
+    public WebElement destinationsElementi;
+
+    // Home >> Destinations >> Bangkok, Thailand
+    @FindBy (xpath = "//*[text()='Bangkok, Thailand']")
+    public WebElement bangkokThailandElementi;
+
+    // Home>> Destinations >> Bangkok, Thaliand >> Bangkok, Thailand Home
+    @FindBy (xpath = "//*[h1='Bangkok, Thailand']")
+    public WebElement bangkokThailandHomeElementi;
+
+    // Home>> Destinations >> Greenville,South Carolina
+    @FindBy (xpath = "//*[text()='Greenville, South Carolina']")
+    public WebElement greenVilleElementi;
+
+    // Home >> Destinations >> Greenville, South Carolina Home
+    @FindBy (xpath = "//*[h2='Greenville Tours & Vacations']")
+    public WebElement greenVilleHomeElementi;
+
+    // Home >> Destinations >> Buenos Aires, Argentina
+    @FindBy (xpath = "//*[text()='Buenos Aires, Argentina']")
+    public WebElement buenosAiresElementi;
+
+    // Home >> Destinations >> Buenos Aires, Argentina Home
+    @FindBy (xpath = "//*[h2='Buenos Aires Tours & Vacations']")
+    public WebElement buenosAiresHomeElementi;
+
+    // Home >> Destinations >> Marrakesh,Morocco
+    @FindBy (xpath = "//*[text()='Marrakesh, Morocco']")
+    public WebElement marrakeshElementi;
+
+    // Home >> Destinations >> Marrakesh, Morocco Home
+    @FindBy (xpath = "//*[h2='Marrakesh Tours & Vacations']")
+    public WebElement marrakeshHomeElementi;
+
+    // Home >> Destinations >> Salina Island, Italy
+    @FindBy (xpath = "//*[text()='Salina Island, Italy']")
+    public WebElement salinaIslandElementi;
+
+    // Home >> Destinations >> Salina Island, Italy Home
+    @FindBy (xpath = "//*[h2='Salina Island Tours & Vacations']")
+    public WebElement salinaIslandHomeElementi;
+
+    // Home >> Destinations >> Istanbul ,Turkey
+    @FindBy (xpath = "//*[text()='Istanbul, Turkey']")
+    public WebElement ıstanbulElementi;
+
+    // Home >> Destinations >> Istanbul, Turkey Home
+    @FindBy (xpath = "//*[h2='Istanbul, Turkey'][1]")
+    public WebElement ıstanbulHomeElementi;
+
+    // Home >> Destinations >> California , USA
+    @FindBy (xpath = "//*[text()='California, USA']")
+    public WebElement californiaElementi;
+
+    // Home >> Destinations >> California ,USA Home
+    @FindBy (xpath = "(//div[@class='row'])[3]")
+    public WebElement californiaHomeElementi;
+
+    // Home >> Packages
+    @FindBy (xpath = "(//*[text()='Packages'])[2]")
+    public WebElement packagesElementi;
+
+    // Home >> Packages >> 3 days in Buenos Aires
+    @FindBy(xpath = "(//div[@class='photo-title'])[1]")
+    public WebElement ucDaysBuenosElementi;
+
+    // Home >> Packages >> 3 days in Buenos Aires >> 3 days in Buenos Aires Home
+    @FindBy(xpath = "//*[h4='Tour Dates']")
+    public WebElement ucDaysBuenosHomeElementi;
+
+    // Home >> Packages >> 10 days in Buenos Aires
+    @FindBy (xpath = "(//div[@class='photo-title'])[2]")
+    public WebElement onDaysBuenosElementi;
+
+    // Home >> Packages >> 10 days in Buenos Aires >> 10 days in Buenos Aires Home
+    @FindBy (xpath = "//h4[text()='Tour Dates']")
+    public WebElement onDaysBuenosHomeElementi;
+
+    // Home >> Packages >> 7 days in Istanbul
+    @FindBy (xpath = "(//div[@class='photo-title'])[3]")
+    public WebElement yediDaysIstanbulElementi;
+
+    // Home >> Packages >> 7 days in Istanbul >> 7 days in Istabul Home
+    @FindBy (xpath = "//h4[text()='Tour Dates']")
+    public WebElement yediDaysIstanbulHomeElementi;
+
+    // Home >> Packages >>  3 days in Bangkok
+    @FindBy (xpath = "(//div[@class='photo-title'])[4]")
+    public WebElement ucDaysBangkokElementi;
+
+    // Home >> Packages >> 3 days in Bangkok >> 3 days in Bangkok Home
+    @FindBy (xpath = "//h4[text()='Tour Dates']")
+    public WebElement ucDaysBangkokHomeElementi;
+
+    // Home >> Packages >> 7 day in Salina Island
+    @FindBy (xpath = "(//div[@class='photo-title'])[5]")
+    public WebElement yediDaySalinaElementi;
+
+    // Home >> Packages>> 7 day in Salina Island >> 7 day in Salina Island Home
+    @FindBy (xpath = "//h4[text()='Tour Dates']")
+    public WebElement yediDaysSalinaHomeElementi;
+
+
+    // Home >> Packages >> 5 day California
+    @FindBy (xpath = "(//div[@class='photo-title'])[6]")
+    public WebElement besDayCaliforniaElementi;
+
+    // Home >> Packages >> 5 day California >> 5 day California Home
+    @FindBy (xpath = "//h4[text()='Tour Dates']")
+    public WebElement besDayCaliforniaHomeElementi;
+
+    // Home >> About Us
+    @FindBy (xpath = "(//*[text()='About Us'])[2]")
+    public WebElement aboutUsElementi;
+
+    //Home >> About Us >> About Us Home
+    @FindBy (xpath = "//div[@class='about-text mt_30']")
+    public WebElement aboutUsHomeElementi;
+
+    // Home >> FAQ
+    @FindBy (xpath = "(//*[text()='FAQ'])[2]")
+    public WebElement faqElementi;
+
+    // Home >> FAQ >> FAQ Home
+    @FindBy (xpath = "(//*[@type='button'])[2]")
+    public WebElement faqHomeElementi;
+
+    // Home >> Contact
+    @FindBy (xpath = "(//*[text()='Contact'])[2]")
+    public WebElement contactElementi;
+
+    // Home >> Contact >> Contact Home
+    @FindBy (xpath = "//*[text()='Contact Form']")
+    public WebElement contactHomeElementi;
 
     //body >>Forget Password
     @FindBy(xpath = "//*[@class='forget-password-link']")
     public WebElement forgetPasswordButonu;
 
     //body>> Forget Password >>RESET PASSWORD
-
     @FindBy(xpath = "//input[@class='form-control']")
     public WebElement emailAdressReset;
 
@@ -140,16 +274,13 @@ public class UserHomepage {
     @FindBy(xpath ="(//div[@class='ser-text'])[3] ")
     public WebElement Culture_tour;
 
-
     //Bussiness Tour butonu
     @FindBy(xpath ="(//div[@class='ser-text'])[4] ")
     public WebElement Bussiness_Tour;
 
-
     //Health Tour butonu
     @FindBy(xpath ="(//*[text()='Contact'])[5] ")
     public WebElement Health_Tour;
-
 
     //Religious Tour butonu
     @FindBy(xpath ="(//*[text()='Contact'])[6] ")
