@@ -200,67 +200,91 @@ public class AdminDashboard {
     @FindBy(xpath = "(//*[text()='Packages'])[1]")
     public WebElement packagesButtonu;
 
+    // Packages >> +AddNew
     @FindBy(xpath = "//*[@class='btn btn-primary btn-sm']")
     public WebElement packagesAddNewButonu;
 
+    // Packages >> +AddNew >> Add Packages Text
     @FindBy(xpath = "//*[@class='m-0 mt-2 font-weight-bold text-primary']")
     public WebElement addPackagesText;
+
+    // Packages >> +AddNew >> Package Name
     @FindBy(xpath = "//input[@name='p_name']")
     public WebElement packageName;
 
+    // Packages >> +AddNew >> Package Slug
     @FindBy(xpath = "//input[@name='p_slug']")
     public WebElement packageSlug;
+
+    // Packages >> +AddNew >> Package Photo
     @FindBy(xpath = "//input[@name='p_photo']")
     public WebElement packagePhoto;
 
+    // Packages >> +AddNew >> Package Description
     @FindBy(xpath = "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[4]/div[1]/div[3]/div[2]")
     public WebElement packageDescription;
 
+    // Packages >> +AddNew >> Package Short Description
     @FindBy(xpath = "//textarea[@name='p_description_short']")
     public WebElement packageShortDescription;
 
+    // Packages >> +AddNew >> Package Location
     @FindBy(xpath = "//textarea[@name='p_location']")
     public WebElement packageLocation;
 
+    // Packages >> +AddNew >> Package Start Date
     @FindBy(xpath = "//input[@id='datepicker']")
     public WebElement packageStartDate;
 
+    // Packages >> +AddNew >> Package End Date
     @FindBy(xpath = "//input[@id='datepicker1']")
     public WebElement packageEndDate;
 
+    // Packages >> +AddNew >> Package Last Booking Date
     @FindBy(xpath = "//input[@id='datepicker2']")
     public WebElement packageLastBookingDate;
 
+    // Packages >> +AddNew >> Map
     @FindBy(xpath = "//textarea[@name='p_map']")
     public WebElement packageMap;
 
+    // Packages >> +AddNew >> Itinerary
     @FindBy(xpath = "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[11]/div[1]/div[3]/div[2]")
     public WebElement packageItinerary;
 
+    // Packages >> +AddNew >> Price
     @FindBy(xpath = "//input[@name='p_price']")
     public WebElement packagePrice;
 
+    // Packages >> +AddNew >> Policy
     @FindBy(xpath = "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[13]/div[1]/div[3]/div[2]")
     public WebElement packagePolicy;
 
+    // Packages >> +AddNew >> Terms
     @FindBy(xpath = "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[14]/div[1]/div[3]/div[2]")
     public WebElement packageTerms;
 
+    // Packages >> +AddNew >> Is Featured?
     @FindBy(xpath = "//select[@name='p_is_featured']")
     public WebElement packageIsFeatured;
 
+    // Packages >> +AddNew >> Destination
     @FindBy(xpath = "//select[@name='destination_id']")
     public WebElement packageDestination;
 
+    // Packages >> +AddNew >> Title
     @FindBy(xpath = "//input[@name='seo_title']")
     public WebElement packageTitle;
 
+    // Packages >> +AddNew >> Meta Description
     @FindBy(xpath = "//textarea[@name='seo_meta_description']")
     public WebElement packageMetaDescription;
 
+    // Packages >> +AddNew >> Submit
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement packageSubmit;
 
+    // Packages >> +AddNew >> Dogrulama Yazisi
     @FindBy(xpath = "//div[@class='toast-message']")
     public WebElement packageDogrulama;
 
@@ -277,22 +301,22 @@ public class AdminDashboard {
     public WebElement addBlogTitleText;
 
     // 2905_Blog elementi addBlogContent text yazimi
-    @FindBy (xpath = "//*[@role='textbox']")
+    @FindBy(xpath = "//*[@role='textbox']")
     public WebElement addBlogContentText;
 
     // 2905_Blog elementi addShortContent text yazimi
-    @FindBy (xpath = "//textarea[@name='blog_content_short']")
+    @FindBy(xpath = "//textarea[@name='blog_content_short']")
     public WebElement addBlogShortContentText;
     // 2905_addBlogDosya foto seçimi
-    @FindBy (xpath = "//input[@name='blog_photo']")
+    @FindBy(xpath = "//input[@name='blog_photo']")
     public WebElement addBlogDosyaSecimi;
 
     // 2905_addblog submit butonu
-    @FindBy (xpath = "//button[@class='btn btn-success']")
+    @FindBy(xpath = "//button[@class='btn btn-success']")
     public WebElement AddBlogSubmitButonu;
 
     // 2905_addBlog yükleme başarılı
-    @FindBy (xpath = "//*[@id='page-top']/script[4]")
+    @FindBy(xpath = "//*[@id='page-top']/script[4]")
     public WebElement accessSuccessfullyAlert;
 
 }
