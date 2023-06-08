@@ -1,7 +1,6 @@
 package tests.US_024;
 
 import org.testng.annotations.Test;
-import pages.UserDashboard;
 import utilities.ConfigReader;
 import utilities.UserTestBaseRapor;
 

@@ -9,7 +9,7 @@ import utilities.ReusableMethods;
 import utilities.UserTestBaseRapor;
 
 public class US_023_TC_02 extends UserTestBaseRapor {
-        UserDashboard userDashboard =new UserDashboard();
+UserDashboard userDashboard=new UserDashboard();
         UserHomepage userHomepage=new UserHomepage();
     @Test
     public void TC_02(){

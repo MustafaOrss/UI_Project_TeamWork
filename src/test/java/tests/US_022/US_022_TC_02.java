@@ -4,6 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
 import pages.UserDashboard;
 import utilities.ConfigReader;
 import utilities.Driver;
@@ -14,7 +15,7 @@ import java.time.Duration;
 public class US_022_TC_02 extends UserTestBaseRapor {
     @Test
     public void TC_02() throws InterruptedException {
-        UserDashboard userDashboard=new UserDashboard();
+       UserDashboard userDashboard =new UserDashboard();
      extentTest=extentReports.createTest("Uptade Password testi","Kullanıcı login iken şife degiştirebilmeli");
         //1-launch browser
         //2-Go to https://qa.tripandway.com/traveller/login

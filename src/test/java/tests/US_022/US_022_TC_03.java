@@ -2,11 +2,10 @@ package tests.US_022;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
 import pages.UserDashboard;
 import pages.UserHomepage;
-import utilities.ConfigReader;
-import utilities.ReusableMethods;
-import utilities.UserTestBaseRapor;
+import utilities.*;
 
 public class US_022_TC_03 extends UserTestBaseRapor {
     UserDashboard userDashboard=new UserDashboard();
@@ -49,7 +48,14 @@ public class US_022_TC_03 extends UserTestBaseRapor {
         //10-"Please check your email to get password reset
         //information" yazısının gorunurlugu test edılmelı//
 
+        //10-"Please check your email to get password reset
+        //information" yazısının gorunurlugu test edılmelı//
+        String expectedforgtto="Please check your email to get password reset information";
+        String actualforgetto= JSUtilities.getTextWithJS(Driver.getDriver(),userHomepage.maileYeniSıfreGondermeTexti);
+        Assert.assertEquals(expectedforgtto,actualforgetto);
 
+        extentTest.pass("Please check your email to get password reset information yazısı goruldu,sıfrenız yenılendı");
+    }
 
 
 
@@ -68,4 +74,4 @@ public class US_022_TC_03 extends UserTestBaseRapor {
 
 
     }
-}
+
