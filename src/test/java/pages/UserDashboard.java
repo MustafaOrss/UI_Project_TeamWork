@@ -123,4 +123,68 @@ public class UserDashboard {
     @FindBy(xpath = "//body[@style='overflow-x: hidden;']/script[5]")
     public WebElement odemeTamamlandıTexti;
 
+    //User Anasayfa ilk Registration butonu (Login yanındaki)
+    @FindBy(xpath = ("//*[text()='Registration']"))
+    public WebElement registrationButonu;
+
+
+    //User Anasayfa >> Register Name
+    @FindBy(xpath = "//input[@class='form-control'][1]")
+    public WebElement nameButonu;
+
+    //User Anasayfa >> Register E-mail Adress
+    @FindBy(xpath = "//input[@name='traveller_email']")
+    public WebElement registerEmailButonu;
+
+    //User Anasayfa >> Register Password
+    @FindBy(xpath = "//input[@name='traveller_password']")
+    public WebElement registerPasswordButonu;
+
+
+    //User Anasayfa >> Make Registration
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement MakeRegistrationButonu;
+
+    //User Dashboard >>'Update Profile'butonu (kullanıcı login iken profil yenilemek icin)
+    @FindBy(xpath = "//*[text()='Update Profile']")
+    public WebElement updateProfileButonu;
+
+    //User Dashboard >>'Update Profile text'i
+    @FindBy(xpath = "//h1[text()='Update Profile']")
+    public WebElement updateProfileTitle;
+
+
+    //User Dashboard >>'Update Profile Phone
+    @FindBy(xpath = "//input[@name='traveller_phone']")
+    public WebElement updateProfilePhone;
+
+    //User Dashboard >>'Update Profile country
+    @FindBy(xpath = "//input[@name='traveller_country']")
+    public WebElement updateProfileCountry;
+
+    //User Dashboard >>'Update Profile city
+    @FindBy(xpath = "//input[@name='traveller_city']")
+    public WebElement updateProfileCity;
+
+    //User Dashboard >>'Update Profile Zip code
+    @FindBy(xpath = "//input[@name='traveller_zip']")
+    public WebElement updateProfileZipcode;
+
+    //User Dashboard >>'Update Profile Address
+    @FindBy(xpath = "//input[@name='traveller_address']")
+    public WebElement updateProfileAddress;
+
+    //User Dashboard >>'Update Profile State
+    @FindBy(xpath = "//input[@name='traveller_state']")
+    public WebElement updateProfileState;
+
+
+    //User Dashboard >> Profile is update succesfully
+    @FindBy(xpath = "//div[@class='toast toast-success']")
+    public WebElement profuleisupdatesuccesfully;
+
+
+
+
+
     }
