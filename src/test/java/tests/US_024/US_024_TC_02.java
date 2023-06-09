@@ -51,38 +51,37 @@ public class US_024_TC_02 extends UserTestBaseRapor {
       Assert.assertTrue(userDashboard.cardNumberKutusu.isDisplayed());
       extentTest.info("Card number textbox' ı gorundu ");
     //13-Card number textbox ına card numarası gırılır
-        userDashboard.cardNumberKutusu.click();
+        //userDashboard.cardNumberKutusu.click();
         userDashboard.cardNumberKutusu.sendKeys(ConfigReader.getProperty("cardNumber"));
+        ReusableMethods.wait(3);
        extentTest.info("Card number textbox' ına card number girildi ");
     //14-Tarih textbox 'ının gorunurlugu dogrulanır
         Assert.assertTrue(userDashboard.cardMMYYKutusu.isDisplayed());
         extentTest.info("-Tarih textbox 'ı gorundu ");
         //        //15-Tarih textbox'ına tarih girilir
-        userDashboard.cardMMYYKutusu.click();
+       // userDashboard.cardMMYYKutusu.click();
       userDashboard.cardCVCKutusu.sendKeys(ConfigReader.getProperty("cardMMYY"));
+        ReusableMethods.wait(5);
       extentTest.info("-Tarih textbox 'ına tarih girildi ");
     //16-CVC textbox 'ının gorunurlugu dogrulanır
       Assert.assertTrue(userDashboard.cardCVCKutusu.isDisplayed());
+        ReusableMethods.wait(5);
     //17-CvC textbox ına  guvenlık kodu gırılır
         userDashboard.cardCVCKutusu.click();
+        ReusableMethods.wait(5);
      userDashboard.cardCVCKutusu.sendKeys(ConfigReader.getProperty("cardCVC"));
      extentTest.info("CvC textbox ına  guvenlık kodu gırıldi");
     //18-"Pay" butonu gorunurlugu dogrulanır
    Assert.assertTrue(userDashboard.payButonu.isDisplayed());
    extentTest.info("'Pay' butonu gorundu");
+      userDashboard.payButonu.click();
+      ReusableMethods.wait(3);
 
 
-        //        //19-"Payment is successfull!" yazısının gorunurlugu test edılır
-
-        String expectedsıfre="\n" +
-                "        toastr.success('Password is updated successfully');\n" +
-                "    ";
-        String actualsıfre=JSUtilities.getTextWithJS(Driver.getDriver(),userDashboard.odemeTamamlandıTexti);
-        Assert.assertEquals(expectedsıfre,actualsıfre);
-        extentTest.pass("Payment is successfull! yazısı goruldu,odeme basarıyla tamamlandı");
-
-
-
+     String expectedtext="Payment is successful!";
+     String actualtext=JSUtilities.getTextWithJS(Driver.getDriver(),userDashboard.paymentSuccessfullTexti);
+     Assert.assertEquals(expectedtext,actualtext);
+     extentTest.pass("Payment is succcesfull");
 
 
 
