@@ -11,7 +11,7 @@ public class UserHomepage {
     }
 
     // Cookies butonu
-    @FindBy(className = "wpcc-btn")
+    @FindBy(xpath = "//button[@type='button']")
     public WebElement cookiesButonu;
 
     // Footer >> Recent Posts Elementi
@@ -19,7 +19,7 @@ public class UserHomepage {
     public WebElement recentPostsElementi;
 
     // Footer >> Recent Posts >> ogeLink >> Search Here
-    @FindBy(name = "search_string")
+    @FindBy(xpath = "//input[@placeholder='Search Here']")
     public WebElement searchKutusu;
 
     // Footer >> Facebok Linki
@@ -27,7 +27,7 @@ public class UserHomepage {
     public WebElement facebookLinki;
 
     // Footer >> Facebook Linki >> Email
-    @FindBy(id = "email")
+    @FindBy(xpath = "//input[@id='email']")
     public WebElement facebookEmailButonu;
 
     // Footer >> Twitter Linki
@@ -73,9 +73,6 @@ public class UserHomepage {
     // Footer >> Email
     @FindBy(xpath = "//div[@class='text']//p[text()='info@tripandway.com']")
     public WebElement footerEmailElementi;
-
-
-
   
     // footer>> şartlar ve koşullar
     @FindBy(xpath =" //h1[text()='Terms and Conditions']")
@@ -418,7 +415,48 @@ public class UserHomepage {
     @FindBy (xpath = "(//*[text()='About Us'])[2]")
     public WebElement About_us;
 
+    // Header >> EXPLORE THE WORLD
+    @FindBy (xpath = "/html/body/div[6]/div/div[1]/div/div[3]/div/div[2]/div/div")
+    public WebElement EXPLORE_THE_WORD;
 
+    // Header >> THE WORD IS SO BEAUTIFUL
+    @FindBy (xpath = "/html/body/div[6]/div/div[1]/div/div[4]/div/div[2]/div/div/div/div/div[1]/h1")
+    public WebElement WORD_IS_BEAUTIFUL;
 
+    // Header >> SALINA ISLAND
+    @FindBy (xpath = "/html/body/div[6]/div/div[1]/div/div[4]/div/div[2]/div/div/div/div/div[1]/h1")
+    public WebElement SALINA_ISLAND;
+
+    // Header >> READ_MORE_EXPLORE
+    @FindBy (xpath = "/html/body/div[6]/div/div[1]/div/div[3]/div/div[2]/div/div/div/div/div[3]/ul/li/a")
+    public WebElement READ_MORE_EXPLORE;
+
+    // Header >> READ_MORE_WORD
+    @FindBy (xpath = "/html/body/div[6]/div/div[1]/div/div[4]/div/div[2]/div/div/div/div/div[3]/ul/li/a")
+    public WebElement READ_MORE_WORD;
+
+    // Header >> READ MORE SALİNA ISLAND
+    @FindBy (xpath = "/html/body/div[6]/div/div[1]/div/div[5]/div/div[2]/div/div/div/div/div[3]/ul/li/a")
+    public WebElement READ_MORE_SALINA;
+
+    // Header >> SAĞA GİTME BUTONU
+    @FindBy (xpath = "/html/body/div[6]/div/div[2]/div[2]")
+    public WebElement SAG_TIK;
+
+    // Sağ ustte cikan "To activate your subscription please check your email and follow instruction there." yazisinin locate'i
+    @FindBy(id = "toast-container")
+    public WebElement toActivatePencereElementi;
+  
+    // Newsletter Email kutusunun locate'i
+    @FindBy(name = "subs_email")
+    public WebElement newsletterEmailKutusu;
+  
+    // Terms and Conditions element locate'i
+    @FindBy(xpath = "//*[text()='Terms and Conditions']")
+    public WebElement termsAndConditionElementi;
+  
+    // Privacy Policy element locate'i
+    @FindBy(xpath = "//*[text()='Privacy Policy']")
+    public WebElement privacyPolicyElementi;
 
 }

@@ -12,11 +12,11 @@ public class AdminDashboard {
     }
 
     // Admin Anasayfa >> Email Address
-    @FindBy(id = "email")
+    @FindBy(xpath = "//input[@id='email']")
     public WebElement adminEmailKutusu;
 
     // Admin Anasayfa >> Password
-    @FindBy(id = "password")
+    @FindBy(xpath = "//input[@id='password']")
     public WebElement adminPasswordKutusu;
 
     // Admin Anasayfa >> Login
@@ -322,6 +322,18 @@ public class AdminDashboard {
     // 2905_addBlog yükleme başarılı
     @FindBy(xpath = "//*[@id='page-top']/script[4]")
     public WebElement accessSuccessfullyAlert;
+
+    // 2906_addBlogEdit olabilirligini test etme
+    @FindBy (xpath = "(//i[@class='fas fa-edit'])[9]")
+    public WebElement addBlogEdit;
+
+    // 2906_addBlogUpdateButonu
+    @FindBy (xpath = "//button[@class='btn btn-success']")
+    public WebElement addBlogUpdateButonu;
+
+    //2907_blogDeleteButonu
+    @FindBy (xpath = "(//i[@class='fas fa-trash-alt'])[7]")
+    public WebElement blogDeleteButonu;
 
 }
 
