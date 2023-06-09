@@ -18,7 +18,7 @@ public class US_002_TC_09 extends UserTestBaseRapor {
         extentTest = extentReports.createTest("Header elements testi",
                 "Kullanici HOME, SERVICES, DESTINATIONS, PACKAGES, ABOUT US, FAQ, BLOG, CONTACT" +
                         " butonlarının varlığını ve aktifliğini kontrol etmeli");
-        userHomepage.cookiesButonu.click();
+        //userHomepage.cookiesButonu.click();
         // 1- Launch Browser
         // 2- Go to https://qa.tripandway.com/
         extentTest.info("Kullanici " + ConfigReader.getProperty("tripAndWayUrl") + " sayfaya gider");
