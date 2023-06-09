@@ -12,11 +12,11 @@ public class AdminDashboard {
     }
 
     // Admin Anasayfa >> Email Address
-    @FindBy(id = "email")
+    @FindBy(xpath = "//input[@id='email']")
     public WebElement adminEmailKutusu;
 
     // Admin Anasayfa >> Password
-    @FindBy(id = "password")
+    @FindBy(xpath = "//input[@id='password']")
     public WebElement adminPasswordKutusu;
 
     // Admin Anasayfa >> Login
