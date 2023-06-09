@@ -96,7 +96,7 @@ public class UserDashboard {
     public WebElement payWithCardButonu;
 
     //User Dashboard  >>Packages >> Payment >> Pay with Card  >> 'Card number' textbox kutusu
-    @FindBy(xpath = "//input[@id='card_number']")
+    @FindBy(xpath = "//*[@id='card_number']")
     public WebElement cardNumberKutusu;
 
     //User Dashboard  >>Packages >>Payment>>Pay with Card' >>Tarih(MM/YY) textbox kutusu
