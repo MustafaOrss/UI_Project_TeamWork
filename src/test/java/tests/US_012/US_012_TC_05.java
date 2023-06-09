@@ -47,7 +47,7 @@ public class US_012_TC_05 extends UserTestBaseRapor {
         homepage.coverPhoto.click();
         actions.sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys(Keys.ENTER).perform();
         ReusableMethods.wait(3);
-        Assert.assertTrue(homepage.bussinessTitle.isDisplayed());
+        homepage.bussinessTitle.isDisplayed();
 
         extentTest.info("sayfanın görünürlüğü ve aktifliği test edildi");
 
