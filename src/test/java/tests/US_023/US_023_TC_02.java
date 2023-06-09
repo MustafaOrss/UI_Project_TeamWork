@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import pages.UserDashboard;
 import pages.UserHomepage;
 import utilities.ConfigReader;
+import utilities.Driver;
 import utilities.ReusableMethods;
 import utilities.UserTestBaseRapor;
 
@@ -28,12 +29,12 @@ UserDashboard userDashboard=new UserDashboard();
         extentTest.info("anasayfaya gırıs yapıldı");
         ReusableMethods.wait(2);
         //6-"logout" butonunun gorunurlugu dogrulanmalıdır
-        Assert.assertTrue(userDashboard.logoutButonu.isDisplayed());
-         userDashboard.logoutButonu.click();
-        extentTest.info("anasayfadan  cıkıs yapıldı ");
+           Assert.assertTrue(userDashboard.logoutButonu.isDisplayed());
+        ReusableMethods.wait(3);
+        userDashboard.logoutButonu.click();
         //7-"Registration"butonunun  gorunurlugunu
         // test edılmelı//
-        ReusableMethods.wait(2);
+        ReusableMethods.wait(3);
         Assert.assertTrue(userHomepage.registrationButonu.isDisplayed());
         extentTest.pass("Registration butonu goruldu basarı ıle çıkıs yapılmıstır");
 

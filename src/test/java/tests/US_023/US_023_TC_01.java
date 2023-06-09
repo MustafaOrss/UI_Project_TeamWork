@@ -1,8 +1,10 @@
 package tests.US_023;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.UserDashboard;
 import utilities.ConfigReader;
+import utilities.Driver;
 import utilities.UserTestBaseRapor;
 public class US_023_TC_01 extends UserTestBaseRapor {
 
@@ -11,20 +13,19 @@ public class US_023_TC_01 extends UserTestBaseRapor {
 
     @Test
     public void TC_01(){
+        extentTest = extentReports.createTest("Tripandway anasayfa testi",
+                "Kullanici sayfaya ulasabilmeli");
 
-       //1-launch browser
-        //2-Go to https://qa.tripandway.com/traveller/login
-        extentTest=extentReports.createTest("Tripandway anasayfa testi","Kullanici sayfaya ulasabilmeli");
-        userDashboard.cookiesButonu.click();
-        userDashboard.loginButonu.click();
-        //3-Email kısmına ilgili data yazılır
-         userDashboard.emailAddressButonu.sendKeys(ConfigReader.getProperty("userEmail"));
-        //4-Password kısmına ilgili data yazılır
-        userDashboard.passwordButonu.sendKeys(ConfigReader.getProperty("userPassword"));
-        //5-Login butonuna tıklanır//
-        userDashboard.loginButonu.click();
-        extentTest.info("kullanıcı login olup anasayfaya ulastı");
+        // 1- Launch Browser
+        // 2- Go to https://qa.tripandway.com/
+        // TestBaseRapor'dan URL giris yapildi
+        extentTest.info("Kullanıcı"+ ConfigReader.getProperty("tripAndWayUrl")+"anasayfaya gıder");
 
+        // 3- Anasayfaya erisildigi dogrulanmalidir
+        String actualTitle= Driver.getDriver().getTitle();
+        String expectedHomePageTitle = ConfigReader.getProperty("expectedHomePageTitle");
+        Assert.assertTrue(actualTitle.contains(expectedHomePageTitle));
+        extentTest.pass("Belirlenen " + expectedHomePageTitle + " aranacak title arama sonucunda expected icerik oldugu test edildi");
 
 
 

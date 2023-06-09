@@ -24,32 +24,36 @@ public class US_022_TC_03 extends UserTestBaseRapor {
         //5-Login butonuna tıklanır
         userDashboard.loginButonu.click();
         extentTest.info("kullanıcı anasayfaya giriş sagladı");
-        ReusableMethods.wait(2);
+        ReusableMethods.wait(3);
 
         //6-logout sayfadan çıkış yapılır
         userDashboard.logoutButonu.click();
         extentTest.info("kullanıcı anasayfadan cıktı");
+        ReusableMethods.wait(3);
         //-"Forget Password" butonun gorunurlugu dogrulanmalı
         Assert.assertTrue(userHomepage.forgetPasswordButonu.isDisplayed());
-        extentTest.info("'Forget Password'butonu goruldu");
+        extentTest.info("'Forget Password'butonu goruldu")
+        ;  ReusableMethods.wait(3);
         //6-"Forget Password" butonuna tıklanmalı
         userHomepage.forgetPasswordButonu.click();
         extentTest.info("Forget Password butonuna tıklandı");
         //7-Email Address 'ın textbox 'ına mail adresi girilmeli
+        ReusableMethods.wait(3);
         userHomepage.emailAdressReset.sendKeys(ConfigReader.getProperty("userEmail"));
         extentTest.info("Sıfreyi resetlemek ıcın email adresi girildi");
+        ReusableMethods.wait(3);
         //8-"Submit" butonu gorunur oldugu dogrulanmalı
         ReusableMethods.wait(2);
         Assert.assertTrue(userHomepage.submitButonuReset.isDisplayed());
         extentTest.info("Submit butonu görüldü");
+        ReusableMethods.wait(3);
         //9-"Submit" butonuna tıklanmalı
         userHomepage.submitButonuReset.click();
         extentTest.info("Submit butonuna tıklandı");
-        //10-"Please check your email to get password reset
-        //information" yazısının gorunurlugu test edılmelı//
 
         //10-"Please check your email to get password reset
         //information" yazısının gorunurlugu test edılmelı//
+        ReusableMethods.wait(3);
         String expectedforgtto="Please check your email to get password reset information";
         String actualforgetto= JSUtilities.getTextWithJS(Driver.getDriver(),userHomepage.maileYeniSıfreGondermeTexti);
         Assert.assertEquals(expectedforgtto,actualforgetto);

@@ -98,14 +98,16 @@ public class UserDashboard {
     //User Dashboard  >>Packages >> Payment >> Pay with Card  >> 'Card number' textbox kutusu
     @FindBy(xpath = "//input[@id='card_number']")
     public WebElement cardNumberKutusu;
-
+     //input[@id='card_number']
     //User Dashboard  >>Packages >>Payment>>Pay with Card' >>Tarih(MM/YY) textbox kutusu
-    @FindBy(xpath = "//*[@id='cc-exp']")
+    @FindBy(xpath = "(//input[@class='control'])[2]")
     public WebElement cardMMYYKutusu;
+     //*[@id='cc-exp']
 
     //User Dashboard  >>Packages >> Payment>> Pay with Card >>'Güvenlik kodu (CVC)' textbox kutusu
-    @FindBy(xpath = "//*[@id='cc-csc']")
+    @FindBy(xpath = "(//input[@class='control'])[1]")
     public WebElement cardCVCKutusu;
+    //*[@id='cc-csc']
 
     //User Dashboard   >>'Pay 'butonu
     @FindBy(xpath = "//span[@class='iconTick']")
@@ -183,7 +185,8 @@ public class UserDashboard {
     @FindBy(xpath = "//div[@class='toast toast-success']")
     public WebElement profuleisupdatesuccesfully;
 
-
+    @FindBy(xpath = "//div[text()='Payment is successful!']")
+    public WebElement paymentSuccessfullTexti;
 
 
 

@@ -6,9 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import pages.UserDashboard;
-import utilities.ConfigReader;
-import utilities.Driver;
-import utilities.UserTestBaseRapor;
+import utilities.*;
 
 import java.time.Duration;
 
@@ -35,6 +33,7 @@ public class US_022_TC_02 extends UserTestBaseRapor {
         // dogrulanmalı
         Assert.assertTrue(userDashboard.updatePasswordButonu.isDisplayed());
         extentTest.info("Uptade Password butonu göründü");
+        ReusableMethods.wait(3);
         //7-"Uptade Password " butonuna tıkla
         userDashboard.updatePasswordButonu.click();
         extentTest.info("Uptade Password butonu tıklandı");
@@ -45,19 +44,27 @@ public class US_022_TC_02 extends UserTestBaseRapor {
         //9-new password 'un textbox 'ına yenı sıfre gır
         userDashboard.newPasswordKutusu.sendKeys(ConfigReader.getProperty("newPassword"));
         extentTest.info("new password textbox kutusuna yenı dıfre yazıldı");
+        ReusableMethods.wait(3);
         //10-"Uptade" butonunun gorunurlugunu dogrula
         Assert.assertTrue(userDashboard.updateButonu.isDisplayed());
         extentTest.info("Uptade butonu gorundu");
-
+        ReusableMethods.wait(3);
         //11-"Uptade"butonuna tıkla
         userDashboard.updateButonu.click();
         extentTest.info("Uptade butonu tıklandı");
-
+        ReusableMethods.wait(3);
         //12-Password is updated successfully yazısının
         //gorunurlugu dogrulanmalı//
 
 
+        String expectedsıfre="\n" +
+                "        toastr.success('Password is updated successfully');\n" +
+                "    ";
+        String actualsıfre= JSUtilities.getTextWithJS(Driver.getDriver(),userDashboard.odemeTamamlandıTexti);
+        Assert.assertEquals(expectedsıfre,actualsıfre);
+        extentTest.pass("Password is updated successfull! yazısı goruldu,sıfre basarıyla resetlendı tamamlandı");
 
+        ReusableMethods.wait(3);
 
 
 
