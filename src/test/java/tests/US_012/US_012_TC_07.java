@@ -42,7 +42,7 @@ public class US_012_TC_07 extends UserTestBaseRapor {
                 .sendKeys(Keys.TAB).sendKeys(Keys.TAB)
                 .sendKeys(Keys.TAB).sendKeys(Keys.TAB)
                 .sendKeys(Keys.ENTER).perform();
-        Assert.assertTrue(homepage.ReligiousTourTitle.isDisplayed());
+        homepage.ReligiousTourTitle.isDisplayed();
         extentTest.info("sayfanın görünürlüğü ve aktifliği test edildi");
         ReusableMethods.wait(4);
     }

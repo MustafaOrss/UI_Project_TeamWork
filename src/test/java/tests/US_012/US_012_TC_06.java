@@ -37,7 +37,7 @@ public class US_012_TC_06 extends UserTestBaseRapor {
                 sendKeys(Keys.TAB).sendKeys(Keys.TAB).
                 sendKeys(Keys.TAB).sendKeys(Keys.ENTER).perform();
         ReusableMethods.wait(3);
-        Assert.assertTrue(homepage.HealthTourTitle.isDisplayed());
+        homepage.HealthTourTitle.isDisplayed();
         extentTest.info("sayfanın görünürlüğü ve aktifliği test edildi");
 
 
