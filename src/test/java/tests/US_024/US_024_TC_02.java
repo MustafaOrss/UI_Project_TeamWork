@@ -63,6 +63,9 @@ public class US_024_TC_02 extends UserTestBaseRapor {
         userDashboard.cardNumberKutusu.sendKeys(ConfigReader.getProperty("cardNumber"));
         userDashboard.cardNumberKutusu.sendKeys(ConfigReader.getProperty("cardNumber"));
 
+        //userDashboard.cardNumberKutusu.click();
+        userDashboard.cardNumberKutusu.sendKeys(ConfigReader.getProperty("cardNumber"));
+        ReusableMethods.wait(3);
        extentTest.info("Card number textbox' ına card number girildi ");
 
     //14-Tarih textbox 'ının gorunurlugu dogrulanır
@@ -74,24 +77,38 @@ public class US_024_TC_02 extends UserTestBaseRapor {
       userDashboard.cardMMYYKutusu.sendKeys(ConfigReader.getProperty("cardMMYY"));
         userDashboard.cardMMYYKutusu.sendKeys(ConfigReader.getProperty("cardMMYY1"));
         ReusableMethods.wait(3);
+       // userDashboard.cardMMYYKutusu.click();
+      userDashboard.cardCVCKutusu.sendKeys(ConfigReader.getProperty("cardMMYY"));
+        ReusableMethods.wait(5);
+
       extentTest.info("-Tarih textbox 'ına tarih girildi ");
 
     //16-CVC textbox 'ının gorunurlugu dogrulanır
       Assert.assertTrue(userDashboard.cardCVCKutusu.isDisplayed());
+        ReusableMethods.wait(5);
     //17-CvC textbox ına  guvenlık kodu gırılır
         userDashboard.cardCVCKutusu.click();
+        ReusableMethods.wait(5);
      userDashboard.cardCVCKutusu.sendKeys(ConfigReader.getProperty("cardCVC"));
      extentTest.info("CvC textbox ına  guvenlık kodu gırıldi");
     //18-"Pay" butonu gorunurlugu dogrulanır
    Assert.assertTrue(userDashboard.payButonu.isDisplayed());
    extentTest.info("'Pay' butonu gorundu");
+
    userDashboard.payButonu.click();
 
         ReusableMethods.wait(3);
         //        //19-"Payment is successfull!" yazısının gorunurlugu test edılır
 
 
+      userDashboard.payButonu.click();
+      ReusableMethods.wait(3);
 
+
+     String expectedtext="Payment is successful!";
+     String actualtext=JSUtilities.getTextWithJS(Driver.getDriver(),userDashboard.paymentSuccessfullTexti);
+     Assert.assertEquals(expectedtext,actualtext);
+     extentTest.pass("Payment is succcesfull");
 
 
 

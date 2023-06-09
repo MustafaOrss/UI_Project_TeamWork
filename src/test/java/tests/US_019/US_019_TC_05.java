@@ -54,8 +54,8 @@ public class US_019_TC_05 extends UserTestBaseRapor {
          UserDashboard.loginButonu.click();
          extentTest.info("Kullanici login butonuna tikladi");
          // Login olduktan sonra Kullanici anaysayfaya yonlendirilmeli
-        ReusableMethods.waitForVisibility(UserHomepage.home,2);
         UserHomepage.home.click();
+        ReusableMethods.wait(3);
         extentTest.info("Kullanici basarili bir sekilde login olduktan sonra anasayfaya yonlendirildi");
 
 

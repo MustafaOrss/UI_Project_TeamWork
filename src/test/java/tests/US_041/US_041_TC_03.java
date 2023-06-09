@@ -51,13 +51,14 @@ public class US_041_TC_03 extends AdminTestBaseRapor {
         extentTest.info("Acilan profil bilgilerini değiştirme ekranında 'Logout' elementi tiklanip " +
                                "Admin Dashboard'dan cikildi");
 
-        //8- Anasayfaya yönlendirecek Home Page butonu aranır, varsa tıklanır.
+        //7- Admin Dashboarddan anasayfaya gidilir
         String actualLoginUrl = Driver.getDriver().getCurrentUrl();
-        String expectedTripAndWayAdminUrl = ConfigReader.getProperty("tripAndWayAdminUrl");
+        String expectedTripAndWayAdminUrl = ConfigReader.getProperty("tripAndWayUrl");
+
+
 
         Assert.assertEquals(expectedTripAndWayAdminUrl, actualLoginUrl);
         extentTest.pass( "Admin Dashboard sayfasi kapatilip \""+ actualLoginUrl + "\" anasayfasinin acildigi dogrulandi.");
-
 
 
 
