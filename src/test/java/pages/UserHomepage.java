@@ -438,4 +438,17 @@ public class UserHomepage {
     // Header >> SAĞA GİTME BUTONU
     @FindBy (xpath = "/html/body/div[6]/div/div[2]/div[2]")
     public WebElement SAG_TIK;
+
+    // Sağ ustte cikan "To activate your subscription please check your email and follow instruction there." yazisinin locate'i
+    @FindBy(id = "toast-container")
+    public WebElement toActivatePencereElementi;
+    // Newsletter Email kutusunun locate'i
+    @FindBy(name = "subs_email")
+    public WebElement newsletterEmailKutusu;
+    // Terms and Conditions element locate'i
+    @FindBy(xpath = "//*[text()='Terms and Conditions']")
+    public WebElement termsAndConditionElementi;
+    // Privacy Policy element locate'i
+    @FindBy(xpath = "//*[text()='Privacy Policy']")
+    public WebElement privacyPolicyElementi;
 }
