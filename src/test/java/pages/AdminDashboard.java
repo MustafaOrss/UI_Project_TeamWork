@@ -331,5 +331,9 @@ public class AdminDashboard {
     @FindBy (xpath = "//button[@class='btn btn-success']")
     public WebElement addBlogUpdateButonu;
 
+    //2907_blogDeleteButonu
+    @FindBy (xpath = "(//i[@class='fas fa-trash-alt'])[7]")
+    public WebElement blogDeleteButonu;
+
 }
 
