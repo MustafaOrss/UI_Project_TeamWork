@@ -108,19 +108,7 @@ public class US_029_TC_05  extends AdminTestBaseRapor{
         Assert.assertEquals(expectedCategorisDuzenleme, actualCategoriesDuzenleme);
         extentTest.pass("Categories duzenleme dogrulandi");
 
-        // Silinebilir oldugu dogrulanir
-        silmeLinki(satir).click();
-        extentTest.info("Silme butonuna tiklandi");
 
-        Driver.getDriver().switchTo().alert().accept();
-        extentTest.info("Alert accept tiklandi");
-
-        String actualCategoriesSilme = JSUtilities.getTextWithJS(Driver.getDriver(), adminDashboard.categoriesDogrulama);
-        String expectedCategoriesSilme = "\n" +
-                "        toastr.success('Category is deleted successfully!');\n" +
-                "    ";
-        Assert.assertEquals(expectedCategoriesSilme, actualCategoriesSilme);
-        extentTest.pass("Categories silme dogrulandi");
 
          */
 
