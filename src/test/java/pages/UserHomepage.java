@@ -409,4 +409,33 @@ public class UserHomepage {
     // Header >> About_us
     @FindBy (xpath = "(//*[text()='About Us'])[2]")
     public WebElement About_us;
+
+    // Header >> EXPLORE THE WORLD
+    @FindBy (xpath = "/html/body/div[6]/div/div[1]/div/div[3]/div/div[2]/div/div")
+    public WebElement EXPLORE_THE_WORD;
+
+    // Header >> THE WORD IS SO BEAUTIFUL
+    @FindBy (xpath = "/html/body/div[6]/div/div[1]/div/div[4]/div/div[2]/div/div/div/div/div[1]/h1")
+    public WebElement WORD_IS_BEAUTIFUL;
+
+    // Header >> SALINA ISLAND
+    @FindBy (xpath = "/html/body/div[6]/div/div[1]/div/div[4]/div/div[2]/div/div/div/div/div[1]/h1")
+    public WebElement SALINA_ISLAND;
+
+    // Header >> READ_MORE_EXPLORE
+    @FindBy (xpath = "/html/body/div[6]/div/div[1]/div/div[3]/div/div[2]/div/div/div/div/div[3]/ul/li/a")
+    public WebElement READ_MORE_EXPLORE;
+
+
+    // Header >> READ_MORE_WORD
+    @FindBy (xpath = "/html/body/div[6]/div/div[1]/div/div[4]/div/div[2]/div/div/div/div/div[3]/ul/li/a")
+    public WebElement READ_MORE_WORD;
+
+    // Header >> READ MORE SALİNA ISLAND
+    @FindBy (xpath = "/html/body/div[6]/div/div[1]/div/div[5]/div/div[2]/div/div/div/div/div[3]/ul/li/a")
+    public WebElement READ_MORE_SALINA;
+
+    // Header >> SAĞA GİTME BUTONU
+    @FindBy (xpath = "/html/body/div[6]/div/div[2]/div[2]")
+    public WebElement SAG_TIK;
 }

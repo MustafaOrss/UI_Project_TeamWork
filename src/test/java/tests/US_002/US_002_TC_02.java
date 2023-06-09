@@ -42,8 +42,8 @@ public class US_002_TC_02 extends UserTestBaseRapor {
         Driver.getDriver().navigate().back();
 
 
-//services
-         ReusableMethods.waitForVisibility(userHomepage.services,2);
+//services2
+        ReusableMethods.waitForVisibility(userHomepage.services,2);
         userHomepage.services.click();
         ReusableMethods.wait(2);
         String serviceseurl = "https://qa.tripandway.com/services";
@@ -73,7 +73,7 @@ public class US_002_TC_02 extends UserTestBaseRapor {
         Driver.getDriver().navigate().back();
 
 
-//About_us
+//About_us5
        ReusableMethods.waitForVisibility(userHomepage.About_us,2);
         userHomepage.About_us.click();
         String About_useurl = "https://qa.tripandway.com/about";
@@ -83,7 +83,7 @@ public class US_002_TC_02 extends UserTestBaseRapor {
         Driver.getDriver().navigate().back();
 
 
-//Faq
+//Faq6
       ReusableMethods.waitForVisibility(userHomepage.FAQ,2);
         userHomepage.FAQ.click();
         String FAQeurl = "https://qa.tripandway.com/faq";
@@ -93,7 +93,7 @@ public class US_002_TC_02 extends UserTestBaseRapor {
         Driver.getDriver().navigate().back();
 
 
- //BLOG
+ //BLOG7
        ReusableMethods.waitForVisibility(userHomepage.BLOG,2);
         userHomepage.BLOG.click();
         String BLOGeurl = "https://qa.tripandway.com/blog";
@@ -103,7 +103,7 @@ public class US_002_TC_02 extends UserTestBaseRapor {
         Driver.getDriver().navigate().back();
         ReusableMethods.wait(2);
 
-//CONTACT
+//CONTACT8
      ReusableMethods.waitForVisibility(userHomepage.CONTACT,2);
         userHomepage.CONTACT.click();
         String CONTACTeurl = "https://qa.tripandway.com/contact";
