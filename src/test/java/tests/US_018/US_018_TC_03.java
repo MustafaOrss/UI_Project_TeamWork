@@ -16,6 +16,7 @@ public class US_018_TC_03 extends UserTestBaseRapor {
      Kayit olmak icin Web site anasayfasi'nda bulunan Registration bolumune tiklanir
     */
     UserDashboard UserDashboard = new UserDashboard();
+    UserHomepage UserHomePage = new UserHomepage();
 
     @Test
 
@@ -32,7 +33,7 @@ public class US_018_TC_03 extends UserTestBaseRapor {
         Assert.assertTrue(actualTitle.contains(expectedHomePageTitle));
         extentTest.pass("title basariyla test edildi ");
         // Header kisminda Registration butonuna tiklanilir
-        UserDashboard.registrationButonu.click();
+        UserHomePage.registrationButonu.click();
         extentTest.pass("Ziyaretci kayit yapmak icin Registration Bolumune tikladi");
     }
 }

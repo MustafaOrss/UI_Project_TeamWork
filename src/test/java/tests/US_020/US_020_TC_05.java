@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import pages.UserDashboard;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 import utilities.UserTestBaseRapor;
 
 public class US_020_TC_05 extends UserTestBaseRapor {
@@ -68,7 +69,7 @@ public class US_020_TC_05 extends UserTestBaseRapor {
         // Update Profile text'i dogrulanir
         UserDashboard.updateProfileButonu.isDisplayed();
         extentTest.info("Update Profile title Teset edildi");
-        // Profili guncellemek icin gerekli yerler doldurulur
+        // Profili guncellemek icin gerekli yerler doldurulur0
         UserDashboard.updateProfilePhone.click();
         UserDashboard.updateProfilePhone.sendKeys(ConfigReader.getProperty("UpdateProfilePhone"));
         UserDashboard.updateProfileCountry.click();
@@ -83,9 +84,10 @@ public class US_020_TC_05 extends UserTestBaseRapor {
         UserDashboard.updateProfileZipcode.sendKeys(ConfigReader.getProperty("UpdateProfileZipcode"));
         extentTest.info("Profili guncellemek icin gerekli bilgiler girildi");
         // Profili guncellemek icin Update butonuna tiklanmali
-        UserDashboard.updateButonu.click();
+        UserDashboard.updateprofileButonu.submit();
         // Update is profile succesfully text'i gorunurlugu
         UserDashboard.profuleisupdatesuccesfully.isDisplayed();
+        ReusableMethods.wait(3);
         extentTest.info("Profil basariyla guncellendi");
 
 
