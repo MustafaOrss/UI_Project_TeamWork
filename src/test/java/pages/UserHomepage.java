@@ -11,7 +11,7 @@ public class UserHomepage {
     }
 
     // Cookies butonu
-    @FindBy(className = "wpcc-btn")
+    @FindBy(xpath = "//button[@type='button']")
     public WebElement cookiesButonu;
 
     // Footer >> Recent Posts Elementi
@@ -19,7 +19,7 @@ public class UserHomepage {
     public WebElement recentPostsElementi;
 
     // Footer >> Recent Posts >> ogeLink >> Search Here
-    @FindBy(name = "search_string")
+    @FindBy(xpath = "//input[@placeholder='Search Here']")
     public WebElement searchKutusu;
 
     // Footer >> Facebok Linki
@@ -27,7 +27,7 @@ public class UserHomepage {
     public WebElement facebookLinki;
 
     // Footer >> Facebook Linki >> Email
-    @FindBy(id = "email")
+    @FindBy(xpath = "//input[@id='email']")
     public WebElement facebookEmailButonu;
 
     // Footer >> Twitter Linki
