@@ -323,5 +323,17 @@ public class AdminDashboard {
     @FindBy(xpath = "//*[@id='page-top']/script[4]")
     public WebElement accessSuccessfullyAlert;
 
+    // 2906_addBlogEdit olabilirligini test etme
+    @FindBy (xpath = "(//i[@class='fas fa-edit'])[9]")
+    public WebElement addBlogEdit;
+
+    // 2906_addBlogUpdateButonu
+    @FindBy (xpath = "//button[@class='btn btn-success']")
+    public WebElement addBlogUpdateButonu;
+
+    //2907_blogDeleteButonu
+    @FindBy (xpath = "(//i[@class='fas fa-trash-alt'])[7]")
+    public WebElement blogDeleteButonu;
+
 }
 
