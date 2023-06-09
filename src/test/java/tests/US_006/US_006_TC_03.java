@@ -88,7 +88,7 @@ public class US_006_TC_03 extends UserTestBaseRapor {
         extentTest.pass("Oge5 linkine tiklaninca acilan sayfa dogrulandi");
     }
     private WebElement recentPostOgeler(int ogeNo) {
-        String dinamikXpath = "/html[1]/body[1]/div[16]/div[1]/div[1]/div[3]/div[1]/ul[1]/li[" + ogeNo + "]/a[1]";
+        String dinamikXpath = "//div[16]/div[1]/div[1]/div[3]/div[1]/ul[1]/li[" + ogeNo + "]/a[1]";
         WebElement istenenOge = Driver.getDriver().findElement(By.xpath(dinamikXpath));
         return istenenOge;
     }
