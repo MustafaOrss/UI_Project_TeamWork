@@ -9,7 +9,7 @@ import utilities.UserTestBaseRapor;
 
 public class US_012_TC_03 extends UserTestBaseRapor {
 
-    UserHomepage userHomepage=new UserHomepage();
+    UserHomepage homepage=new UserHomepage();
     @Test
     public void tc_03(){
         extentTest=extentReports.createTest("AdventureTour ögesinin görünür ve aktif olduğu test",
@@ -20,18 +20,18 @@ public class US_012_TC_03 extends UserTestBaseRapor {
         Assert.assertTrue(actualTitle.contains(expectedHomePageTitle));
         extentTest.info("hizmetler sayfasına gidildi");
         //2-"SERVİCES" elementine tıklanır.
-        userHomepage.servicespage.click();
-        extentTest.pass("SERVİVES elementine tıklandı");
+        homepage.servicesButon.click();
+        extentTest.pass("Services elementine tıklandı");
 
-        // 3-"SERVİCESé sayfasının açıldığı test edilir
+        // 3-"SERVİCES" sayfasının açıldığı test edilir
         String actualservicestitle = Driver.getDriver().getTitle();
-        String expectedservicesTitle = ConfigReader.getProperty("expectedservicesTitle");
+        String expectedservicesTitle = "Services";
         Assert.assertTrue(actualservicestitle.contains(expectedservicesTitle));
         extentTest.pass("services sayfası doğrulandı");
         //4."AdventureTour" ögesinin görünür ve aktif olduğu test edilir.
-        userHomepage.AdventureTourElementi.isDisplayed();
-        userHomepage.cultureTourElementi.click();
-        userHomepage.AdventureTourTitle.isDisplayed();
+        Assert.assertTrue(homepage.AdventureTourElementi.isDisplayed());
+        homepage.AdventureTourElementi.click();
+        Assert.assertTrue(homepage.Adventure_Tour.isDisplayed());
         extentTest.info("sayfanın görünürlüğü ve aktifliği test edildi");
 
     }

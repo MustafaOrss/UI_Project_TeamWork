@@ -8,6 +8,7 @@ import pages.UserDashboard;
 import pages.UserHomepage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 import utilities.UserTestBaseRapor;
 
 public class US_018_TC_05 extends UserTestBaseRapor {
@@ -49,7 +50,6 @@ public class US_018_TC_05 extends UserTestBaseRapor {
             System.out.println("Registration sayfasi acilirken hata olustu.");
         }
         // Kayit Formunu doldurun
-        UserDashboard.registrationButonu.click();
         UserDashboard.nameButonu.click();
         UserDashboard.nameButonu.sendKeys(ConfigReader.getProperty("registrationName"));
         extentTest.pass("Ziyaretci kayit olmak icin isim girdi");
@@ -59,7 +59,8 @@ public class US_018_TC_05 extends UserTestBaseRapor {
         UserDashboard.registerPasswordButonu.click();
         UserDashboard.registerPasswordButonu.sendKeys(ConfigReader.getProperty("RegistrationPassword"));
         extentTest.pass("Ziyaretci kayit yapmak icin gecerli bir parola girdi");
-        UserDashboard.MakeRegistrationButonu.click();
+        UserDashboard.makeRegistrationButonu.submit();
+        ReusableMethods.wait(3);
         extentTest.pass("Ziyaretci bilgileri girdikten sonra kaydi tamamlamak icin Make Registration butonuna tikladi ");
 
 

@@ -11,7 +11,7 @@ public class UserHomepage {
     }
 
     // Cookies butonu
-    @FindBy(className = "wpcc-btn")
+    @FindBy(xpath = "//button[@type='button']")
     public WebElement cookiesButonu;
 
     // Footer >> Recent Posts Elementi
@@ -19,7 +19,7 @@ public class UserHomepage {
     public WebElement recentPostsElementi;
 
     // Footer >> Recent Posts >> ogeLink >> Search Here
-    @FindBy(name = "search_string")
+    @FindBy(xpath = "//input[@placeholder='Search Here']")
     public WebElement searchKutusu;
 
     // Footer >> Facebok Linki
@@ -27,7 +27,7 @@ public class UserHomepage {
     public WebElement facebookLinki;
 
     // Footer >> Facebook Linki >> Email
-    @FindBy(id = "email")
+    @FindBy(xpath = "//input[@id='email']")
     public WebElement facebookEmailButonu;
 
     // Footer >> Twitter Linki
@@ -73,10 +73,6 @@ public class UserHomepage {
     // Footer >> Email
     @FindBy(xpath = "//div[@class='text']//p[text()='info@tripandway.com']")
     public WebElement footerEmailElementi;
-
-    // userhomepage >> services
-    @FindBy(xpath = "//*[text()='Services'])[2]")
-    public WebElement servicespage;
   
     // footer>> şartlar ve koşullar
     @FindBy(xpath =" //h1[text()='Terms and Conditions']")
@@ -85,21 +81,23 @@ public class UserHomepage {
     // footer>> gizlilikPolitikasıElementi
     @FindBy(xpath =" //h1[text()='Privacy Policy']")
     public WebElement  gizlilikPolitikasıElementi;
+
+    // Services
+    @FindBy(xpath = "(//a[@href='https://qa.tripandway.com/services'])[2]")
+    public WebElement servicesButon;
   
     // services>> International Tour
-    @FindBy(xpath = "//h4[text()='International Tour']")
+    @FindBy(xpath = "(//div[@class='service-item mt_30'])[1]")
     public WebElement InternationalTourElementi ;
 
     // services>> International Tour
     @FindBy(xpath = "//h1[text()='International Tour']")
     public WebElement InternationalTourTitle;
   
-    // services>> Adventure Tour
-    @FindBy(xpath = "//h1[text()='Adventure Tour']")
-    public WebElement AdventureTourTitle;
+
   
     // services>> Adventure Tour
-    @FindBy(xpath = "//h4[text()='Adventure Tour']")
+    @FindBy(xpath = "(//div[@class='service-item mt_30'])[2]")
     public WebElement AdventureTourElementi;
   
     // services>> Culture Tour
@@ -107,27 +105,34 @@ public class UserHomepage {
     public WebElement cultureTourTitle;
 
     // services>> Culture Tour
-    @FindBy(xpath = "//h1[text()='Culture Tour']")
+    @FindBy(xpath = "(//div[@class='service-item mt_30'])[3]")
     public WebElement cultureTourElementi;
-  
+
+    // Services >> cover photo
+    @FindBy (xpath = "//div[@class='banner-text']")
+    public  WebElement coverPhoto;
+
     // services>> Bussiness Tour
-    @FindBy(xpath = "//h1[text()='Bussiness Tour']")
-    public WebElement BussinessTourElementi;
-  
-    // services>> Bussiness Tour
-    @FindBy(xpath = "//h1[text()='Bussiness Tour']")
-    public WebElement BussinessTourTitle;
-  
+    @FindBy(xpath = "//div[@class='col-md-4 col-xs-6 clear-three wow fadeIn'][4]")
+    public WebElement bussinessTour;
+
+    // Bussiness >> Title
+    @FindBy(xpath = "(//*[text()='Bussiness Tour'])[2]")
+    public WebElement bussinessTitle;
+
+    @FindBy(xpath = "//*[@class='fa fa-handshake']")
+    public WebElement clickBussiness;
+
     // services>> Health Tour
-    @FindBy(xpath = "//h1[text()='Health Tour']")
-    public WebElement HealthTourElementi;
+    @FindBy(xpath = "(//div[@class='col-md-4 col-xs-6 clear-three wow fadeIn'])[5]")
+    public WebElement healthTourElementi;
   
     // services>> Health Tour
     @FindBy(xpath = "//h1[text()='Health Tour']")
     public WebElement  HealthTourTitle;
   
     // services>> Religious Tour
-    @FindBy(xpath = "//h1[text()='Health Tour']")
+    @FindBy(xpath = "(//div[@class='col-md-4 col-xs-6 clear-three wow fadeIn'])[6]")
     public WebElement ReligiousTourElementi;
 
     // services>> Religious Tour
@@ -327,7 +332,7 @@ public class UserHomepage {
     public WebElement International_tour;
 
     //Adventure Tour butonu
-    @FindBy(xpath ="(//div[@class='ser-text'])[2] ")
+    @FindBy(xpath ="(//*[text()='Adventure Tour'])[2]")
     public WebElement Adventure_Tour;
 
     //Culture Tour butonu
@@ -409,4 +414,49 @@ public class UserHomepage {
     // Header >> About_us
     @FindBy (xpath = "(//*[text()='About Us'])[2]")
     public WebElement About_us;
+
+    // Header >> EXPLORE THE WORLD
+    @FindBy (xpath = "/html/body/div[6]/div/div[1]/div/div[3]/div/div[2]/div/div")
+    public WebElement EXPLORE_THE_WORD;
+
+    // Header >> THE WORD IS SO BEAUTIFUL
+    @FindBy (xpath = "/html/body/div[6]/div/div[1]/div/div[4]/div/div[2]/div/div/div/div/div[1]/h1")
+    public WebElement WORD_IS_BEAUTIFUL;
+
+    // Header >> SALINA ISLAND
+    @FindBy (xpath = "/html/body/div[6]/div/div[1]/div/div[4]/div/div[2]/div/div/div/div/div[1]/h1")
+    public WebElement SALINA_ISLAND;
+
+    // Header >> READ_MORE_EXPLORE
+    @FindBy (xpath = "/html/body/div[6]/div/div[1]/div/div[3]/div/div[2]/div/div/div/div/div[3]/ul/li/a")
+    public WebElement READ_MORE_EXPLORE;
+
+    // Header >> READ_MORE_WORD
+    @FindBy (xpath = "/html/body/div[6]/div/div[1]/div/div[4]/div/div[2]/div/div/div/div/div[3]/ul/li/a")
+    public WebElement READ_MORE_WORD;
+
+    // Header >> READ MORE SALİNA ISLAND
+    @FindBy (xpath = "/html/body/div[6]/div/div[1]/div/div[5]/div/div[2]/div/div/div/div/div[3]/ul/li/a")
+    public WebElement READ_MORE_SALINA;
+
+    // Header >> SAĞA GİTME BUTONU
+    @FindBy (xpath = "/html/body/div[6]/div/div[2]/div[2]")
+    public WebElement SAG_TIK;
+
+    // Sağ ustte cikan "To activate your subscription please check your email and follow instruction there." yazisinin locate'i
+    @FindBy(id = "toast-container")
+    public WebElement toActivatePencereElementi;
+  
+    // Newsletter Email kutusunun locate'i
+    @FindBy(name = "subs_email")
+    public WebElement newsletterEmailKutusu;
+  
+    // Terms and Conditions element locate'i
+    @FindBy(xpath = "//*[text()='Terms and Conditions']")
+    public WebElement termsAndConditionElementi;
+  
+    // Privacy Policy element locate'i
+    @FindBy(xpath = "//*[text()='Privacy Policy']")
+    public WebElement privacyPolicyElementi;
+
 }

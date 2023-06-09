@@ -144,8 +144,8 @@ public class UserDashboard {
 
 
     //User Anasayfa >> Make Registration
-    @FindBy(xpath = "//button[@type='submit']")
-    public WebElement MakeRegistrationButonu;
+    @FindBy(xpath = "//button[@class='btn btn-primary']")
+    public WebElement makeRegistrationButonu;
 
     //User Dashboard >>'Update Profile'butonu (kullanıcı login iken profil yenilemek icin)
     @FindBy(xpath = "//*[text()='Update Profile']")
@@ -154,7 +154,6 @@ public class UserDashboard {
     //User Dashboard >>'Update Profile text'i
     @FindBy(xpath = "//h1[text()='Update Profile']")
     public WebElement updateProfileTitle;
-
 
     //User Dashboard >>'Update Profile Phone
     @FindBy(xpath = "//input[@name='traveller_phone']")
@@ -180,7 +179,6 @@ public class UserDashboard {
     @FindBy(xpath = "//input[@name='traveller_state']")
     public WebElement updateProfileState;
 
-
     //User Dashboard >> Profile is update succesfully
     @FindBy(xpath = "//div[@class='toast toast-success']")
     public WebElement profuleisupdatesuccesfully;
@@ -188,6 +186,8 @@ public class UserDashboard {
     @FindBy(xpath = "//div[text()='Payment is successful!']")
     public WebElement paymentSuccessfullTexti;
 
+    //User Dashboard >> 'Update'butonu (kullanıcı login iken sifre yenileme icin)
+    @FindBy(xpath = "//div[contains(@class,'row form-group')]/following-sibling::button[1]")
+    public WebElement updateprofileButonu;
 
-
-    }
+}
