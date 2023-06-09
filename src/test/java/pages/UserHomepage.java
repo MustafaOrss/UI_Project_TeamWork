@@ -128,7 +128,7 @@ public class UserHomepage {
     public WebElement healthTourElementi;
   
     // services>> Health Tour
-    @FindBy(xpath = "//*[text()='Health Tour']")
+    @FindBy(xpath = "//h1[text()='Health Tour']")
     public WebElement  HealthTourTitle;
   
     // services>> Religious Tour
