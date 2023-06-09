@@ -335,5 +335,39 @@ public class AdminDashboard {
     @FindBy (xpath = "(//i[@class='fas fa-trash-alt'])[7]")
     public WebElement blogDeleteButonu;
 
+    //3003_destinationButonu
+    @FindBy (xpath = "(//a[@class='nav-link'])[2]")
+    public WebElement destinationButonu;
+
+    //3003_destinationDogrulama
+    @FindBy (xpath = "//h1")
+    public WebElement destinationDogrulama;
+
+    // 3005_addDastionationButonu
+    @FindBy(xpath = "//a[@class='btn btn-primary btn-sm']")
+    public WebElement addDastionationButonu;
+
+    // 3005_addDestinationNameText
+    @FindBy(xpath = "//input[@name='d_name']")
+    public WebElement addDestinationNameText;
+
+    // 3005_addDestinationDosyaSecimi
+    @FindBy (xpath = "//input[@name='d_photo']")
+    public WebElement addDestinationDosyaSecimi;
+
+    //3005_addDestinationSubmitButonu
+    @FindBy(xpath = "//button[@class='btn btn-success']")
+    public WebElement addDestinationSubmitButonu;
+
+    //3005_addedDestiantionDuzenle
+    @FindBy(xpath = "(//a[@class='btn btn-warning btn-sm'])[9]")
+    public WebElement addedDestiantionDuzenle;
+
+    //3005_addDestinationUpdateButonu
+    @FindBy(xpath = "//button[@class='btn btn-success']")
+    public WebElement addDestinationUpdateButonu;
+
+
+
 }
 
