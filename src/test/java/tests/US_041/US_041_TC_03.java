@@ -56,6 +56,7 @@ public class US_041_TC_03 extends AdminTestBaseRapor {
         String expectedTripAndWayAdminUrl = ConfigReader.getProperty("tripAndWayUrl");
 
 
+
         Assert.assertEquals(expectedTripAndWayAdminUrl, actualLoginUrl);
         extentTest.pass( "Admin Dashboard sayfasi kapatilip \""+ actualLoginUrl + "\" anasayfasinin acildigi dogrulandi.");
 
