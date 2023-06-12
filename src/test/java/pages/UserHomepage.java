@@ -459,4 +459,28 @@ public class UserHomepage {
     @FindBy(xpath = "//*[text()='Privacy Policy']")
     public WebElement privacyPolicyElementi;
 
+    // Gmail email
+    @FindBy(xpath = "//input[@type='email']")
+    public WebElement gmailEmail;
+
+    // Gmail sifre
+    @FindBy(xpath = "//input[@type='password']")
+    public WebElement gmailSifre;
+
+    // Gmail ileri butonu
+    @FindBy(xpath = "(//span[@jsname='V67aGc'])[2]")
+    public WebElement ileri;
+
+    // Gmail logosu
+    @FindBy(xpath = "//img[@class='gb_Pc']")
+    public WebElement gmailLogosu;
+
+    // Gmail search kutusu
+    @FindBy(xpath = "(//input[@class='gb_xe aJh'])[1]")
+    public WebElement gmailSearchKutusu;
+
+    // Gmail mail dogrulamasi
+    @FindBy(xpath = "//td[@class='TC']")
+    public WebElement tripandwayMail;
+
 }
